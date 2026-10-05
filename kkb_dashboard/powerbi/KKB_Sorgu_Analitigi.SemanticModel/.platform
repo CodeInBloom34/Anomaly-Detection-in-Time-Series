@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "KKB_Sorgu_Analitigi"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fb036f45-d191-56c0-9e80-8149a745f345"
+  }
+}

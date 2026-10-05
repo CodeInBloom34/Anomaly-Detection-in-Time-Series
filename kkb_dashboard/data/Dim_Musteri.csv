@@ -1,0 +1,601 @@
+VKN,Unvan,Segment,NACE,Il,Bolge,SubeKod,GrupKod,MusteriSinceTarihi,PortfoyYoneticisi,_Senaryo,NACEAciklama
+9609778585,Musteri 0001 A.S.,Ticari,J,Kayseri,Ic Anadolu,S101,,2019-08-10,PY102,proje_buyumesi,Bilgi ve iletisim
+9517727538,Musteri 0002 A.S.,KOBI,C,Bursa,Marmara,S022,G074,2019-01-24,PY022,stabil,Imalat
+9657261830,Musteri 0003 A.S.,KOBI,F,Ankara,Ic Anadolu,S032,,2022-09-26,PY033,bozulma,Insaat
+9843950336,Musteri 0004 A.S.,KOBI,G,Adana,Akdeniz,S082,,2019-07-01,PY083,rakip_buyutuyor,Toptan ve perakende ticaret
+9219048284,Musteri 0005 A.S.,KOBI,H,Bursa,Marmara,S022,,2020-09-06,PY022,stabil,Ulastirma ve depolama
+9859858350,Musteri 0006 A.S.,KOBI,C,Denizli,Ege,S062,G001,2023-03-26,PY062,ana_banka,Imalat
+9796187133,Musteri 0007 A.S.,KOBI,I,Gaziantep,Guneydogu,S092,G067,2015-12-23,PY091,proje_buyumesi,Konaklama ve yiyecek
+9847033530,Musteri 0008 A.S.,Kurumsal,H,Izmir,Ege,S050,,2020-06-04,PY051,proje_buyumesi,Ulastirma ve depolama
+9627194192,Musteri 0009 A.S.,KOBI,H,Gaziantep,Guneydogu,S092,,2023-05-31,PY091,stabil,Ulastirma ve depolama
+9903107311,Musteri 0010 A.S.,Ticari,C,Gaziantep,Guneydogu,S091,G009,2020-12-24,PY092,birlikte_buyume,Imalat
+9221222822,Musteri 0011 A.S.,Ticari,I,Ankara,Ic Anadolu,S031,,2016-04-18,PY032,stabil,Konaklama ve yiyecek
+9319870421,Musteri 0012 A.S.,KOBI,C,Adana,Akdeniz,S082,,2021-11-03,PY081,sessiz_cikis,Imalat
+9649436560,Musteri 0013 A.S.,KOBI,G,Gaziantep,Guneydogu,S092,,2023-04-22,PY091,rakip_buyutuyor,Toptan ve perakende ticaret
+9729478084,Musteri 0014 A.S.,KOBI,C,Bursa,Marmara,S022,G005,2024-04-09,PY022,bozulma,Imalat
+9466592382,Musteri 0015 A.S.,Ticari,C,Izmir,Ege,S051,,2015-03-15,PY053,stabil,Imalat
+9722789982,Musteri 0016 A.S.,KOBI,H,Kayseri,Ic Anadolu,S102,,2020-10-07,PY101,stabil,Ulastirma ve depolama
+9461138467,Musteri 0017 A.S.,KOBI,C,Ankara,Ic Anadolu,S032,,2022-01-14,PY031,birlikte_buyume,Imalat
+9825571868,Musteri 0018 A.S.,Ticari,M,Kayseri,Ic Anadolu,S101,,2023-09-06,PY101,stabil,Mesleki ve teknik faaliyetler
+9577757216,Musteri 0019 A.S.,Kurumsal,H,Izmir,Ege,S050,,2015-04-08,PY052,bozulma,Ulastirma ve depolama
+9457772521,Musteri 0020 A.S.,Kurumsal,J,Istanbul,Marmara,S000,G047,2018-07-01,PY001,rakip_buyutuyor,Bilgi ve iletisim
+9983689845,Musteri 0021 A.S.,KOBI,C,Bursa,Marmara,S022,,2025-03-04,PY022,proje_buyumesi,Imalat
+9422805512,Musteri 0022 A.S.,Ticari,I,Adana,Akdeniz,S081,,2021-02-17,PY083,stabil,Konaklama ve yiyecek
+9441142289,Musteri 0023 A.S.,KOBI,M,Ankara,Ic Anadolu,S032,,2017-09-07,PY032,ana_banka,Mesleki ve teknik faaliyetler
+9343835894,Musteri 0024 A.S.,Ticari,H,Gaziantep,Guneydogu,S091,,2021-05-25,PY092,bozulma,Ulastirma ve depolama
+9692878068,Musteri 0025 A.S.,KOBI,G,Bursa,Marmara,S022,,2019-07-28,PY023,proje_buyumesi,Toptan ve perakende ticaret
+9440733508,Musteri 0026 A.S.,Ticari,H,Ankara,Ic Anadolu,S031,G008,2020-02-23,PY033,stabil,Ulastirma ve depolama
+9450187040,Musteri 0027 A.S.,KOBI,M,Denizli,Ege,S062,,2023-03-18,PY063,birlikte_buyume,Mesleki ve teknik faaliyetler
+9579189070,Musteri 0028 A.S.,Kurumsal,F,Ankara,Ic Anadolu,S030,,2015-02-11,PY033,stabil,Insaat
+9194135482,Musteri 0029 A.S.,Ticari,I,Trabzon,Karadeniz,S111,G052,2015-05-21,PY113,stabil,Konaklama ve yiyecek
+9931510360,Musteri 0030 A.S.,KOBI,M,Denizli,Ege,S062,G046,2018-11-27,PY061,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9922085802,Musteri 0031 A.S.,KOBI,H,Antalya,Akdeniz,S072,G027,2017-07-19,PY071,rakip_buyutuyor,Ulastirma ve depolama
+9519181696,Musteri 0032 A.S.,KOBI,H,Izmir,Ege,S052,,2025-06-12,PY053,ana_banka,Ulastirma ve depolama
+9892527591,Musteri 0033 A.S.,Kurumsal,M,Ankara,Ic Anadolu,S030,,2016-05-25,PY032,stabil,Mesleki ve teknik faaliyetler
+9343307609,Musteri 0034 A.S.,Ticari,I,Trabzon,Karadeniz,S111,,2023-10-15,PY111,stabil,Konaklama ve yiyecek
+9582839131,Musteri 0035 A.S.,Kurumsal,F,Istanbul,Marmara,S000,,2015-03-04,PY003,birlikte_buyume,Insaat
+9866358176,Musteri 0036 A.S.,Kurumsal,F,Istanbul,Marmara,S000,,2015-03-16,PY003,stabil,Insaat
+9190995549,Musteri 0037 A.S.,KOBI,G,Istanbul,Marmara,S002,,2016-10-28,PY001,stabil,Toptan ve perakende ticaret
+9674267814,Musteri 0038 A.S.,KOBI,M,Trabzon,Karadeniz,S112,,2015-10-06,PY112,birlikte_buyume,Mesleki ve teknik faaliyetler
+9432985930,Musteri 0039 A.S.,KOBI,C,Trabzon,Karadeniz,S112,G033,2016-01-27,PY113,stabil,Imalat
+9853945172,Musteri 0040 A.S.,KOBI,C,Adana,Akdeniz,S082,,2022-06-18,PY083,rakip_buyutuyor,Imalat
+9159455520,Musteri 0041 A.S.,KOBI,C,Trabzon,Karadeniz,S112,,2020-01-31,PY112,stabil,Imalat
+9721114092,Musteri 0042 A.S.,KOBI,I,Denizli,Ege,S062,,2023-10-04,PY061,bozulma,Konaklama ve yiyecek
+9656843300,Musteri 0043 A.S.,Kurumsal,C,Ankara,Ic Anadolu,S030,,2025-01-28,PY033,rakip_buyutuyor,Imalat
+9938339867,Musteri 0044 A.S.,Ticari,F,Adana,Akdeniz,S081,G046,2023-06-28,PY082,stabil,Insaat
+9267156736,Musteri 0045 A.S.,Ticari,C,Adana,Akdeniz,S081,,2023-05-18,PY082,bozulma,Imalat
+9828072642,Musteri 0046 A.S.,KOBI,G,Adana,Akdeniz,S082,G077,2019-04-09,PY082,proje_buyumesi,Toptan ve perakende ticaret
+9884268177,Musteri 0047 A.S.,Kurumsal,M,Ankara,Ic Anadolu,S030,,2018-09-19,PY031,stabil,Mesleki ve teknik faaliyetler
+9132308997,Musteri 0048 A.S.,Ticari,F,Kocaeli,Marmara,S011,,2019-10-13,PY012,stabil,Insaat
+9694640063,Musteri 0049 A.S.,KOBI,C,Ankara,Ic Anadolu,S032,,2019-09-02,PY031,rakip_buyutuyor,Imalat
+9912690237,Musteri 0050 A.S.,Kurumsal,G,Izmir,Ege,S050,,2025-01-08,PY053,stabil,Toptan ve perakende ticaret
+9920446003,Musteri 0051 A.S.,Ticari,C,Kocaeli,Marmara,S011,G001,2016-07-27,PY013,stabil,Imalat
+9749952104,Musteri 0052 A.S.,KOBI,H,Gaziantep,Guneydogu,S092,,2016-03-06,PY092,stabil,Ulastirma ve depolama
+9457509971,Musteri 0053 A.S.,KOBI,J,Istanbul,Marmara,S002,G036,2023-08-30,PY003,proje_buyumesi,Bilgi ve iletisim
+9379588766,Musteri 0054 A.S.,Ticari,J,Ankara,Ic Anadolu,S031,G015,2023-05-22,PY033,rakip_buyutuyor,Bilgi ve iletisim
+9706543930,Musteri 0055 A.S.,KOBI,M,Bursa,Marmara,S022,,2019-09-19,PY023,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9978307786,Musteri 0056 A.S.,Ticari,I,Bursa,Marmara,S021,,2016-06-28,PY022,proje_buyumesi,Konaklama ve yiyecek
+9930611370,Musteri 0057 A.S.,KOBI,J,Trabzon,Karadeniz,S112,,2021-05-08,PY112,birlikte_buyume,Bilgi ve iletisim
+9909029418,Musteri 0058 A.S.,Ticari,F,Konya,Ic Anadolu,S041,,2015-02-07,PY043,birlikte_buyume,Insaat
+9510991509,Musteri 0059 A.S.,Ticari,H,Gaziantep,Guneydogu,S091,,2022-07-05,PY092,stabil,Ulastirma ve depolama
+9452356157,Musteri 0060 A.S.,Ticari,C,Gaziantep,Guneydogu,S091,G008,2019-06-04,PY093,stabil,Imalat
+9501465603,Musteri 0061 A.S.,Ticari,F,Adana,Akdeniz,S081,,2015-07-18,PY081,rakip_buyutuyor,Insaat
+9383698032,Musteri 0062 A.S.,KOBI,F,Bursa,Marmara,S022,G023,2015-01-22,PY023,birlikte_buyume,Insaat
+9445188790,Musteri 0063 A.S.,Kurumsal,H,Ankara,Ic Anadolu,S030,,2016-03-06,PY033,birlikte_buyume,Ulastirma ve depolama
+9312724391,Musteri 0064 A.S.,Kurumsal,H,Ankara,Ic Anadolu,S030,G004,2015-07-09,PY031,proje_buyumesi,Ulastirma ve depolama
+9275611816,Musteri 0065 A.S.,Ticari,F,Ankara,Ic Anadolu,S031,,2019-06-02,PY031,rakip_buyutuyor,Insaat
+9694080718,Musteri 0066 A.S.,KOBI,I,Denizli,Ege,S062,G041,2016-12-07,PY063,birlikte_buyume,Konaklama ve yiyecek
+9686702194,Musteri 0067 A.S.,KOBI,M,Adana,Akdeniz,S082,,2024-02-21,PY082,birlikte_buyume,Mesleki ve teknik faaliyetler
+9181521152,Musteri 0068 A.S.,KOBI,H,Adana,Akdeniz,S082,,2023-02-01,PY082,stabil,Ulastirma ve depolama
+9864449000,Musteri 0069 A.S.,Ticari,G,Kayseri,Ic Anadolu,S101,,2024-03-07,PY102,stabil,Toptan ve perakende ticaret
+9264527893,Musteri 0070 A.S.,Ticari,I,Trabzon,Karadeniz,S111,,2022-01-26,PY111,stabil,Konaklama ve yiyecek
+9245884522,Musteri 0071 A.S.,Kurumsal,H,Ankara,Ic Anadolu,S030,G061,2017-10-11,PY033,stabil,Ulastirma ve depolama
+9743604799,Musteri 0072 A.S.,Ticari,M,Izmir,Ege,S051,G065,2024-05-10,PY052,stabil,Mesleki ve teknik faaliyetler
+9577971496,Musteri 0073 A.S.,KOBI,H,Kocaeli,Marmara,S012,,2015-06-24,PY012,bozulma,Ulastirma ve depolama
+9995333403,Musteri 0074 A.S.,KOBI,C,Kayseri,Ic Anadolu,S102,,2020-04-19,PY103,stabil,Imalat
+9975971488,Musteri 0075 A.S.,Ticari,C,Trabzon,Karadeniz,S111,,2022-12-06,PY111,stabil,Imalat
+9650052945,Musteri 0076 A.S.,Ticari,C,Konya,Ic Anadolu,S041,,2025-04-27,PY042,stabil,Imalat
+9907079834,Musteri 0077 A.S.,KOBI,F,Kocaeli,Marmara,S012,G038,2016-12-05,PY013,stabil,Insaat
+9683365356,Musteri 0078 A.S.,Ticari,J,Trabzon,Karadeniz,S111,,2017-02-19,PY112,rakip_buyutuyor,Bilgi ve iletisim
+9273780372,Musteri 0079 A.S.,Kurumsal,J,Izmir,Ege,S050,,2022-04-11,PY052,birlikte_buyume,Bilgi ve iletisim
+9696276634,Musteri 0080 A.S.,Ticari,J,Denizli,Ege,S061,,2018-04-25,PY063,proje_buyumesi,Bilgi ve iletisim
+9639162006,Musteri 0081 A.S.,Kurumsal,G,Ankara,Ic Anadolu,S030,,2021-07-20,PY032,rakip_buyutuyor,Toptan ve perakende ticaret
+9762915783,Musteri 0082 A.S.,Ticari,H,Kocaeli,Marmara,S011,G037,2019-02-07,PY013,stabil,Ulastirma ve depolama
+9218039652,Musteri 0083 A.S.,Kurumsal,G,Ankara,Ic Anadolu,S030,,2023-05-19,PY031,proje_buyumesi,Toptan ve perakende ticaret
+9759199383,Musteri 0084 A.S.,Ticari,F,Trabzon,Karadeniz,S111,G008,2015-04-09,PY113,stabil,Insaat
+9277900283,Musteri 0085 A.S.,Ticari,G,Kocaeli,Marmara,S011,,2022-05-21,PY011,stabil,Toptan ve perakende ticaret
+9754886329,Musteri 0086 A.S.,Ticari,J,Istanbul,Marmara,S001,,2016-07-21,PY001,stabil,Bilgi ve iletisim
+9421914368,Musteri 0087 A.S.,Ticari,J,Antalya,Akdeniz,S071,G038,2021-05-04,PY071,rakip_buyutuyor,Bilgi ve iletisim
+9377499883,Musteri 0088 A.S.,KOBI,G,Konya,Ic Anadolu,S042,,2024-02-22,PY043,birlikte_buyume,Toptan ve perakende ticaret
+9234139153,Musteri 0089 A.S.,KOBI,C,Gaziantep,Guneydogu,S092,,2022-12-07,PY093,stabil,Imalat
+9773191115,Musteri 0090 A.S.,Ticari,C,Bursa,Marmara,S021,,2016-10-12,PY022,birlikte_buyume,Imalat
+9349162040,Musteri 0091 A.S.,Ticari,F,Konya,Ic Anadolu,S041,,2023-07-24,PY041,stabil,Insaat
+9409020143,Musteri 0092 A.S.,KOBI,G,Konya,Ic Anadolu,S042,G072,2017-06-16,PY041,rakip_buyutuyor,Toptan ve perakende ticaret
+9265196185,Musteri 0093 A.S.,Ticari,F,Izmir,Ege,S051,G002,2020-10-22,PY053,stabil,Insaat
+9874411344,Musteri 0094 A.S.,Ticari,G,Istanbul,Marmara,S001,G043,2017-05-03,PY001,stabil,Toptan ve perakende ticaret
+9428463121,Musteri 0095 A.S.,KOBI,H,Antalya,Akdeniz,S072,,2025-04-02,PY073,stabil,Ulastirma ve depolama
+9998946673,Musteri 0096 A.S.,Ticari,H,Izmir,Ege,S051,,2018-12-09,PY053,rakip_buyutuyor,Ulastirma ve depolama
+9553852690,Musteri 0097 A.S.,KOBI,J,Denizli,Ege,S062,,2017-05-14,PY061,stabil,Bilgi ve iletisim
+9114224999,Musteri 0098 A.S.,Ticari,I,Adana,Akdeniz,S081,,2020-05-25,PY082,stabil,Konaklama ve yiyecek
+9506218841,Musteri 0099 A.S.,KOBI,H,Ankara,Ic Anadolu,S032,,2018-08-17,PY033,stabil,Ulastirma ve depolama
+9197791392,Musteri 0100 A.S.,Ticari,I,Izmir,Ege,S051,,2023-02-04,PY051,ana_banka,Konaklama ve yiyecek
+9793490676,Musteri 0101 A.S.,Ticari,M,Antalya,Akdeniz,S071,,2024-03-27,PY073,sessiz_cikis,Mesleki ve teknik faaliyetler
+9382913148,Musteri 0102 A.S.,Ticari,C,Trabzon,Karadeniz,S111,G032,2016-09-14,PY112,rakip_buyutuyor,Imalat
+9944924818,Musteri 0103 A.S.,Kurumsal,H,Istanbul,Marmara,S000,,2021-10-25,PY002,stabil,Ulastirma ve depolama
+9293893148,Musteri 0104 A.S.,KOBI,F,Denizli,Ege,S062,G059,2024-11-19,PY062,ana_banka,Insaat
+9788997352,Musteri 0105 A.S.,Ticari,G,Kayseri,Ic Anadolu,S101,,2025-06-21,PY103,proje_buyumesi,Toptan ve perakende ticaret
+9765883316,Musteri 0106 A.S.,Ticari,F,Kocaeli,Marmara,S011,,2015-01-09,PY011,rakip_buyutuyor,Insaat
+9792466882,Musteri 0107 A.S.,KOBI,C,Istanbul,Marmara,S002,,2014-10-23,PY003,stabil,Imalat
+9311730749,Musteri 0108 A.S.,KOBI,M,Denizli,Ege,S062,,2022-07-20,PY062,stabil,Mesleki ve teknik faaliyetler
+9104810947,Musteri 0109 A.S.,Ticari,H,Trabzon,Karadeniz,S111,,2018-01-06,PY111,stabil,Ulastirma ve depolama
+9798211977,Musteri 0110 A.S.,Ticari,I,Bursa,Marmara,S021,,2017-03-30,PY023,sessiz_cikis,Konaklama ve yiyecek
+9856954769,Musteri 0111 A.S.,KOBI,F,Bursa,Marmara,S022,G046,2019-05-23,PY022,birlikte_buyume,Insaat
+9134779878,Musteri 0112 A.S.,KOBI,F,Izmir,Ege,S052,,2023-04-12,PY053,stabil,Insaat
+9790857820,Musteri 0113 A.S.,KOBI,C,Kocaeli,Marmara,S012,,2021-11-18,PY013,stabil,Imalat
+9434388887,Musteri 0114 A.S.,KOBI,F,Denizli,Ege,S062,G015,2019-06-19,PY062,birlikte_buyume,Insaat
+9531475367,Musteri 0115 A.S.,KOBI,J,Denizli,Ege,S062,,2016-04-12,PY063,stabil,Bilgi ve iletisim
+9220836521,Musteri 0116 A.S.,Kurumsal,M,Istanbul,Marmara,S000,,2018-07-09,PY002,bozulma,Mesleki ve teknik faaliyetler
+9931012270,Musteri 0117 A.S.,Ticari,C,Trabzon,Karadeniz,S111,,2022-11-15,PY111,proje_buyumesi,Imalat
+9972558987,Musteri 0118 A.S.,Kurumsal,C,Izmir,Ege,S050,,2024-02-07,PY051,rakip_buyutuyor,Imalat
+9266837745,Musteri 0119 A.S.,KOBI,G,Adana,Akdeniz,S082,G037,2023-06-13,PY083,stabil,Toptan ve perakende ticaret
+9916844402,Musteri 0120 A.S.,KOBI,H,Gaziantep,Guneydogu,S092,G064,2019-01-25,PY091,rakip_buyutuyor,Ulastirma ve depolama
+9348076449,Musteri 0121 A.S.,Ticari,C,Adana,Akdeniz,S081,,2020-01-04,PY082,birlikte_buyume,Imalat
+9302220526,Musteri 0122 A.S.,Ticari,G,Antalya,Akdeniz,S071,,2016-06-10,PY071,rakip_buyutuyor,Toptan ve perakende ticaret
+9245747413,Musteri 0123 A.S.,Kurumsal,J,Izmir,Ege,S050,,2018-08-30,PY051,stabil,Bilgi ve iletisim
+9453456356,Musteri 0124 A.S.,KOBI,M,Istanbul,Marmara,S002,,2022-11-06,PY003,stabil,Mesleki ve teknik faaliyetler
+9145482389,Musteri 0125 A.S.,Kurumsal,M,Istanbul,Marmara,S000,,2016-03-21,PY001,stabil,Mesleki ve teknik faaliyetler
+9583904337,Musteri 0126 A.S.,Kurumsal,J,Ankara,Ic Anadolu,S030,G010,2017-02-22,PY031,birlikte_buyume,Bilgi ve iletisim
+9195352626,Musteri 0127 A.S.,Ticari,J,Ankara,Ic Anadolu,S031,,2024-11-24,PY033,stabil,Bilgi ve iletisim
+9986082312,Musteri 0128 A.S.,Kurumsal,J,Izmir,Ege,S050,,2023-10-12,PY053,stabil,Bilgi ve iletisim
+9359069388,Musteri 0129 A.S.,Ticari,G,Trabzon,Karadeniz,S111,G010,2022-03-15,PY112,stabil,Toptan ve perakende ticaret
+9554749229,Musteri 0130 A.S.,Ticari,H,Kayseri,Ic Anadolu,S101,,2019-04-08,PY103,birlikte_buyume,Ulastirma ve depolama
+9964905739,Musteri 0131 A.S.,Ticari,M,Denizli,Ege,S061,G062,2017-08-15,PY061,stabil,Mesleki ve teknik faaliyetler
+9327672410,Musteri 0132 A.S.,Kurumsal,H,Istanbul,Marmara,S000,G027,2016-12-28,PY002,sessiz_cikis,Ulastirma ve depolama
+9107164404,Musteri 0133 A.S.,Kurumsal,J,Izmir,Ege,S050,,2023-10-30,PY053,birlikte_buyume,Bilgi ve iletisim
+9416845606,Musteri 0134 A.S.,Ticari,G,Gaziantep,Guneydogu,S091,,2018-09-03,PY091,stabil,Toptan ve perakende ticaret
+9299892333,Musteri 0135 A.S.,Kurumsal,C,Ankara,Ic Anadolu,S030,,2018-12-01,PY033,birlikte_buyume,Imalat
+9355646179,Musteri 0136 A.S.,KOBI,H,Bursa,Marmara,S022,,2017-01-26,PY022,stabil,Ulastirma ve depolama
+9532048228,Musteri 0137 A.S.,Ticari,M,Istanbul,Marmara,S001,,2022-11-01,PY003,ana_banka,Mesleki ve teknik faaliyetler
+9403170889,Musteri 0138 A.S.,Ticari,F,Antalya,Akdeniz,S071,,2019-01-06,PY073,birlikte_buyume,Insaat
+9953158515,Musteri 0139 A.S.,Ticari,C,Gaziantep,Guneydogu,S091,G073,2017-11-19,PY091,proje_buyumesi,Imalat
+9546044570,Musteri 0140 A.S.,Ticari,H,Trabzon,Karadeniz,S111,,2024-11-30,PY113,stabil,Ulastirma ve depolama
+9775374339,Musteri 0141 A.S.,Kurumsal,C,Izmir,Ege,S050,,2021-01-17,PY053,birlikte_buyume,Imalat
+9145792660,Musteri 0142 A.S.,Kurumsal,G,Istanbul,Marmara,S000,G060,2019-11-21,PY003,birlikte_buyume,Toptan ve perakende ticaret
+9761284833,Musteri 0143 A.S.,KOBI,M,Denizli,Ege,S062,G044,2019-10-26,PY062,sessiz_cikis,Mesleki ve teknik faaliyetler
+9819143736,Musteri 0144 A.S.,Kurumsal,F,Istanbul,Marmara,S000,G033,2025-03-19,PY002,birlikte_buyume,Insaat
+9498306165,Musteri 0145 A.S.,Ticari,I,Istanbul,Marmara,S001,,2021-07-12,PY003,birlikte_buyume,Konaklama ve yiyecek
+9578451626,Musteri 0146 A.S.,Ticari,C,Denizli,Ege,S061,,2020-05-29,PY061,stabil,Imalat
+9379405529,Musteri 0147 A.S.,Ticari,F,Gaziantep,Guneydogu,S091,,2016-07-17,PY093,stabil,Insaat
+9414607250,Musteri 0148 A.S.,Ticari,M,Trabzon,Karadeniz,S111,G046,2022-09-09,PY113,birlikte_buyume,Mesleki ve teknik faaliyetler
+9912603418,Musteri 0149 A.S.,KOBI,I,Izmir,Ege,S052,,2015-08-21,PY053,stabil,Konaklama ve yiyecek
+9361872311,Musteri 0150 A.S.,KOBI,F,Istanbul,Marmara,S002,G015,2024-03-21,PY002,stabil,Insaat
+9155149048,Musteri 0151 A.S.,Ticari,M,Gaziantep,Guneydogu,S091,G003,2024-02-01,PY092,bozulma,Mesleki ve teknik faaliyetler
+9622216194,Musteri 0152 A.S.,Ticari,C,Denizli,Ege,S061,,2017-03-20,PY062,bozulma,Imalat
+9376779777,Musteri 0153 A.S.,Ticari,I,Bursa,Marmara,S021,,2015-06-16,PY023,stabil,Konaklama ve yiyecek
+9502653476,Musteri 0154 A.S.,Ticari,I,Konya,Ic Anadolu,S041,,2021-10-19,PY041,birlikte_buyume,Konaklama ve yiyecek
+9478637566,Musteri 0155 A.S.,KOBI,J,Antalya,Akdeniz,S072,G034,2023-11-11,PY073,stabil,Bilgi ve iletisim
+9819573704,Musteri 0156 A.S.,Ticari,J,Trabzon,Karadeniz,S111,,2015-04-22,PY113,rakip_buyutuyor,Bilgi ve iletisim
+9870768667,Musteri 0157 A.S.,Ticari,M,Gaziantep,Guneydogu,S091,,2024-09-03,PY091,stabil,Mesleki ve teknik faaliyetler
+9777398662,Musteri 0158 A.S.,KOBI,F,Bursa,Marmara,S022,,2018-07-17,PY023,rakip_buyutuyor,Insaat
+9365517287,Musteri 0159 A.S.,Kurumsal,M,Ankara,Ic Anadolu,S030,G045,2021-11-15,PY032,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9659675827,Musteri 0160 A.S.,Ticari,H,Istanbul,Marmara,S001,,2018-12-21,PY003,proje_buyumesi,Ulastirma ve depolama
+9724186422,Musteri 0161 A.S.,KOBI,I,Izmir,Ege,S052,,2018-04-13,PY052,stabil,Konaklama ve yiyecek
+9776155155,Musteri 0162 A.S.,Kurumsal,H,Izmir,Ege,S050,,2020-11-05,PY051,sessiz_cikis,Ulastirma ve depolama
+9300131134,Musteri 0163 A.S.,Kurumsal,G,Izmir,Ege,S050,,2020-10-13,PY053,stabil,Toptan ve perakende ticaret
+9846774918,Musteri 0164 A.S.,Kurumsal,H,Ankara,Ic Anadolu,S030,,2019-08-30,PY033,stabil,Ulastirma ve depolama
+9586451252,Musteri 0165 A.S.,KOBI,H,Konya,Ic Anadolu,S042,,2017-10-13,PY043,birlikte_buyume,Ulastirma ve depolama
+9963085302,Musteri 0166 A.S.,Kurumsal,H,Izmir,Ege,S050,,2014-10-25,PY053,stabil,Ulastirma ve depolama
+9164665301,Musteri 0167 A.S.,Kurumsal,G,Ankara,Ic Anadolu,S030,,2019-12-26,PY032,bozulma,Toptan ve perakende ticaret
+9401390819,Musteri 0168 A.S.,Kurumsal,H,Izmir,Ege,S050,,2015-02-21,PY053,proje_buyumesi,Ulastirma ve depolama
+9630071989,Musteri 0169 A.S.,Kurumsal,F,Ankara,Ic Anadolu,S030,G012,2024-06-26,PY032,stabil,Insaat
+9681555488,Musteri 0170 A.S.,Ticari,H,Gaziantep,Guneydogu,S091,,2019-09-27,PY093,ana_banka,Ulastirma ve depolama
+9128934178,Musteri 0171 A.S.,Ticari,F,Adana,Akdeniz,S081,G046,2024-05-17,PY083,stabil,Insaat
+9250628499,Musteri 0172 A.S.,Ticari,G,Denizli,Ege,S061,,2018-10-18,PY062,birlikte_buyume,Toptan ve perakende ticaret
+9377257875,Musteri 0173 A.S.,Ticari,G,Kocaeli,Marmara,S011,,2023-11-13,PY011,stabil,Toptan ve perakende ticaret
+9915212667,Musteri 0174 A.S.,KOBI,M,Konya,Ic Anadolu,S042,,2020-02-25,PY042,sessiz_cikis,Mesleki ve teknik faaliyetler
+9423995062,Musteri 0175 A.S.,Kurumsal,M,Ankara,Ic Anadolu,S030,G058,2022-06-08,PY032,stabil,Mesleki ve teknik faaliyetler
+9713997692,Musteri 0176 A.S.,KOBI,F,Istanbul,Marmara,S002,,2017-06-20,PY003,stabil,Insaat
+9991250278,Musteri 0177 A.S.,Ticari,C,Denizli,Ege,S061,,2019-11-13,PY063,stabil,Imalat
+9461781639,Musteri 0178 A.S.,Kurumsal,M,Istanbul,Marmara,S000,G030,2019-11-06,PY003,ana_banka,Mesleki ve teknik faaliyetler
+9372881868,Musteri 0179 A.S.,KOBI,M,Gaziantep,Guneydogu,S092,,2020-10-18,PY092,bozulma,Mesleki ve teknik faaliyetler
+9927384295,Musteri 0180 A.S.,KOBI,M,Izmir,Ege,S052,,2015-03-23,PY051,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9388765066,Musteri 0181 A.S.,Ticari,I,Kocaeli,Marmara,S011,,2019-08-25,PY011,bozulma,Konaklama ve yiyecek
+9618130408,Musteri 0182 A.S.,KOBI,I,Istanbul,Marmara,S002,,2018-03-29,PY003,bozulma,Konaklama ve yiyecek
+9400194933,Musteri 0183 A.S.,Ticari,G,Ankara,Ic Anadolu,S031,G027,2020-11-25,PY031,birlikte_buyume,Toptan ve perakende ticaret
+9865468790,Musteri 0184 A.S.,Ticari,M,Gaziantep,Guneydogu,S091,G036,2024-05-20,PY093,stabil,Mesleki ve teknik faaliyetler
+9259163454,Musteri 0185 A.S.,KOBI,C,Bursa,Marmara,S022,,2024-04-22,PY021,proje_buyumesi,Imalat
+9690285574,Musteri 0186 A.S.,Ticari,M,Izmir,Ege,S051,G022,2025-05-25,PY051,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9623554567,Musteri 0187 A.S.,KOBI,J,Antalya,Akdeniz,S072,,2025-04-10,PY071,stabil,Bilgi ve iletisim
+9567050564,Musteri 0188 A.S.,Ticari,I,Trabzon,Karadeniz,S111,,2018-04-13,PY112,stabil,Konaklama ve yiyecek
+9506687736,Musteri 0189 A.S.,KOBI,J,Istanbul,Marmara,S002,,2024-02-26,PY001,rakip_buyutuyor,Bilgi ve iletisim
+9634592203,Musteri 0190 A.S.,Ticari,M,Kayseri,Ic Anadolu,S101,,2018-03-17,PY101,stabil,Mesleki ve teknik faaliyetler
+9827446828,Musteri 0191 A.S.,Ticari,I,Ankara,Ic Anadolu,S031,,2023-05-27,PY032,sessiz_cikis,Konaklama ve yiyecek
+9957833541,Musteri 0192 A.S.,Ticari,M,Adana,Akdeniz,S081,,2020-03-20,PY083,stabil,Mesleki ve teknik faaliyetler
+9794463532,Musteri 0193 A.S.,Ticari,G,Istanbul,Marmara,S001,G058,2025-01-05,PY001,stabil,Toptan ve perakende ticaret
+9533832130,Musteri 0194 A.S.,Kurumsal,I,Ankara,Ic Anadolu,S030,G026,2020-10-20,PY032,bozulma,Konaklama ve yiyecek
+9322896789,Musteri 0195 A.S.,Kurumsal,I,Ankara,Ic Anadolu,S030,,2019-12-01,PY033,stabil,Konaklama ve yiyecek
+9740535238,Musteri 0196 A.S.,Ticari,C,Ankara,Ic Anadolu,S031,,2024-05-28,PY032,stabil,Imalat
+9725375690,Musteri 0197 A.S.,Kurumsal,F,Istanbul,Marmara,S000,G069,2023-02-10,PY002,birlikte_buyume,Insaat
+9246120977,Musteri 0198 A.S.,Kurumsal,G,Ankara,Ic Anadolu,S030,G012,2016-09-05,PY032,bozulma,Toptan ve perakende ticaret
+9492387041,Musteri 0199 A.S.,KOBI,F,Denizli,Ege,S062,,2019-10-21,PY061,stabil,Insaat
+9932466225,Musteri 0200 A.S.,KOBI,H,Antalya,Akdeniz,S072,G076,2016-02-28,PY073,stabil,Ulastirma ve depolama
+9276574680,Musteri 0201 A.S.,KOBI,M,Ankara,Ic Anadolu,S032,,2023-06-16,PY032,proje_buyumesi,Mesleki ve teknik faaliyetler
+9170340525,Musteri 0202 A.S.,Ticari,C,Ankara,Ic Anadolu,S031,,2016-05-29,PY033,ana_banka,Imalat
+9532900577,Musteri 0203 A.S.,KOBI,G,Kocaeli,Marmara,S012,,2020-02-19,PY011,birlikte_buyume,Toptan ve perakende ticaret
+9765793023,Musteri 0204 A.S.,Ticari,I,Izmir,Ege,S051,,2024-09-13,PY051,stabil,Konaklama ve yiyecek
+9571461236,Musteri 0205 A.S.,Kurumsal,H,Istanbul,Marmara,S000,,2019-09-04,PY001,stabil,Ulastirma ve depolama
+9121001061,Musteri 0206 A.S.,Kurumsal,G,Istanbul,Marmara,S000,G030,2023-02-26,PY003,stabil,Toptan ve perakende ticaret
+9568946291,Musteri 0207 A.S.,KOBI,J,Konya,Ic Anadolu,S042,G075,2016-04-21,PY042,stabil,Bilgi ve iletisim
+9279822879,Musteri 0208 A.S.,Kurumsal,J,Izmir,Ege,S050,G047,2018-11-19,PY052,rakip_buyutuyor,Bilgi ve iletisim
+9211690642,Musteri 0209 A.S.,Ticari,F,Adana,Akdeniz,S081,,2018-08-11,PY083,stabil,Insaat
+9235538458,Musteri 0210 A.S.,KOBI,H,Gaziantep,Guneydogu,S092,,2024-07-23,PY093,birlikte_buyume,Ulastirma ve depolama
+9379109355,Musteri 0211 A.S.,Kurumsal,C,Ankara,Ic Anadolu,S030,,2017-06-05,PY033,rakip_buyutuyor,Imalat
+9356610160,Musteri 0212 A.S.,Kurumsal,H,Ankara,Ic Anadolu,S030,,2021-12-01,PY033,birlikte_buyume,Ulastirma ve depolama
+9385740951,Musteri 0213 A.S.,KOBI,J,Adana,Akdeniz,S082,,2016-12-06,PY083,stabil,Bilgi ve iletisim
+9685715130,Musteri 0214 A.S.,Ticari,F,Antalya,Akdeniz,S071,,2024-04-06,PY073,proje_buyumesi,Insaat
+9354536579,Musteri 0215 A.S.,Kurumsal,C,Izmir,Ege,S050,G015,2018-02-22,PY051,rakip_buyutuyor,Imalat
+9588106364,Musteri 0216 A.S.,KOBI,G,Ankara,Ic Anadolu,S032,G017,2020-10-13,PY033,rakip_buyutuyor,Toptan ve perakende ticaret
+9587544563,Musteri 0217 A.S.,KOBI,H,Trabzon,Karadeniz,S112,G034,2025-02-28,PY113,stabil,Ulastirma ve depolama
+9375519696,Musteri 0218 A.S.,Ticari,G,Antalya,Akdeniz,S071,,2017-05-16,PY071,stabil,Toptan ve perakende ticaret
+9112399619,Musteri 0219 A.S.,Ticari,H,Kocaeli,Marmara,S011,,2022-11-06,PY011,sessiz_cikis,Ulastirma ve depolama
+9788293633,Musteri 0220 A.S.,Ticari,J,Ankara,Ic Anadolu,S031,,2016-06-09,PY032,stabil,Bilgi ve iletisim
+9230436015,Musteri 0221 A.S.,Kurumsal,C,Istanbul,Marmara,S000,,2017-05-29,PY002,stabil,Imalat
+9479152114,Musteri 0222 A.S.,Ticari,J,Gaziantep,Guneydogu,S091,,2024-06-06,PY093,birlikte_buyume,Bilgi ve iletisim
+9392160065,Musteri 0223 A.S.,Ticari,C,Kocaeli,Marmara,S011,,2022-11-10,PY013,rakip_buyutuyor,Imalat
+9356326829,Musteri 0224 A.S.,KOBI,J,Izmir,Ege,S052,,2017-01-27,PY051,ana_banka,Bilgi ve iletisim
+9984793426,Musteri 0225 A.S.,KOBI,M,Bursa,Marmara,S022,G029,2020-09-28,PY023,stabil,Mesleki ve teknik faaliyetler
+9582552063,Musteri 0226 A.S.,Kurumsal,F,Izmir,Ege,S050,,2024-07-09,PY053,sessiz_cikis,Insaat
+9114607410,Musteri 0227 A.S.,Ticari,C,Konya,Ic Anadolu,S041,,2020-08-29,PY042,stabil,Imalat
+9102834852,Musteri 0228 A.S.,Ticari,H,Bursa,Marmara,S021,,2022-05-22,PY022,birlikte_buyume,Ulastirma ve depolama
+9217829180,Musteri 0229 A.S.,KOBI,F,Kayseri,Ic Anadolu,S102,,2024-12-13,PY103,rakip_buyutuyor,Insaat
+9553657515,Musteri 0230 A.S.,Ticari,C,Antalya,Akdeniz,S071,,2024-07-14,PY071,stabil,Imalat
+9757303219,Musteri 0231 A.S.,Ticari,H,Trabzon,Karadeniz,S111,,2015-01-29,PY111,stabil,Ulastirma ve depolama
+9554090715,Musteri 0232 A.S.,Ticari,J,Adana,Akdeniz,S081,,2016-04-21,PY081,stabil,Bilgi ve iletisim
+9472165082,Musteri 0233 A.S.,Ticari,J,Istanbul,Marmara,S001,,2021-12-24,PY002,ana_banka,Bilgi ve iletisim
+9978874359,Musteri 0234 A.S.,KOBI,F,Kocaeli,Marmara,S012,,2023-07-05,PY011,birlikte_buyume,Insaat
+9452653938,Musteri 0235 A.S.,KOBI,H,Antalya,Akdeniz,S072,,2023-05-13,PY072,sessiz_cikis,Ulastirma ve depolama
+9556260484,Musteri 0236 A.S.,Ticari,I,Kocaeli,Marmara,S011,G041,2021-09-14,PY012,proje_buyumesi,Konaklama ve yiyecek
+9514217895,Musteri 0237 A.S.,KOBI,H,Gaziantep,Guneydogu,S092,,2024-06-03,PY093,birlikte_buyume,Ulastirma ve depolama
+9339239422,Musteri 0238 A.S.,KOBI,F,Kayseri,Ic Anadolu,S102,,2020-11-28,PY102,proje_buyumesi,Insaat
+9135081439,Musteri 0239 A.S.,Ticari,H,Izmir,Ege,S051,G040,2015-04-23,PY051,stabil,Ulastirma ve depolama
+9772399785,Musteri 0240 A.S.,Ticari,G,Antalya,Akdeniz,S071,,2024-02-08,PY073,stabil,Toptan ve perakende ticaret
+9303680074,Musteri 0241 A.S.,Kurumsal,I,Ankara,Ic Anadolu,S030,,2021-01-19,PY033,bozulma,Konaklama ve yiyecek
+9993527161,Musteri 0242 A.S.,KOBI,H,Kocaeli,Marmara,S012,G027,2024-04-23,PY012,proje_buyumesi,Ulastirma ve depolama
+9579924828,Musteri 0243 A.S.,Ticari,J,Trabzon,Karadeniz,S111,,2023-08-08,PY112,stabil,Bilgi ve iletisim
+9934901562,Musteri 0244 A.S.,Ticari,I,Gaziantep,Guneydogu,S091,G021,2015-05-23,PY091,birlikte_buyume,Konaklama ve yiyecek
+9316224053,Musteri 0245 A.S.,Kurumsal,G,Izmir,Ege,S050,G022,2021-09-25,PY051,rakip_buyutuyor,Toptan ve perakende ticaret
+9273647562,Musteri 0246 A.S.,KOBI,M,Istanbul,Marmara,S002,,2021-06-14,PY003,bozulma,Mesleki ve teknik faaliyetler
+9407518238,Musteri 0247 A.S.,Ticari,G,Konya,Ic Anadolu,S041,G048,2025-03-27,PY041,rakip_buyutuyor,Toptan ve perakende ticaret
+9362340049,Musteri 0248 A.S.,KOBI,J,Izmir,Ege,S052,,2021-09-29,PY053,stabil,Bilgi ve iletisim
+9553797419,Musteri 0249 A.S.,Kurumsal,J,Izmir,Ege,S050,,2019-10-24,PY051,stabil,Bilgi ve iletisim
+9161203641,Musteri 0250 A.S.,KOBI,J,Gaziantep,Guneydogu,S092,,2020-05-18,PY093,stabil,Bilgi ve iletisim
+9490914323,Musteri 0251 A.S.,Kurumsal,C,Ankara,Ic Anadolu,S030,,2017-04-18,PY033,rakip_buyutuyor,Imalat
+9161259812,Musteri 0252 A.S.,Kurumsal,M,Izmir,Ege,S050,G074,2014-11-11,PY052,bozulma,Mesleki ve teknik faaliyetler
+9183943814,Musteri 0253 A.S.,KOBI,F,Istanbul,Marmara,S002,G052,2018-05-07,PY003,birlikte_buyume,Insaat
+9819300629,Musteri 0254 A.S.,KOBI,J,Ankara,Ic Anadolu,S032,,2019-01-21,PY032,stabil,Bilgi ve iletisim
+9776766621,Musteri 0255 A.S.,Ticari,F,Antalya,Akdeniz,S071,,2016-05-21,PY071,stabil,Insaat
+9503394478,Musteri 0256 A.S.,Ticari,H,Konya,Ic Anadolu,S041,,2022-09-01,PY043,rakip_buyutuyor,Ulastirma ve depolama
+9143448279,Musteri 0257 A.S.,KOBI,M,Adana,Akdeniz,S082,G069,2015-12-09,PY083,proje_buyumesi,Mesleki ve teknik faaliyetler
+9781275411,Musteri 0258 A.S.,KOBI,G,Denizli,Ege,S062,,2024-12-12,PY062,stabil,Toptan ve perakende ticaret
+9331635081,Musteri 0259 A.S.,Ticari,G,Antalya,Akdeniz,S071,G040,2017-04-18,PY072,stabil,Toptan ve perakende ticaret
+9609211197,Musteri 0260 A.S.,Ticari,H,Istanbul,Marmara,S001,,2021-01-29,PY003,birlikte_buyume,Ulastirma ve depolama
+9702526764,Musteri 0261 A.S.,KOBI,M,Ankara,Ic Anadolu,S032,,2020-03-09,PY033,stabil,Mesleki ve teknik faaliyetler
+9854322899,Musteri 0262 A.S.,KOBI,F,Denizli,Ege,S062,,2023-12-26,PY062,bozulma,Insaat
+9836404617,Musteri 0263 A.S.,KOBI,G,Trabzon,Karadeniz,S112,G047,2023-09-23,PY113,stabil,Toptan ve perakende ticaret
+9203667447,Musteri 0264 A.S.,Ticari,G,Kocaeli,Marmara,S011,,2019-06-21,PY011,stabil,Toptan ve perakende ticaret
+9403241394,Musteri 0265 A.S.,Kurumsal,I,Izmir,Ege,S050,,2025-05-17,PY051,sessiz_cikis,Konaklama ve yiyecek
+9365396061,Musteri 0266 A.S.,KOBI,F,Bursa,Marmara,S022,,2021-06-13,PY021,stabil,Insaat
+9943346287,Musteri 0267 A.S.,KOBI,F,Kayseri,Ic Anadolu,S102,G071,2022-09-18,PY101,stabil,Insaat
+9628871477,Musteri 0268 A.S.,KOBI,G,Istanbul,Marmara,S002,,2017-10-26,PY002,stabil,Toptan ve perakende ticaret
+9741592403,Musteri 0269 A.S.,Kurumsal,C,Istanbul,Marmara,S000,,2017-04-29,PY002,stabil,Imalat
+9885278574,Musteri 0270 A.S.,Ticari,F,Adana,Akdeniz,S081,,2020-05-04,PY083,stabil,Insaat
+9908436946,Musteri 0271 A.S.,KOBI,C,Ankara,Ic Anadolu,S032,,2018-06-30,PY033,stabil,Imalat
+9383245702,Musteri 0272 A.S.,Kurumsal,G,Izmir,Ege,S050,,2021-09-14,PY053,stabil,Toptan ve perakende ticaret
+9376952771,Musteri 0273 A.S.,KOBI,F,Denizli,Ege,S062,,2016-04-23,PY061,stabil,Insaat
+9734745168,Musteri 0274 A.S.,Ticari,I,Ankara,Ic Anadolu,S031,G006,2024-04-04,PY032,birlikte_buyume,Konaklama ve yiyecek
+9405114271,Musteri 0275 A.S.,KOBI,I,Kocaeli,Marmara,S012,G052,2016-12-13,PY013,rakip_buyutuyor,Konaklama ve yiyecek
+9461997290,Musteri 0276 A.S.,KOBI,M,Trabzon,Karadeniz,S112,G068,2022-01-29,PY113,stabil,Mesleki ve teknik faaliyetler
+9583455383,Musteri 0277 A.S.,Ticari,H,Denizli,Ege,S061,G024,2020-06-26,PY062,stabil,Ulastirma ve depolama
+9447329162,Musteri 0278 A.S.,Ticari,F,Kocaeli,Marmara,S011,G016,2022-03-20,PY012,birlikte_buyume,Insaat
+9320030683,Musteri 0279 A.S.,Ticari,G,Kocaeli,Marmara,S011,,2014-10-29,PY013,bozulma,Toptan ve perakende ticaret
+9440981160,Musteri 0280 A.S.,Ticari,G,Kayseri,Ic Anadolu,S101,,2019-03-20,PY101,bozulma,Toptan ve perakende ticaret
+9918817818,Musteri 0281 A.S.,Ticari,M,Ankara,Ic Anadolu,S031,G063,2017-11-23,PY032,stabil,Mesleki ve teknik faaliyetler
+9728486566,Musteri 0282 A.S.,Ticari,H,Istanbul,Marmara,S001,,2014-12-10,PY001,stabil,Ulastirma ve depolama
+9499345925,Musteri 0283 A.S.,KOBI,H,Gaziantep,Guneydogu,S092,G056,2017-06-17,PY091,stabil,Ulastirma ve depolama
+9751088231,Musteri 0284 A.S.,Ticari,J,Istanbul,Marmara,S001,,2016-03-13,PY003,stabil,Bilgi ve iletisim
+9631755299,Musteri 0285 A.S.,Kurumsal,J,Izmir,Ege,S050,,2025-01-09,PY051,birlikte_buyume,Bilgi ve iletisim
+9294642378,Musteri 0286 A.S.,Ticari,F,Kocaeli,Marmara,S011,,2016-04-18,PY012,stabil,Insaat
+9118475044,Musteri 0287 A.S.,Ticari,F,Izmir,Ege,S051,,2017-12-18,PY053,stabil,Insaat
+9283923590,Musteri 0288 A.S.,Kurumsal,I,Ankara,Ic Anadolu,S030,,2024-07-03,PY033,stabil,Konaklama ve yiyecek
+9174940784,Musteri 0289 A.S.,Kurumsal,F,Izmir,Ege,S050,G016,2015-02-06,PY051,birlikte_buyume,Insaat
+9628076396,Musteri 0290 A.S.,KOBI,I,Kayseri,Ic Anadolu,S102,,2019-01-05,PY101,stabil,Konaklama ve yiyecek
+9135571256,Musteri 0291 A.S.,Ticari,C,Adana,Akdeniz,S081,G058,2015-11-18,PY081,bozulma,Imalat
+9756545578,Musteri 0292 A.S.,KOBI,M,Kocaeli,Marmara,S012,,2015-05-07,PY011,stabil,Mesleki ve teknik faaliyetler
+9316097315,Musteri 0293 A.S.,Ticari,H,Denizli,Ege,S061,,2024-07-07,PY061,sessiz_cikis,Ulastirma ve depolama
+9569542792,Musteri 0294 A.S.,Kurumsal,H,Izmir,Ege,S050,,2020-11-21,PY052,stabil,Ulastirma ve depolama
+9656003254,Musteri 0295 A.S.,KOBI,M,Denizli,Ege,S062,G031,2021-05-21,PY061,bozulma,Mesleki ve teknik faaliyetler
+9785969271,Musteri 0296 A.S.,KOBI,G,Istanbul,Marmara,S002,G022,2023-08-21,PY001,sessiz_cikis,Toptan ve perakende ticaret
+9842070551,Musteri 0297 A.S.,Ticari,H,Bursa,Marmara,S021,,2016-06-26,PY021,ana_banka,Ulastirma ve depolama
+9160280211,Musteri 0298 A.S.,Ticari,C,Adana,Akdeniz,S081,G032,2022-05-15,PY081,proje_buyumesi,Imalat
+9987426768,Musteri 0299 A.S.,Kurumsal,G,Ankara,Ic Anadolu,S030,G017,2024-01-30,PY032,proje_buyumesi,Toptan ve perakende ticaret
+9848932017,Musteri 0300 A.S.,Ticari,I,Gaziantep,Guneydogu,S091,,2022-02-27,PY093,rakip_buyutuyor,Konaklama ve yiyecek
+9224722496,Musteri 0301 A.S.,Ticari,J,Izmir,Ege,S051,,2020-12-01,PY051,proje_buyumesi,Bilgi ve iletisim
+9849214195,Musteri 0302 A.S.,Ticari,G,Izmir,Ege,S051,,2018-07-06,PY051,stabil,Toptan ve perakende ticaret
+9253287179,Musteri 0303 A.S.,Kurumsal,I,Ankara,Ic Anadolu,S030,,2024-10-06,PY033,birlikte_buyume,Konaklama ve yiyecek
+9107175792,Musteri 0304 A.S.,Ticari,J,Izmir,Ege,S051,G079,2016-04-09,PY053,birlikte_buyume,Bilgi ve iletisim
+9167816279,Musteri 0305 A.S.,KOBI,C,Bursa,Marmara,S022,G071,2024-11-25,PY022,bozulma,Imalat
+9311233139,Musteri 0306 A.S.,KOBI,H,Denizli,Ege,S062,,2019-08-21,PY061,birlikte_buyume,Ulastirma ve depolama
+9897831267,Musteri 0307 A.S.,Ticari,H,Adana,Akdeniz,S081,,2015-12-26,PY083,stabil,Ulastirma ve depolama
+9235116600,Musteri 0308 A.S.,Kurumsal,I,Izmir,Ege,S050,G066,2022-05-24,PY052,rakip_buyutuyor,Konaklama ve yiyecek
+9897701341,Musteri 0309 A.S.,Ticari,C,Gaziantep,Guneydogu,S091,,2018-05-21,PY093,stabil,Imalat
+9844722751,Musteri 0310 A.S.,Ticari,G,Istanbul,Marmara,S001,,2021-10-05,PY002,stabil,Toptan ve perakende ticaret
+9394208516,Musteri 0311 A.S.,KOBI,I,Denizli,Ege,S062,G025,2016-03-31,PY062,birlikte_buyume,Konaklama ve yiyecek
+9825631514,Musteri 0312 A.S.,KOBI,M,Adana,Akdeniz,S082,,2019-05-11,PY081,stabil,Mesleki ve teknik faaliyetler
+9724473400,Musteri 0313 A.S.,KOBI,M,Adana,Akdeniz,S082,G067,2020-10-30,PY081,stabil,Mesleki ve teknik faaliyetler
+9107755531,Musteri 0314 A.S.,KOBI,C,Antalya,Akdeniz,S072,,2024-12-31,PY071,stabil,Imalat
+9401943791,Musteri 0315 A.S.,KOBI,J,Trabzon,Karadeniz,S112,G068,2019-03-02,PY112,stabil,Bilgi ve iletisim
+9859892873,Musteri 0316 A.S.,KOBI,G,Ankara,Ic Anadolu,S032,G025,2019-02-18,PY031,stabil,Toptan ve perakende ticaret
+9974028704,Musteri 0317 A.S.,Kurumsal,F,Istanbul,Marmara,S000,G040,2024-03-06,PY002,stabil,Insaat
+9650660307,Musteri 0318 A.S.,Kurumsal,I,Ankara,Ic Anadolu,S030,,2018-02-06,PY033,rakip_buyutuyor,Konaklama ve yiyecek
+9903287345,Musteri 0319 A.S.,Ticari,G,Trabzon,Karadeniz,S111,G064,2019-11-13,PY112,stabil,Toptan ve perakende ticaret
+9885385383,Musteri 0320 A.S.,Ticari,G,Adana,Akdeniz,S081,,2019-09-24,PY083,sessiz_cikis,Toptan ve perakende ticaret
+9977131371,Musteri 0321 A.S.,Kurumsal,H,Izmir,Ege,S050,,2021-01-15,PY053,sessiz_cikis,Ulastirma ve depolama
+9196558351,Musteri 0322 A.S.,KOBI,G,Gaziantep,Guneydogu,S092,,2022-12-21,PY091,birlikte_buyume,Toptan ve perakende ticaret
+9865669104,Musteri 0323 A.S.,Ticari,M,Ankara,Ic Anadolu,S031,G008,2023-05-21,PY033,stabil,Mesleki ve teknik faaliyetler
+9187241087,Musteri 0324 A.S.,Ticari,F,Trabzon,Karadeniz,S111,,2015-11-13,PY111,birlikte_buyume,Insaat
+9861370355,Musteri 0325 A.S.,Kurumsal,I,Ankara,Ic Anadolu,S030,,2024-11-14,PY033,bozulma,Konaklama ve yiyecek
+9746515506,Musteri 0326 A.S.,Ticari,M,Konya,Ic Anadolu,S041,,2019-03-26,PY043,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9271445039,Musteri 0327 A.S.,Kurumsal,M,Izmir,Ege,S050,,2023-06-19,PY052,proje_buyumesi,Mesleki ve teknik faaliyetler
+9493415237,Musteri 0328 A.S.,KOBI,I,Bursa,Marmara,S022,,2017-05-30,PY022,birlikte_buyume,Konaklama ve yiyecek
+9105758806,Musteri 0329 A.S.,Ticari,F,Bursa,Marmara,S021,,2021-11-21,PY022,rakip_buyutuyor,Insaat
+9614412805,Musteri 0330 A.S.,KOBI,C,Konya,Ic Anadolu,S042,,2024-12-24,PY043,stabil,Imalat
+9410751273,Musteri 0331 A.S.,Ticari,I,Istanbul,Marmara,S001,,2023-06-25,PY002,rakip_buyutuyor,Konaklama ve yiyecek
+9811218839,Musteri 0332 A.S.,Ticari,J,Kayseri,Ic Anadolu,S101,,2018-10-26,PY101,stabil,Bilgi ve iletisim
+9799926935,Musteri 0333 A.S.,Ticari,C,Bursa,Marmara,S021,G067,2019-11-10,PY023,rakip_buyutuyor,Imalat
+9599350356,Musteri 0334 A.S.,KOBI,I,Izmir,Ege,S052,G032,2019-03-02,PY051,bozulma,Konaklama ve yiyecek
+9113494706,Musteri 0335 A.S.,KOBI,J,Kocaeli,Marmara,S012,,2021-06-09,PY012,stabil,Bilgi ve iletisim
+9632226348,Musteri 0336 A.S.,Ticari,G,Adana,Akdeniz,S081,,2021-11-18,PY083,rakip_buyutuyor,Toptan ve perakende ticaret
+9132250337,Musteri 0337 A.S.,KOBI,J,Ankara,Ic Anadolu,S032,,2022-09-02,PY032,stabil,Bilgi ve iletisim
+9145341764,Musteri 0338 A.S.,Kurumsal,J,Ankara,Ic Anadolu,S030,G012,2023-10-15,PY032,rakip_buyutuyor,Bilgi ve iletisim
+9949729282,Musteri 0339 A.S.,KOBI,G,Kocaeli,Marmara,S012,G040,2015-05-24,PY011,stabil,Toptan ve perakende ticaret
+9834157571,Musteri 0340 A.S.,Kurumsal,J,Ankara,Ic Anadolu,S030,,2021-05-27,PY033,sessiz_cikis,Bilgi ve iletisim
+9616134047,Musteri 0341 A.S.,Ticari,C,Gaziantep,Guneydogu,S091,,2015-11-10,PY093,stabil,Imalat
+9461924267,Musteri 0342 A.S.,KOBI,F,Adana,Akdeniz,S082,,2024-12-16,PY083,ana_banka,Insaat
+9683896248,Musteri 0343 A.S.,Kurumsal,H,Ankara,Ic Anadolu,S030,,2018-08-18,PY031,proje_buyumesi,Ulastirma ve depolama
+9837505679,Musteri 0344 A.S.,Ticari,I,Konya,Ic Anadolu,S041,G040,2018-10-16,PY043,birlikte_buyume,Konaklama ve yiyecek
+9955446642,Musteri 0345 A.S.,Ticari,H,Denizli,Ege,S061,G066,2016-06-16,PY061,proje_buyumesi,Ulastirma ve depolama
+9693066967,Musteri 0346 A.S.,Ticari,M,Izmir,Ege,S051,,2017-02-23,PY052,proje_buyumesi,Mesleki ve teknik faaliyetler
+9516340054,Musteri 0347 A.S.,KOBI,I,Ankara,Ic Anadolu,S032,G034,2022-10-14,PY031,sessiz_cikis,Konaklama ve yiyecek
+9309458931,Musteri 0348 A.S.,KOBI,G,Istanbul,Marmara,S002,G067,2025-04-13,PY001,stabil,Toptan ve perakende ticaret
+9593752653,Musteri 0349 A.S.,KOBI,M,Denizli,Ege,S062,G017,2021-03-29,PY062,birlikte_buyume,Mesleki ve teknik faaliyetler
+9431283943,Musteri 0350 A.S.,Ticari,J,Kocaeli,Marmara,S011,,2018-10-20,PY012,stabil,Bilgi ve iletisim
+9966429055,Musteri 0351 A.S.,Ticari,M,Gaziantep,Guneydogu,S091,,2015-05-13,PY093,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9668157325,Musteri 0352 A.S.,Ticari,H,Ankara,Ic Anadolu,S031,,2018-11-13,PY032,stabil,Ulastirma ve depolama
+9573945892,Musteri 0353 A.S.,Ticari,C,Gaziantep,Guneydogu,S091,,2015-10-09,PY092,birlikte_buyume,Imalat
+9803319255,Musteri 0354 A.S.,Kurumsal,F,Izmir,Ege,S050,G030,2016-11-12,PY052,birlikte_buyume,Insaat
+9556471107,Musteri 0355 A.S.,KOBI,C,Istanbul,Marmara,S002,,2020-10-29,PY003,birlikte_buyume,Imalat
+9898549049,Musteri 0356 A.S.,KOBI,G,Gaziantep,Guneydogu,S092,,2020-09-30,PY091,birlikte_buyume,Toptan ve perakende ticaret
+9387699010,Musteri 0357 A.S.,KOBI,M,Denizli,Ege,S062,,2022-05-11,PY061,proje_buyumesi,Mesleki ve teknik faaliyetler
+9198164725,Musteri 0358 A.S.,Ticari,I,Antalya,Akdeniz,S071,,2022-01-07,PY071,proje_buyumesi,Konaklama ve yiyecek
+9723494412,Musteri 0359 A.S.,Ticari,M,Bursa,Marmara,S021,G002,2022-10-09,PY022,birlikte_buyume,Mesleki ve teknik faaliyetler
+9127895309,Musteri 0360 A.S.,Ticari,J,Izmir,Ege,S051,,2018-11-22,PY051,birlikte_buyume,Bilgi ve iletisim
+9323318519,Musteri 0361 A.S.,Ticari,H,Trabzon,Karadeniz,S111,,2022-01-17,PY112,sessiz_cikis,Ulastirma ve depolama
+9512725349,Musteri 0362 A.S.,Ticari,I,Ankara,Ic Anadolu,S031,,2021-06-20,PY031,stabil,Konaklama ve yiyecek
+9676298913,Musteri 0363 A.S.,Kurumsal,J,Izmir,Ege,S050,,2021-07-17,PY052,stabil,Bilgi ve iletisim
+9335437173,Musteri 0364 A.S.,Kurumsal,I,Ankara,Ic Anadolu,S030,,2015-07-24,PY031,stabil,Konaklama ve yiyecek
+9933563976,Musteri 0365 A.S.,KOBI,G,Trabzon,Karadeniz,S112,,2025-03-24,PY112,rakip_buyutuyor,Toptan ve perakende ticaret
+9749898295,Musteri 0366 A.S.,Ticari,F,Trabzon,Karadeniz,S111,G048,2020-09-27,PY113,stabil,Insaat
+9284144676,Musteri 0367 A.S.,KOBI,F,Konya,Ic Anadolu,S042,,2024-07-28,PY042,proje_buyumesi,Insaat
+9790894929,Musteri 0368 A.S.,Kurumsal,I,Istanbul,Marmara,S000,,2015-12-11,PY003,rakip_buyutuyor,Konaklama ve yiyecek
+9836432557,Musteri 0369 A.S.,Ticari,G,Trabzon,Karadeniz,S111,,2020-03-12,PY111,stabil,Toptan ve perakende ticaret
+9466170255,Musteri 0370 A.S.,Ticari,M,Izmir,Ege,S051,,2015-06-01,PY052,bozulma,Mesleki ve teknik faaliyetler
+9852855900,Musteri 0371 A.S.,Ticari,I,Gaziantep,Guneydogu,S091,,2017-12-14,PY093,proje_buyumesi,Konaklama ve yiyecek
+9128423197,Musteri 0372 A.S.,Kurumsal,C,Ankara,Ic Anadolu,S030,,2023-12-18,PY033,stabil,Imalat
+9807938196,Musteri 0373 A.S.,Kurumsal,I,Ankara,Ic Anadolu,S030,,2022-04-07,PY033,stabil,Konaklama ve yiyecek
+9837333446,Musteri 0374 A.S.,KOBI,H,Kayseri,Ic Anadolu,S102,,2020-03-25,PY101,stabil,Ulastirma ve depolama
+9221688379,Musteri 0375 A.S.,Ticari,H,Gaziantep,Guneydogu,S091,G030,2016-04-15,PY092,stabil,Ulastirma ve depolama
+9922514230,Musteri 0376 A.S.,Ticari,M,Bursa,Marmara,S021,,2015-10-09,PY023,stabil,Mesleki ve teknik faaliyetler
+9305502608,Musteri 0377 A.S.,Ticari,I,Denizli,Ege,S061,,2015-07-13,PY061,sessiz_cikis,Konaklama ve yiyecek
+9742709001,Musteri 0378 A.S.,Ticari,H,Kayseri,Ic Anadolu,S101,,2024-11-12,PY101,stabil,Ulastirma ve depolama
+9994053230,Musteri 0379 A.S.,Ticari,C,Kayseri,Ic Anadolu,S101,,2016-08-01,PY103,stabil,Imalat
+9667136772,Musteri 0380 A.S.,Kurumsal,I,Istanbul,Marmara,S000,,2019-12-05,PY001,rakip_buyutuyor,Konaklama ve yiyecek
+9653638876,Musteri 0381 A.S.,KOBI,F,Denizli,Ege,S062,,2021-06-18,PY061,birlikte_buyume,Insaat
+9744960480,Musteri 0382 A.S.,KOBI,J,Antalya,Akdeniz,S072,,2017-05-15,PY071,sessiz_cikis,Bilgi ve iletisim
+9338333956,Musteri 0383 A.S.,KOBI,G,Ankara,Ic Anadolu,S032,,2021-11-15,PY033,proje_buyumesi,Toptan ve perakende ticaret
+9818874844,Musteri 0384 A.S.,Ticari,C,Kocaeli,Marmara,S011,,2018-05-23,PY011,birlikte_buyume,Imalat
+9259595854,Musteri 0385 A.S.,Kurumsal,G,Istanbul,Marmara,S000,,2021-04-17,PY003,stabil,Toptan ve perakende ticaret
+9919946734,Musteri 0386 A.S.,KOBI,M,Adana,Akdeniz,S082,,2021-02-15,PY082,ana_banka,Mesleki ve teknik faaliyetler
+9195348121,Musteri 0387 A.S.,Ticari,J,Izmir,Ege,S051,,2023-02-02,PY053,rakip_buyutuyor,Bilgi ve iletisim
+9454675680,Musteri 0388 A.S.,Kurumsal,H,Izmir,Ege,S050,,2022-11-15,PY052,ana_banka,Ulastirma ve depolama
+9451813732,Musteri 0389 A.S.,Ticari,M,Trabzon,Karadeniz,S111,G059,2019-05-09,PY112,stabil,Mesleki ve teknik faaliyetler
+9371612080,Musteri 0390 A.S.,KOBI,I,Ankara,Ic Anadolu,S032,,2022-06-14,PY032,bozulma,Konaklama ve yiyecek
+9623799215,Musteri 0391 A.S.,Ticari,F,Ankara,Ic Anadolu,S031,,2020-02-22,PY033,rakip_buyutuyor,Insaat
+9771083191,Musteri 0392 A.S.,KOBI,C,Ankara,Ic Anadolu,S032,,2021-11-07,PY032,stabil,Imalat
+9345757517,Musteri 0393 A.S.,KOBI,F,Trabzon,Karadeniz,S112,,2018-05-21,PY111,birlikte_buyume,Insaat
+9765255089,Musteri 0394 A.S.,Ticari,G,Kayseri,Ic Anadolu,S101,,2022-12-13,PY101,rakip_buyutuyor,Toptan ve perakende ticaret
+9560029386,Musteri 0395 A.S.,KOBI,F,Konya,Ic Anadolu,S042,,2015-05-08,PY041,stabil,Insaat
+9311629528,Musteri 0396 A.S.,Ticari,M,Antalya,Akdeniz,S071,,2023-08-03,PY071,birlikte_buyume,Mesleki ve teknik faaliyetler
+9837692397,Musteri 0397 A.S.,Ticari,H,Bursa,Marmara,S021,,2025-02-28,PY023,bozulma,Ulastirma ve depolama
+9866340979,Musteri 0398 A.S.,Kurumsal,I,Izmir,Ege,S050,,2025-03-29,PY052,stabil,Konaklama ve yiyecek
+9831067251,Musteri 0399 A.S.,KOBI,H,Trabzon,Karadeniz,S112,,2017-11-28,PY112,birlikte_buyume,Ulastirma ve depolama
+9379946592,Musteri 0400 A.S.,Ticari,F,Istanbul,Marmara,S001,G045,2018-08-16,PY003,stabil,Insaat
+9166244835,Musteri 0401 A.S.,Kurumsal,F,Izmir,Ege,S050,G066,2024-01-05,PY051,stabil,Insaat
+9965366523,Musteri 0402 A.S.,Ticari,F,Izmir,Ege,S051,,2019-11-16,PY053,sessiz_cikis,Insaat
+9110926810,Musteri 0403 A.S.,Kurumsal,G,Ankara,Ic Anadolu,S030,,2019-07-20,PY033,proje_buyumesi,Toptan ve perakende ticaret
+9326536868,Musteri 0404 A.S.,Kurumsal,G,Izmir,Ege,S050,,2020-12-01,PY051,stabil,Toptan ve perakende ticaret
+9377050108,Musteri 0405 A.S.,Ticari,C,Izmir,Ege,S051,,2019-12-18,PY053,ana_banka,Imalat
+9736804248,Musteri 0406 A.S.,Ticari,G,Antalya,Akdeniz,S071,,2025-02-21,PY072,bozulma,Toptan ve perakende ticaret
+9634053032,Musteri 0407 A.S.,KOBI,H,Ankara,Ic Anadolu,S032,G005,2019-11-02,PY031,stabil,Ulastirma ve depolama
+9183957440,Musteri 0408 A.S.,Ticari,I,Konya,Ic Anadolu,S041,G024,2016-06-19,PY042,bozulma,Konaklama ve yiyecek
+9788330800,Musteri 0409 A.S.,KOBI,M,Antalya,Akdeniz,S072,,2021-08-24,PY071,stabil,Mesleki ve teknik faaliyetler
+9796988749,Musteri 0410 A.S.,Ticari,F,Kayseri,Ic Anadolu,S101,,2014-11-27,PY101,ana_banka,Insaat
+9302767604,Musteri 0411 A.S.,KOBI,C,Antalya,Akdeniz,S072,,2017-10-03,PY071,rakip_buyutuyor,Imalat
+9610524221,Musteri 0412 A.S.,Ticari,M,Izmir,Ege,S051,,2015-10-21,PY053,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9706737760,Musteri 0413 A.S.,Ticari,H,Ankara,Ic Anadolu,S031,,2019-11-19,PY033,stabil,Ulastirma ve depolama
+9628730762,Musteri 0414 A.S.,KOBI,G,Trabzon,Karadeniz,S112,G047,2015-05-23,PY112,bozulma,Toptan ve perakende ticaret
+9179794485,Musteri 0415 A.S.,Ticari,I,Istanbul,Marmara,S001,,2016-10-06,PY003,stabil,Konaklama ve yiyecek
+9245604211,Musteri 0416 A.S.,Kurumsal,G,Izmir,Ege,S050,,2016-12-11,PY051,stabil,Toptan ve perakende ticaret
+9297421840,Musteri 0417 A.S.,KOBI,J,Trabzon,Karadeniz,S112,,2018-06-25,PY112,stabil,Bilgi ve iletisim
+9562643376,Musteri 0418 A.S.,KOBI,C,Gaziantep,Guneydogu,S092,G021,2020-05-30,PY091,proje_buyumesi,Imalat
+9183285089,Musteri 0419 A.S.,Kurumsal,I,Izmir,Ege,S050,,2022-02-21,PY051,stabil,Konaklama ve yiyecek
+9722696583,Musteri 0420 A.S.,Ticari,F,Antalya,Akdeniz,S071,,2018-02-25,PY072,sessiz_cikis,Insaat
+9508491514,Musteri 0421 A.S.,KOBI,G,Istanbul,Marmara,S002,,2017-11-28,PY001,rakip_buyutuyor,Toptan ve perakende ticaret
+9765847984,Musteri 0422 A.S.,KOBI,F,Konya,Ic Anadolu,S042,,2014-12-04,PY041,stabil,Insaat
+9575008790,Musteri 0423 A.S.,KOBI,I,Adana,Akdeniz,S082,,2019-10-16,PY083,stabil,Konaklama ve yiyecek
+9793355844,Musteri 0424 A.S.,Ticari,G,Kocaeli,Marmara,S011,,2014-10-26,PY012,stabil,Toptan ve perakende ticaret
+9506045038,Musteri 0425 A.S.,KOBI,I,Antalya,Akdeniz,S072,G022,2022-11-19,PY072,rakip_buyutuyor,Konaklama ve yiyecek
+9614307055,Musteri 0426 A.S.,Ticari,J,Adana,Akdeniz,S081,G072,2023-09-24,PY081,proje_buyumesi,Bilgi ve iletisim
+9280935817,Musteri 0427 A.S.,KOBI,M,Istanbul,Marmara,S002,,2021-01-09,PY001,stabil,Mesleki ve teknik faaliyetler
+9125463074,Musteri 0428 A.S.,Ticari,H,Istanbul,Marmara,S001,G045,2017-04-19,PY002,bozulma,Ulastirma ve depolama
+9197655505,Musteri 0429 A.S.,KOBI,M,Denizli,Ege,S062,G054,2018-03-27,PY062,stabil,Mesleki ve teknik faaliyetler
+9960274480,Musteri 0430 A.S.,Ticari,M,Konya,Ic Anadolu,S041,,2015-01-03,PY041,proje_buyumesi,Mesleki ve teknik faaliyetler
+9320633314,Musteri 0431 A.S.,Ticari,F,Gaziantep,Guneydogu,S091,,2019-12-01,PY093,sessiz_cikis,Insaat
+9299758635,Musteri 0432 A.S.,KOBI,M,Izmir,Ege,S052,,2020-09-03,PY051,proje_buyumesi,Mesleki ve teknik faaliyetler
+9782472222,Musteri 0433 A.S.,Ticari,I,Kocaeli,Marmara,S011,,2015-04-20,PY012,rakip_buyutuyor,Konaklama ve yiyecek
+9343423071,Musteri 0434 A.S.,KOBI,H,Denizli,Ege,S062,G030,2023-06-21,PY063,bozulma,Ulastirma ve depolama
+9489698393,Musteri 0435 A.S.,Ticari,H,Trabzon,Karadeniz,S111,G035,2017-05-21,PY111,stabil,Ulastirma ve depolama
+9629039736,Musteri 0436 A.S.,Ticari,M,Trabzon,Karadeniz,S111,G019,2024-09-12,PY113,stabil,Mesleki ve teknik faaliyetler
+9438822490,Musteri 0437 A.S.,Ticari,I,Izmir,Ege,S051,,2021-06-08,PY051,stabil,Konaklama ve yiyecek
+9388753206,Musteri 0438 A.S.,Ticari,H,Izmir,Ege,S051,,2017-05-23,PY052,birlikte_buyume,Ulastirma ve depolama
+9961518072,Musteri 0439 A.S.,Ticari,H,Gaziantep,Guneydogu,S091,,2025-06-08,PY092,rakip_buyutuyor,Ulastirma ve depolama
+9472984543,Musteri 0440 A.S.,Kurumsal,I,Izmir,Ege,S050,,2019-11-19,PY052,rakip_buyutuyor,Konaklama ve yiyecek
+9473402071,Musteri 0441 A.S.,Kurumsal,G,Istanbul,Marmara,S000,G067,2021-02-10,PY002,bozulma,Toptan ve perakende ticaret
+9302018082,Musteri 0442 A.S.,KOBI,C,Trabzon,Karadeniz,S112,,2015-12-21,PY112,stabil,Imalat
+9118235015,Musteri 0443 A.S.,KOBI,H,Adana,Akdeniz,S082,G020,2016-01-29,PY081,rakip_buyutuyor,Ulastirma ve depolama
+9229726848,Musteri 0444 A.S.,KOBI,G,Trabzon,Karadeniz,S112,,2019-10-04,PY111,stabil,Toptan ve perakende ticaret
+9245682424,Musteri 0445 A.S.,Kurumsal,F,Ankara,Ic Anadolu,S030,,2024-07-03,PY031,stabil,Insaat
+9522599668,Musteri 0446 A.S.,Ticari,H,Izmir,Ege,S051,G033,2025-03-31,PY052,rakip_buyutuyor,Ulastirma ve depolama
+9458140848,Musteri 0447 A.S.,Kurumsal,C,Ankara,Ic Anadolu,S030,G016,2023-12-09,PY033,ana_banka,Imalat
+9680912167,Musteri 0448 A.S.,KOBI,I,Istanbul,Marmara,S002,,2017-08-28,PY001,rakip_buyutuyor,Konaklama ve yiyecek
+9977050803,Musteri 0449 A.S.,KOBI,G,Trabzon,Karadeniz,S112,,2023-04-28,PY112,stabil,Toptan ve perakende ticaret
+9211935313,Musteri 0450 A.S.,Ticari,G,Denizli,Ege,S061,,2022-03-20,PY061,rakip_buyutuyor,Toptan ve perakende ticaret
+9997362109,Musteri 0451 A.S.,KOBI,H,Gaziantep,Guneydogu,S092,,2021-06-12,PY091,stabil,Ulastirma ve depolama
+9633650607,Musteri 0452 A.S.,Kurumsal,C,Istanbul,Marmara,S000,,2021-04-17,PY002,bozulma,Imalat
+9885084829,Musteri 0453 A.S.,Ticari,F,Bursa,Marmara,S021,,2023-11-16,PY023,rakip_buyutuyor,Insaat
+9510622576,Musteri 0454 A.S.,Kurumsal,G,Istanbul,Marmara,S000,G013,2022-10-10,PY003,stabil,Toptan ve perakende ticaret
+9131023893,Musteri 0455 A.S.,Ticari,F,Istanbul,Marmara,S001,,2017-12-01,PY002,stabil,Insaat
+9244941114,Musteri 0456 A.S.,KOBI,C,Trabzon,Karadeniz,S112,G054,2023-09-11,PY112,stabil,Imalat
+9470586724,Musteri 0457 A.S.,KOBI,I,Konya,Ic Anadolu,S042,,2021-11-03,PY043,ana_banka,Konaklama ve yiyecek
+9286873454,Musteri 0458 A.S.,Ticari,M,Trabzon,Karadeniz,S111,,2019-06-24,PY113,birlikte_buyume,Mesleki ve teknik faaliyetler
+9808404116,Musteri 0459 A.S.,Ticari,H,Bursa,Marmara,S021,,2017-11-19,PY021,proje_buyumesi,Ulastirma ve depolama
+9320164419,Musteri 0460 A.S.,KOBI,I,Antalya,Akdeniz,S072,,2025-05-21,PY073,rakip_buyutuyor,Konaklama ve yiyecek
+9217761808,Musteri 0461 A.S.,KOBI,J,Kayseri,Ic Anadolu,S102,G053,2022-06-21,PY103,birlikte_buyume,Bilgi ve iletisim
+9818515731,Musteri 0462 A.S.,Ticari,C,Izmir,Ege,S051,,2015-04-03,PY053,stabil,Imalat
+9184357558,Musteri 0463 A.S.,Ticari,J,Kocaeli,Marmara,S011,G038,2015-09-23,PY013,sessiz_cikis,Bilgi ve iletisim
+9402742979,Musteri 0464 A.S.,Ticari,I,Istanbul,Marmara,S001,G013,2022-01-09,PY001,stabil,Konaklama ve yiyecek
+9922618056,Musteri 0465 A.S.,Ticari,F,Kocaeli,Marmara,S011,,2016-12-20,PY013,birlikte_buyume,Insaat
+9768900784,Musteri 0466 A.S.,KOBI,I,Istanbul,Marmara,S002,G074,2019-09-11,PY002,rakip_buyutuyor,Konaklama ve yiyecek
+9854079234,Musteri 0467 A.S.,Ticari,F,Konya,Ic Anadolu,S041,,2014-11-18,PY041,rakip_buyutuyor,Insaat
+9522220093,Musteri 0468 A.S.,KOBI,F,Izmir,Ege,S052,G052,2022-09-16,PY053,sessiz_cikis,Insaat
+9555152229,Musteri 0469 A.S.,Kurumsal,G,Ankara,Ic Anadolu,S030,,2016-09-24,PY033,stabil,Toptan ve perakende ticaret
+9650792448,Musteri 0470 A.S.,Ticari,M,Denizli,Ege,S061,,2016-08-16,PY061,birlikte_buyume,Mesleki ve teknik faaliyetler
+9746289348,Musteri 0471 A.S.,KOBI,I,Gaziantep,Guneydogu,S092,G059,2022-12-03,PY092,stabil,Konaklama ve yiyecek
+9967145496,Musteri 0472 A.S.,Ticari,H,Kocaeli,Marmara,S011,G017,2018-12-21,PY012,birlikte_buyume,Ulastirma ve depolama
+9935251221,Musteri 0473 A.S.,Ticari,J,Ankara,Ic Anadolu,S031,,2015-09-21,PY032,stabil,Bilgi ve iletisim
+9144766476,Musteri 0474 A.S.,KOBI,H,Kayseri,Ic Anadolu,S102,,2024-01-31,PY101,stabil,Ulastirma ve depolama
+9981318915,Musteri 0475 A.S.,KOBI,J,Izmir,Ege,S052,,2024-06-15,PY052,stabil,Bilgi ve iletisim
+9520622191,Musteri 0476 A.S.,Ticari,F,Bursa,Marmara,S021,,2024-10-04,PY021,stabil,Insaat
+9796976050,Musteri 0477 A.S.,Ticari,I,Adana,Akdeniz,S081,G047,2021-12-14,PY081,stabil,Konaklama ve yiyecek
+9775752699,Musteri 0478 A.S.,Ticari,F,Kayseri,Ic Anadolu,S101,,2022-05-15,PY102,rakip_buyutuyor,Insaat
+9503944590,Musteri 0479 A.S.,Ticari,I,Antalya,Akdeniz,S071,G070,2017-12-01,PY073,rakip_buyutuyor,Konaklama ve yiyecek
+9323893295,Musteri 0480 A.S.,Ticari,C,Antalya,Akdeniz,S071,,2020-11-03,PY071,stabil,Imalat
+9453925120,Musteri 0481 A.S.,Ticari,G,Bursa,Marmara,S021,,2017-07-23,PY021,stabil,Toptan ve perakende ticaret
+9257518958,Musteri 0482 A.S.,KOBI,G,Izmir,Ege,S052,G031,2022-08-25,PY053,stabil,Toptan ve perakende ticaret
+9642175265,Musteri 0483 A.S.,KOBI,I,Kayseri,Ic Anadolu,S102,,2021-06-17,PY102,birlikte_buyume,Konaklama ve yiyecek
+9435256716,Musteri 0484 A.S.,KOBI,F,Trabzon,Karadeniz,S112,G012,2014-12-16,PY111,stabil,Insaat
+9745819003,Musteri 0485 A.S.,KOBI,I,Gaziantep,Guneydogu,S092,G024,2023-07-14,PY092,stabil,Konaklama ve yiyecek
+9908111334,Musteri 0486 A.S.,KOBI,G,Gaziantep,Guneydogu,S092,,2018-04-20,PY093,stabil,Toptan ve perakende ticaret
+9502645665,Musteri 0487 A.S.,KOBI,G,Ankara,Ic Anadolu,S032,,2017-06-25,PY031,birlikte_buyume,Toptan ve perakende ticaret
+9383152069,Musteri 0488 A.S.,KOBI,I,Denizli,Ege,S062,,2017-01-21,PY061,stabil,Konaklama ve yiyecek
+9539083448,Musteri 0489 A.S.,Ticari,C,Bursa,Marmara,S021,,2025-03-26,PY023,birlikte_buyume,Imalat
+9653145597,Musteri 0490 A.S.,Ticari,M,Kayseri,Ic Anadolu,S101,,2020-03-14,PY101,birlikte_buyume,Mesleki ve teknik faaliyetler
+9859399827,Musteri 0491 A.S.,Ticari,F,Antalya,Akdeniz,S071,G019,2019-02-08,PY073,rakip_buyutuyor,Insaat
+9224855466,Musteri 0492 A.S.,Ticari,F,Konya,Ic Anadolu,S041,,2022-01-31,PY042,rakip_buyutuyor,Insaat
+9501428547,Musteri 0493 A.S.,Ticari,M,Konya,Ic Anadolu,S041,G033,2023-12-23,PY043,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9114631398,Musteri 0494 A.S.,Ticari,H,Antalya,Akdeniz,S071,,2015-03-09,PY072,stabil,Ulastirma ve depolama
+9186894106,Musteri 0495 A.S.,Ticari,M,Bursa,Marmara,S021,,2018-06-18,PY022,proje_buyumesi,Mesleki ve teknik faaliyetler
+9649862810,Musteri 0496 A.S.,Ticari,C,Denizli,Ege,S061,G049,2022-12-13,PY061,birlikte_buyume,Imalat
+9202516529,Musteri 0497 A.S.,Ticari,F,Bursa,Marmara,S021,,2018-06-13,PY023,stabil,Insaat
+9585576534,Musteri 0498 A.S.,KOBI,G,Denizli,Ege,S062,G037,2020-08-25,PY063,rakip_buyutuyor,Toptan ve perakende ticaret
+9451562690,Musteri 0499 A.S.,KOBI,M,Denizli,Ege,S062,,2023-08-08,PY063,stabil,Mesleki ve teknik faaliyetler
+9968123083,Musteri 0500 A.S.,Kurumsal,C,Izmir,Ege,S050,G037,2022-09-01,PY051,birlikte_buyume,Imalat
+9451248527,Musteri 0501 A.S.,Kurumsal,I,Istanbul,Marmara,S000,G021,2015-06-17,PY003,rakip_buyutuyor,Konaklama ve yiyecek
+9275877629,Musteri 0502 A.S.,Ticari,C,Adana,Akdeniz,S081,,2015-03-27,PY081,bozulma,Imalat
+9621691138,Musteri 0503 A.S.,KOBI,G,Denizli,Ege,S062,,2020-10-21,PY061,sessiz_cikis,Toptan ve perakende ticaret
+9943934889,Musteri 0504 A.S.,KOBI,F,Kayseri,Ic Anadolu,S102,G024,2021-06-25,PY103,birlikte_buyume,Insaat
+9104203706,Musteri 0505 A.S.,Kurumsal,H,Izmir,Ege,S050,,2023-11-19,PY051,birlikte_buyume,Ulastirma ve depolama
+9705995476,Musteri 0506 A.S.,KOBI,J,Bursa,Marmara,S022,G022,2018-07-15,PY021,proje_buyumesi,Bilgi ve iletisim
+9399139421,Musteri 0507 A.S.,Kurumsal,J,Izmir,Ege,S050,,2021-12-16,PY051,stabil,Bilgi ve iletisim
+9715095307,Musteri 0508 A.S.,Ticari,F,Trabzon,Karadeniz,S111,,2022-10-18,PY111,bozulma,Insaat
+9759743475,Musteri 0509 A.S.,KOBI,M,Gaziantep,Guneydogu,S092,,2023-01-01,PY093,birlikte_buyume,Mesleki ve teknik faaliyetler
+9188484931,Musteri 0510 A.S.,Kurumsal,I,Istanbul,Marmara,S000,,2025-01-17,PY002,stabil,Konaklama ve yiyecek
+9858752416,Musteri 0511 A.S.,Kurumsal,H,Istanbul,Marmara,S000,,2024-11-23,PY001,stabil,Ulastirma ve depolama
+9114493372,Musteri 0512 A.S.,Ticari,G,Bursa,Marmara,S021,G037,2014-11-04,PY021,bozulma,Toptan ve perakende ticaret
+9344123099,Musteri 0513 A.S.,Ticari,J,Denizli,Ege,S061,,2025-02-21,PY063,stabil,Bilgi ve iletisim
+9740545407,Musteri 0514 A.S.,KOBI,F,Adana,Akdeniz,S082,G068,2021-11-25,PY081,stabil,Insaat
+9370701380,Musteri 0515 A.S.,KOBI,G,Trabzon,Karadeniz,S112,G032,2023-07-07,PY112,stabil,Toptan ve perakende ticaret
+9141606212,Musteri 0516 A.S.,Kurumsal,C,Izmir,Ege,S050,G062,2015-09-13,PY052,stabil,Imalat
+9798685589,Musteri 0517 A.S.,Kurumsal,M,Izmir,Ege,S050,,2015-05-27,PY051,stabil,Mesleki ve teknik faaliyetler
+9743431872,Musteri 0518 A.S.,KOBI,C,Istanbul,Marmara,S002,,2019-01-27,PY001,rakip_buyutuyor,Imalat
+9159953674,Musteri 0519 A.S.,Ticari,F,Konya,Ic Anadolu,S041,G064,2019-01-14,PY041,stabil,Insaat
+9704786083,Musteri 0520 A.S.,KOBI,F,Izmir,Ege,S052,,2017-11-23,PY052,bozulma,Insaat
+9136163415,Musteri 0521 A.S.,KOBI,C,Ankara,Ic Anadolu,S032,,2016-03-23,PY033,bozulma,Imalat
+9133463352,Musteri 0522 A.S.,Kurumsal,H,Ankara,Ic Anadolu,S030,,2017-05-16,PY031,stabil,Ulastirma ve depolama
+9542361855,Musteri 0523 A.S.,KOBI,J,Trabzon,Karadeniz,S112,G014,2014-11-24,PY111,stabil,Bilgi ve iletisim
+9754309815,Musteri 0524 A.S.,Kurumsal,F,Istanbul,Marmara,S000,G069,2019-05-06,PY001,rakip_buyutuyor,Insaat
+9275526520,Musteri 0525 A.S.,Ticari,I,Bursa,Marmara,S021,,2025-03-20,PY022,stabil,Konaklama ve yiyecek
+9683089732,Musteri 0526 A.S.,Ticari,J,Trabzon,Karadeniz,S111,,2021-05-08,PY112,stabil,Bilgi ve iletisim
+9608601450,Musteri 0527 A.S.,Ticari,F,Kocaeli,Marmara,S011,,2019-10-04,PY013,ana_banka,Insaat
+9930465186,Musteri 0528 A.S.,KOBI,J,Bursa,Marmara,S022,,2015-09-10,PY022,ana_banka,Bilgi ve iletisim
+9863373194,Musteri 0529 A.S.,KOBI,G,Adana,Akdeniz,S082,G019,2024-11-01,PY081,proje_buyumesi,Toptan ve perakende ticaret
+9982946808,Musteri 0530 A.S.,KOBI,C,Istanbul,Marmara,S002,,2023-08-22,PY003,stabil,Imalat
+9811583925,Musteri 0531 A.S.,KOBI,M,Gaziantep,Guneydogu,S092,G047,2016-05-19,PY093,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9419321727,Musteri 0532 A.S.,Ticari,I,Antalya,Akdeniz,S071,G002,2024-09-13,PY071,rakip_buyutuyor,Konaklama ve yiyecek
+9346820981,Musteri 0533 A.S.,Kurumsal,H,Izmir,Ege,S050,,2016-10-24,PY051,stabil,Ulastirma ve depolama
+9269282943,Musteri 0534 A.S.,KOBI,C,Kocaeli,Marmara,S012,,2015-01-01,PY013,rakip_buyutuyor,Imalat
+9275353917,Musteri 0535 A.S.,KOBI,G,Trabzon,Karadeniz,S112,,2018-07-26,PY111,stabil,Toptan ve perakende ticaret
+9314174870,Musteri 0536 A.S.,Ticari,C,Istanbul,Marmara,S001,,2021-08-01,PY001,stabil,Imalat
+9247828048,Musteri 0537 A.S.,Ticari,C,Antalya,Akdeniz,S071,,2024-02-01,PY071,birlikte_buyume,Imalat
+9318389219,Musteri 0538 A.S.,Ticari,G,Antalya,Akdeniz,S071,,2018-06-19,PY073,stabil,Toptan ve perakende ticaret
+9741915360,Musteri 0539 A.S.,Kurumsal,M,Izmir,Ege,S050,G011,2024-04-10,PY053,stabil,Mesleki ve teknik faaliyetler
+9366711469,Musteri 0540 A.S.,KOBI,G,Gaziantep,Guneydogu,S092,,2018-12-13,PY093,bozulma,Toptan ve perakende ticaret
+9525316159,Musteri 0541 A.S.,Ticari,C,Antalya,Akdeniz,S071,,2015-02-08,PY072,ana_banka,Imalat
+9953564957,Musteri 0542 A.S.,KOBI,H,Denizli,Ege,S062,G022,2016-11-24,PY061,birlikte_buyume,Ulastirma ve depolama
+9828854867,Musteri 0543 A.S.,KOBI,G,Adana,Akdeniz,S082,,2023-06-02,PY081,bozulma,Toptan ve perakende ticaret
+9171385209,Musteri 0544 A.S.,KOBI,F,Antalya,Akdeniz,S072,G055,2025-05-08,PY072,ana_banka,Insaat
+9404826069,Musteri 0545 A.S.,Ticari,C,Istanbul,Marmara,S001,G019,2015-01-12,PY003,stabil,Imalat
+9956387973,Musteri 0546 A.S.,Ticari,G,Ankara,Ic Anadolu,S031,,2024-01-02,PY031,stabil,Toptan ve perakende ticaret
+9255963239,Musteri 0547 A.S.,KOBI,I,Konya,Ic Anadolu,S042,,2019-06-02,PY043,stabil,Konaklama ve yiyecek
+9837829997,Musteri 0548 A.S.,KOBI,F,Istanbul,Marmara,S002,,2020-04-30,PY001,stabil,Insaat
+9958726598,Musteri 0549 A.S.,Ticari,C,Konya,Ic Anadolu,S041,,2020-06-04,PY041,proje_buyumesi,Imalat
+9348071545,Musteri 0550 A.S.,KOBI,C,Kayseri,Ic Anadolu,S102,G008,2016-07-12,PY102,stabil,Imalat
+9665628967,Musteri 0551 A.S.,Kurumsal,C,Istanbul,Marmara,S000,G034,2024-02-01,PY002,birlikte_buyume,Imalat
+9417470384,Musteri 0552 A.S.,KOBI,I,Adana,Akdeniz,S082,,2017-10-17,PY082,stabil,Konaklama ve yiyecek
+9314141251,Musteri 0553 A.S.,Kurumsal,H,Ankara,Ic Anadolu,S030,,2021-07-17,PY033,stabil,Ulastirma ve depolama
+9547281604,Musteri 0554 A.S.,Kurumsal,M,Istanbul,Marmara,S000,G038,2024-01-20,PY003,sessiz_cikis,Mesleki ve teknik faaliyetler
+9387256574,Musteri 0555 A.S.,Ticari,H,Kocaeli,Marmara,S011,,2022-10-07,PY011,stabil,Ulastirma ve depolama
+9402040153,Musteri 0556 A.S.,Kurumsal,C,Izmir,Ege,S050,G017,2025-03-26,PY052,stabil,Imalat
+9388605780,Musteri 0557 A.S.,Kurumsal,C,Istanbul,Marmara,S000,,2016-11-16,PY003,stabil,Imalat
+9591448659,Musteri 0558 A.S.,Kurumsal,J,Ankara,Ic Anadolu,S030,G049,2020-04-22,PY031,birlikte_buyume,Bilgi ve iletisim
+9763714400,Musteri 0559 A.S.,Ticari,M,Gaziantep,Guneydogu,S091,G009,2017-01-11,PY091,birlikte_buyume,Mesleki ve teknik faaliyetler
+9111219093,Musteri 0560 A.S.,KOBI,M,Adana,Akdeniz,S082,,2020-11-09,PY081,birlikte_buyume,Mesleki ve teknik faaliyetler
+9595273410,Musteri 0561 A.S.,Kurumsal,I,Istanbul,Marmara,S000,,2015-07-14,PY002,stabil,Konaklama ve yiyecek
+9863894876,Musteri 0562 A.S.,KOBI,M,Gaziantep,Guneydogu,S092,G041,2024-10-13,PY093,stabil,Mesleki ve teknik faaliyetler
+9347473786,Musteri 0563 A.S.,KOBI,I,Konya,Ic Anadolu,S042,G003,2020-09-05,PY042,bozulma,Konaklama ve yiyecek
+9416214714,Musteri 0564 A.S.,Kurumsal,G,Ankara,Ic Anadolu,S030,,2019-11-21,PY033,rakip_buyutuyor,Toptan ve perakende ticaret
+9912400916,Musteri 0565 A.S.,Kurumsal,H,Izmir,Ege,S050,,2017-07-25,PY053,rakip_buyutuyor,Ulastirma ve depolama
+9241841361,Musteri 0566 A.S.,KOBI,F,Trabzon,Karadeniz,S112,,2024-05-25,PY112,rakip_buyutuyor,Insaat
+9815972680,Musteri 0567 A.S.,KOBI,C,Gaziantep,Guneydogu,S092,,2019-03-12,PY091,proje_buyumesi,Imalat
+9901176446,Musteri 0568 A.S.,Ticari,C,Gaziantep,Guneydogu,S091,G071,2025-02-02,PY091,stabil,Imalat
+9280149378,Musteri 0569 A.S.,KOBI,H,Adana,Akdeniz,S082,,2019-06-17,PY082,stabil,Ulastirma ve depolama
+9532548233,Musteri 0570 A.S.,Kurumsal,H,Izmir,Ege,S050,,2018-04-01,PY053,birlikte_buyume,Ulastirma ve depolama
+9260506025,Musteri 0571 A.S.,Ticari,G,Adana,Akdeniz,S081,,2016-04-04,PY082,stabil,Toptan ve perakende ticaret
+9383229922,Musteri 0572 A.S.,KOBI,I,Antalya,Akdeniz,S072,,2021-12-20,PY071,bozulma,Konaklama ve yiyecek
+9458304875,Musteri 0573 A.S.,Ticari,C,Ankara,Ic Anadolu,S031,,2025-06-24,PY033,birlikte_buyume,Imalat
+9132675108,Musteri 0574 A.S.,KOBI,M,Kayseri,Ic Anadolu,S102,G068,2021-08-11,PY102,proje_buyumesi,Mesleki ve teknik faaliyetler
+9481902785,Musteri 0575 A.S.,Ticari,I,Kocaeli,Marmara,S011,,2025-05-25,PY012,bozulma,Konaklama ve yiyecek
+9367406500,Musteri 0576 A.S.,KOBI,M,Adana,Akdeniz,S082,G011,2016-03-25,PY082,birlikte_buyume,Mesleki ve teknik faaliyetler
+9698642242,Musteri 0577 A.S.,Ticari,H,Adana,Akdeniz,S081,G045,2018-03-03,PY083,sessiz_cikis,Ulastirma ve depolama
+9570297688,Musteri 0578 A.S.,Ticari,H,Trabzon,Karadeniz,S111,G070,2024-01-10,PY112,birlikte_buyume,Ulastirma ve depolama
+9684535692,Musteri 0579 A.S.,Ticari,C,Ankara,Ic Anadolu,S031,,2016-04-06,PY033,bozulma,Imalat
+9167303380,Musteri 0580 A.S.,Ticari,J,Denizli,Ege,S061,,2024-04-29,PY062,stabil,Bilgi ve iletisim
+9866336428,Musteri 0581 A.S.,KOBI,C,Antalya,Akdeniz,S072,,2020-10-16,PY072,birlikte_buyume,Imalat
+9916477635,Musteri 0582 A.S.,Kurumsal,C,Izmir,Ege,S050,,2016-02-09,PY052,birlikte_buyume,Imalat
+9432085393,Musteri 0583 A.S.,Kurumsal,F,Ankara,Ic Anadolu,S030,,2017-10-05,PY031,stabil,Insaat
+9692961533,Musteri 0584 A.S.,Kurumsal,M,Ankara,Ic Anadolu,S030,,2024-01-27,PY032,stabil,Mesleki ve teknik faaliyetler
+9655618059,Musteri 0585 A.S.,Kurumsal,F,Istanbul,Marmara,S000,,2024-10-26,PY003,sessiz_cikis,Insaat
+9151572658,Musteri 0586 A.S.,KOBI,C,Kocaeli,Marmara,S012,,2016-05-27,PY012,rakip_buyutuyor,Imalat
+9346204317,Musteri 0587 A.S.,Ticari,I,Antalya,Akdeniz,S071,,2021-10-20,PY071,stabil,Konaklama ve yiyecek
+9575796176,Musteri 0588 A.S.,KOBI,I,Denizli,Ege,S062,,2024-07-31,PY063,stabil,Konaklama ve yiyecek
+9485151398,Musteri 0589 A.S.,Kurumsal,J,Istanbul,Marmara,S000,,2023-08-02,PY002,stabil,Bilgi ve iletisim
+9986146638,Musteri 0590 A.S.,KOBI,H,Bursa,Marmara,S022,G020,2023-11-21,PY022,stabil,Ulastirma ve depolama
+9395907037,Musteri 0591 A.S.,Ticari,H,Bursa,Marmara,S021,G026,2019-02-20,PY022,sessiz_cikis,Ulastirma ve depolama
+9785444396,Musteri 0592 A.S.,Ticari,F,Trabzon,Karadeniz,S111,G070,2021-08-09,PY111,stabil,Insaat
+9403003726,Musteri 0593 A.S.,KOBI,C,Gaziantep,Guneydogu,S092,,2018-03-27,PY091,stabil,Imalat
+9944307895,Musteri 0594 A.S.,KOBI,J,Kocaeli,Marmara,S012,,2016-10-21,PY012,birlikte_buyume,Bilgi ve iletisim
+9100893217,Musteri 0595 A.S.,KOBI,C,Denizli,Ege,S062,,2025-02-16,PY062,stabil,Imalat
+9366026516,Musteri 0596 A.S.,Kurumsal,M,Ankara,Ic Anadolu,S030,,2025-03-05,PY031,stabil,Mesleki ve teknik faaliyetler
+9812662560,Musteri 0597 A.S.,Ticari,F,Kayseri,Ic Anadolu,S101,,2020-09-04,PY102,rakip_buyutuyor,Insaat
+9447829316,Musteri 0598 A.S.,KOBI,G,Ankara,Ic Anadolu,S032,,2024-07-09,PY033,rakip_buyutuyor,Toptan ve perakende ticaret
+9450355148,Musteri 0599 A.S.,Ticari,G,Konya,Ic Anadolu,S041,,2017-01-02,PY043,ana_banka,Toptan ve perakende ticaret
+9552956633,Musteri 0600 A.S.,KOBI,H,Ankara,Ic Anadolu,S032,,2020-06-29,PY032,rakip_buyutuyor,Ulastirma ve depolama

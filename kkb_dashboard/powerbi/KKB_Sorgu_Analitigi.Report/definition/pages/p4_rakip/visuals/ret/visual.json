@@ -1,0 +1,92 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "ret",
+  "position": {
+    "x": 854,
+    "y": 506,
+    "z": 800,
+    "width": 412,
+    "height": 202,
+    "tabOrder": 800
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "SorguSonucu"
+                }
+              },
+              "queryRef": "Fact_Sorgu.SorguSonucu",
+              "nativeQueryRef": "SorguSonucu"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Ret Sonrasi Buyuyen %"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Ret Sonrasi Buyuyen %",
+              "nativeQueryRef": "Ret Sonrasi Buyuyen %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Ret Sonrasi Gecikme %"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Ret Sonrasi Gecikme %",
+              "nativeQueryRef": "Ret Sonrasi Gecikme %"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Ret / vazgeçme sonrası kader'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

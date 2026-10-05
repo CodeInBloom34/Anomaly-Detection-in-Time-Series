@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "yedek",
+  "position": {
+    "x": 1068,
+    "y": 498,
+    "z": 1500,
+    "width": 198,
+    "height": 100,
+    "tabOrder": 1500
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Yedek Banka Endeksi"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Yedek Banka Endeksi",
+              "nativeQueryRef": "Yedek Banka Endeksi"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Yedek banka endeksi'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

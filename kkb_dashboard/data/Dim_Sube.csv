@@ -1,0 +1,28 @@
+SubeKod,SubeAdi,Il,Bolge,SubeTipi
+S000,Istanbul Kurumsal Subesi,Istanbul,Marmara,Kurumsal
+S001,Istanbul Ticari Subesi,Istanbul,Marmara,Ticari
+S002,Istanbul KOBI Subesi,Istanbul,Marmara,KOBI
+S011,Kocaeli Ticari Subesi,Kocaeli,Marmara,Ticari
+S012,Kocaeli KOBI Subesi,Kocaeli,Marmara,KOBI
+S021,Bursa Ticari Subesi,Bursa,Marmara,Ticari
+S022,Bursa KOBI Subesi,Bursa,Marmara,KOBI
+S030,Ankara Kurumsal Subesi,Ankara,Ic Anadolu,Kurumsal
+S031,Ankara Ticari Subesi,Ankara,Ic Anadolu,Ticari
+S032,Ankara KOBI Subesi,Ankara,Ic Anadolu,KOBI
+S041,Konya Ticari Subesi,Konya,Ic Anadolu,Ticari
+S042,Konya KOBI Subesi,Konya,Ic Anadolu,KOBI
+S050,Izmir Kurumsal Subesi,Izmir,Ege,Kurumsal
+S051,Izmir Ticari Subesi,Izmir,Ege,Ticari
+S052,Izmir KOBI Subesi,Izmir,Ege,KOBI
+S061,Denizli Ticari Subesi,Denizli,Ege,Ticari
+S062,Denizli KOBI Subesi,Denizli,Ege,KOBI
+S071,Antalya Ticari Subesi,Antalya,Akdeniz,Ticari
+S072,Antalya KOBI Subesi,Antalya,Akdeniz,KOBI
+S081,Adana Ticari Subesi,Adana,Akdeniz,Ticari
+S082,Adana KOBI Subesi,Adana,Akdeniz,KOBI
+S091,Gaziantep Ticari Subesi,Gaziantep,Guneydogu,Ticari
+S092,Gaziantep KOBI Subesi,Gaziantep,Guneydogu,KOBI
+S101,Kayseri Ticari Subesi,Kayseri,Ic Anadolu,Ticari
+S102,Kayseri KOBI Subesi,Kayseri,Ic Anadolu,KOBI
+S111,Trabzon Ticari Subesi,Trabzon,Karadeniz,Ticari
+S112,Trabzon KOBI Subesi,Trabzon,Karadeniz,KOBI

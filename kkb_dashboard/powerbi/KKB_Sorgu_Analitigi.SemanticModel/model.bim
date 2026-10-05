@@ -1,0 +1,1738 @@
+{
+  "name": "KKB_Sorgu_Analitigi",
+  "compatibilityLevel": 1550,
+  "model": {
+    "culture": "tr-TR",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "tr-TR",
+    "tables": [
+      {
+        "name": "Dim_Tarih",
+        "columns": [
+          {
+            "name": "Tarih",
+            "dataType": "dateTime",
+            "sourceColumn": "Tarih",
+            "summarizeBy": "none",
+            "formatString": "dd.mm.yyyy",
+            "isKey": true
+          },
+          {
+            "name": "Yil",
+            "dataType": "int64",
+            "sourceColumn": "Yil",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "Ay",
+            "dataType": "int64",
+            "sourceColumn": "Ay",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "AyAdi",
+            "dataType": "string",
+            "sourceColumn": "AyAdi",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ceyrek",
+            "dataType": "string",
+            "sourceColumn": "Ceyrek",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HaftaninGunu",
+            "dataType": "int64",
+            "sourceColumn": "HaftaninGunu",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "AyinHaftasi",
+            "dataType": "int64",
+            "sourceColumn": "AyinHaftasi",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "ResmiTatilMi",
+            "dataType": "int64",
+            "sourceColumn": "ResmiTatilMi",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "IsGunu",
+            "dataType": "int64",
+            "sourceColumn": "IsGunu",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "AySonuMu",
+            "dataType": "int64",
+            "sourceColumn": "AySonuMu",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "BayramOncesiMi",
+            "dataType": "int64",
+            "sourceColumn": "BayramOncesiMi",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "type": "calculated",
+            "name": "Ay Donemi",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "IF ( Dim_Tarih[AySonuMu] = 1, \"Ay sonu (son 5 gun)\", \"Ay ici\" )"
+            ],
+            "summarizeBy": "none"
+          },
+          {
+            "type": "calculated",
+            "name": "Gun Adi",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "SWITCH ( Dim_Tarih[HaftaninGunu], 1, \"1 Pzt\", 2, \"2 Sal\", 3, \"3 Car\", 4, \"4 Per\", 5, \"5 Cum\", 6, \"6 Cmt\", \"7 Paz\" )"
+            ],
+            "summarizeBy": "none"
+          },
+          {
+            "type": "calculated",
+            "name": "Yil Ceyrek",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "Dim_Tarih[Yil] & \"-\" & Dim_Tarih[Ceyrek]"
+            ],
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Tarih",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Kaynak = Csv.Document(File.Contents(VeriKlasoru & \"\\Dim_Tarih.csv\"), [Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),",
+                "    Basliklar = Table.PromoteHeaders(Kaynak, [PromoteAllScalars = true]),",
+                "    Bosluklar = Table.TransformColumns(Basliklar, {}, each if _ = \"\" then null else _),",
+                "    Tipler = Table.TransformColumnTypes(Bosluklar, {{\"Tarih\", type date}, {\"Yil\", Int64.Type}, {\"Ay\", Int64.Type}, {\"AyAdi\", type text}, {\"Ceyrek\", type text}, {\"HaftaninGunu\", Int64.Type}, {\"AyinHaftasi\", Int64.Type}, {\"ResmiTatilMi\", Int64.Type}, {\"IsGunu\", Int64.Type}, {\"AySonuMu\", Int64.Type}, {\"BayramOncesiMi\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Tipler"
+              ]
+            }
+          }
+        ],
+        "dataCategory": "Time"
+      },
+      {
+        "name": "Dim_Sube",
+        "columns": [
+          {
+            "name": "SubeKod",
+            "dataType": "string",
+            "sourceColumn": "SubeKod",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SubeAdi",
+            "dataType": "string",
+            "sourceColumn": "SubeAdi",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Il",
+            "dataType": "string",
+            "sourceColumn": "Il",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bolge",
+            "dataType": "string",
+            "sourceColumn": "Bolge",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SubeTipi",
+            "dataType": "string",
+            "sourceColumn": "SubeTipi",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Sube",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Kaynak = Csv.Document(File.Contents(VeriKlasoru & \"\\Dim_Sube.csv\"), [Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),",
+                "    Basliklar = Table.PromoteHeaders(Kaynak, [PromoteAllScalars = true]),",
+                "    Bosluklar = Table.TransformColumns(Basliklar, {}, each if _ = \"\" then null else _),",
+                "    Tipler = Table.TransformColumnTypes(Bosluklar, {{\"SubeKod\", type text}, {\"SubeAdi\", type text}, {\"Il\", type text}, {\"Bolge\", type text}, {\"SubeTipi\", type text}}, \"en-US\")",
+                "in",
+                "    Tipler"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Musteri",
+        "columns": [
+          {
+            "name": "VKN",
+            "dataType": "string",
+            "sourceColumn": "VKN",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Unvan",
+            "dataType": "string",
+            "sourceColumn": "Unvan",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Segment",
+            "dataType": "string",
+            "sourceColumn": "Segment",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NACE",
+            "dataType": "string",
+            "sourceColumn": "NACE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Il",
+            "dataType": "string",
+            "sourceColumn": "Il",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bolge",
+            "dataType": "string",
+            "sourceColumn": "Bolge",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SubeKod",
+            "dataType": "string",
+            "sourceColumn": "SubeKod",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "GrupKod",
+            "dataType": "string",
+            "sourceColumn": "GrupKod",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MusteriSinceTarihi",
+            "dataType": "dateTime",
+            "sourceColumn": "MusteriSinceTarihi",
+            "summarizeBy": "none",
+            "formatString": "dd.mm.yyyy"
+          },
+          {
+            "name": "PortfoyYoneticisi",
+            "dataType": "string",
+            "sourceColumn": "PortfoyYoneticisi",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "_Senaryo",
+            "dataType": "string",
+            "sourceColumn": "_Senaryo",
+            "summarizeBy": "none",
+            "isHidden": true
+          },
+          {
+            "name": "NACEAciklama",
+            "dataType": "string",
+            "sourceColumn": "NACEAciklama",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Musteri",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Kaynak = Csv.Document(File.Contents(VeriKlasoru & \"\\Dim_Musteri.csv\"), [Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),",
+                "    Basliklar = Table.PromoteHeaders(Kaynak, [PromoteAllScalars = true]),",
+                "    Bosluklar = Table.TransformColumns(Basliklar, {}, each if _ = \"\" then null else _),",
+                "    Tipler = Table.TransformColumnTypes(Bosluklar, {{\"VKN\", type text}, {\"Unvan\", type text}, {\"Segment\", type text}, {\"NACE\", type text}, {\"Il\", type text}, {\"Bolge\", type text}, {\"SubeKod\", type text}, {\"GrupKod\", type text}, {\"MusteriSinceTarihi\", type date}, {\"PortfoyYoneticisi\", type text}, {\"_Senaryo\", type text}, {\"NACEAciklama\", type text}}, \"en-US\")",
+                "in",
+                "    Tipler"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_NotBandi",
+        "columns": [
+          {
+            "name": "Bant",
+            "dataType": "string",
+            "sourceColumn": "Bant",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MinNot",
+            "dataType": "int64",
+            "sourceColumn": "MinNot",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "MaxNot",
+            "dataType": "int64",
+            "sourceColumn": "MaxNot",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "Renk",
+            "dataType": "string",
+            "sourceColumn": "Renk",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_NotBandi",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Kaynak = Csv.Document(File.Contents(VeriKlasoru & \"\\Dim_NotBandi.csv\"), [Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),",
+                "    Basliklar = Table.PromoteHeaders(Kaynak, [PromoteAllScalars = true]),",
+                "    Bosluklar = Table.TransformColumns(Basliklar, {}, each if _ = \"\" then null else _),",
+                "    Tipler = Table.TransformColumnTypes(Bosluklar, {{\"Bant\", type text}, {\"MinNot\", Int64.Type}, {\"MaxNot\", Int64.Type}, {\"Renk\", type text}}, \"en-US\")",
+                "in",
+                "    Tipler"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Fact_Sorgu",
+        "columns": [
+          {
+            "name": "SorguTarihi",
+            "dataType": "dateTime",
+            "sourceColumn": "SorguTarihi",
+            "summarizeBy": "none",
+            "formatString": "dd.mm.yyyy"
+          },
+          {
+            "name": "SektorToplamLimit",
+            "dataType": "double",
+            "sourceColumn": "SektorToplamLimit",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "SektorToplamRisk",
+            "dataType": "double",
+            "sourceColumn": "SektorToplamRisk",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "GayrinakdiRisk",
+            "dataType": "double",
+            "sourceColumn": "GayrinakdiRisk",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "BankaSayisi",
+            "dataType": "int64",
+            "sourceColumn": "BankaSayisi",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "GecikmeVar",
+            "dataType": "int64",
+            "sourceColumn": "GecikmeVar",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "TakipVar",
+            "dataType": "int64",
+            "sourceColumn": "TakipVar",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "KKBNot",
+            "dataType": "int64",
+            "sourceColumn": "KKBNot",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "CekKarsiliksizAdet",
+            "dataType": "int64",
+            "sourceColumn": "CekKarsiliksizAdet",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "BizimLimit",
+            "dataType": "double",
+            "sourceColumn": "BizimLimit",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "BizimRisk",
+            "dataType": "double",
+            "sourceColumn": "BizimRisk",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "SorguID",
+            "dataType": "int64",
+            "sourceColumn": "SorguID",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "VKN",
+            "dataType": "string",
+            "sourceColumn": "VKN",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SubeKod",
+            "dataType": "string",
+            "sourceColumn": "SubeKod",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "KullaniciID",
+            "dataType": "string",
+            "sourceColumn": "KullaniciID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RaporTipi",
+            "dataType": "string",
+            "sourceColumn": "RaporTipi",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SorguNedeni",
+            "dataType": "string",
+            "sourceColumn": "SorguNedeni",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SorguSonucu",
+            "dataType": "string",
+            "sourceColumn": "SorguSonucu",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SorguMaliyetTL",
+            "dataType": "double",
+            "sourceColumn": "SorguMaliyetTL",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "NakdiRisk",
+            "dataType": "double",
+            "sourceColumn": "NakdiRisk",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "OncekiSorguID",
+            "dataType": "int64",
+            "sourceColumn": "OncekiSorguID",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "OncekiSorguTarihi",
+            "dataType": "dateTime",
+            "sourceColumn": "OncekiSorguTarihi",
+            "summarizeBy": "none",
+            "formatString": "dd.mm.yyyy"
+          },
+          {
+            "name": "OncekiBizimRisk",
+            "dataType": "double",
+            "sourceColumn": "OncekiBizimRisk",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "OncekiSektorToplamRisk",
+            "dataType": "double",
+            "sourceColumn": "OncekiSektorToplamRisk",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "OncekiGecikmeVar",
+            "dataType": "int64",
+            "sourceColumn": "OncekiGecikmeVar",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "OncekiTakipVar",
+            "dataType": "int64",
+            "sourceColumn": "OncekiTakipVar",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "OncekiKKBNot",
+            "dataType": "int64",
+            "sourceColumn": "OncekiKKBNot",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "OncekiBankaSayisi",
+            "dataType": "int64",
+            "sourceColumn": "OncekiBankaSayisi",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "OncekiGayrinakdiRisk",
+            "dataType": "double",
+            "sourceColumn": "OncekiGayrinakdiRisk",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "SorgularArasiGun",
+            "dataType": "int64",
+            "sourceColumn": "SorgularArasiGun",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "SonrakiSektorToplamRisk",
+            "dataType": "double",
+            "sourceColumn": "SonrakiSektorToplamRisk",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "SonrakiGecikmeVar",
+            "dataType": "int64",
+            "sourceColumn": "SonrakiGecikmeVar",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "SonSorguMu",
+            "dataType": "int64",
+            "sourceColumn": "SonSorguMu",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "BizimPay",
+            "dataType": "double",
+            "sourceColumn": "BizimPay",
+            "summarizeBy": "none",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "OncekiBizimPay",
+            "dataType": "double",
+            "sourceColumn": "OncekiBizimPay",
+            "summarizeBy": "none",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "BizimDoluluk",
+            "dataType": "double",
+            "sourceColumn": "BizimDoluluk",
+            "summarizeBy": "none",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "DigerBankaDoluluk",
+            "dataType": "double",
+            "sourceColumn": "DigerBankaDoluluk",
+            "summarizeBy": "none",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "NotBandi",
+            "dataType": "string",
+            "sourceColumn": "NotBandi",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "OncekiNotBandi",
+            "dataType": "string",
+            "sourceColumn": "OncekiNotBandi",
+            "summarizeBy": "none"
+          },
+          {
+            "type": "calculated",
+            "name": "Tekrar Araligi",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "SWITCH (",
+              "    TRUE (),",
+              "    ISBLANK ( Fact_Sorgu[SorgularArasiGun] ), \"0) Ilk sorgu\",",
+              "    Fact_Sorgu[SorgularArasiGun] <= 7, \"1) 0-7 gun\",",
+              "    Fact_Sorgu[SorgularArasiGun] <= 30, \"2) 8-30 gun\",",
+              "    Fact_Sorgu[SorgularArasiGun] <= 90, \"3) 31-90 gun\",",
+              "    Fact_Sorgu[SorgularArasiGun] <= 180, \"4) 91-180 gun\",",
+              "    \"5) 180+ gun\"",
+              ")"
+            ],
+            "summarizeBy": "none"
+          },
+          {
+            "type": "calculated",
+            "name": "Banka Degisimi",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "VAR d = Fact_Sorgu[BankaSayisi] - Fact_Sorgu[OncekiBankaSayisi]",
+              "RETURN",
+              "    SWITCH (",
+              "        TRUE (),",
+              "        ISBLANK ( Fact_Sorgu[OncekiBankaSayisi] ), \"Ilk sorgu\",",
+              "        d > 0, \"Artti\",",
+              "        d < 0, \"Azaldi\",",
+              "        \"Ayni\"",
+              "    )"
+            ],
+            "summarizeBy": "none"
+          },
+          {
+            "type": "calculated",
+            "name": "Not Degisimi",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "VAR d = Fact_Sorgu[KKBNot] - Fact_Sorgu[OncekiKKBNot]",
+              "RETURN",
+              "    SWITCH (",
+              "        TRUE (),",
+              "        ISBLANK ( Fact_Sorgu[OncekiKKBNot] ), \"Ilk sorgu\",",
+              "        d >= 50, \"Yukseldi\",",
+              "        d <= -50, \"Dustu\",",
+              "        \"Ayni\"",
+              "    )"
+            ],
+            "summarizeBy": "none"
+          },
+          {
+            "type": "calculated",
+            "name": "Cuzdan Bolgesi",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "VAR dPay = Fact_Sorgu[BizimPay] - Fact_Sorgu[OncekiBizimPay]",
+              "VAR dRisk = Fact_Sorgu[SektorToplamRisk] - Fact_Sorgu[OncekiSektorToplamRisk]",
+              "RETURN",
+              "    SWITCH (",
+              "        TRUE (),",
+              "        ISBLANK ( Fact_Sorgu[OncekiBizimPay] ), \"Tek sorgu\",",
+              "        dRisk >= 0 && dPay < 0, \"Rakip buyutuyor\",",
+              "        dRisk >= 0, \"Birlikte buyuyoruz\",",
+              "        dPay < 0, \"Sessiz cikis\",",
+              "        \"Ana bankaya donusuyoruz\"",
+              "    )"
+            ],
+            "summarizeBy": "none"
+          },
+          {
+            "type": "calculated",
+            "name": "Aksiyon Etiketi",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": [
+              "VAR ilk = ISBLANK ( Fact_Sorgu[OncekiSorguID] )",
+              "VAR dPay = Fact_Sorgu[BizimPay] - Fact_Sorgu[OncekiBizimPay]",
+              "VAR dRisk = Fact_Sorgu[SektorToplamRisk] - Fact_Sorgu[OncekiSektorToplamRisk]",
+              "VAR dGn =",
+              "    DIVIDE ( Fact_Sorgu[GayrinakdiRisk], Fact_Sorgu[SektorToplamRisk] )",
+              "        - DIVIDE ( Fact_Sorgu[OncekiGayrinakdiRisk], Fact_Sorgu[OncekiSektorToplamRisk] )",
+              "VAR dNot = Fact_Sorgu[KKBNot] - Fact_Sorgu[OncekiKKBNot]",
+              "VAR dBanka = Fact_Sorgu[BankaSayisi] - Fact_Sorgu[OncekiBankaSayisi]",
+              "VAR skor =",
+              "    LOOKUPVALUE ( Fact_AnomaliSkor[Skor], Fact_AnomaliSkor[SorguID], Fact_Sorgu[SorguID] )",
+              "VAR doluluk = DIVIDE ( Fact_Sorgu[SektorToplamRisk], Fact_Sorgu[SektorToplamLimit] )",
+              "RETURN",
+              "    SWITCH (",
+              "        TRUE (),",
+              "        Fact_Sorgu[GecikmeVar] = 1, \"Erken uyari\",",
+              "        Fact_Sorgu[TakipVar] = 1, \"Erken uyari\",",
+              "        NOT ilk && skor >= 70 && dNot < 0, \"Erken uyari\",",
+              "        NOT ilk && dBanka >= 2 && dNot < 0, \"Kredi acligi\",",
+              "        NOT ilk && dRisk > 0 && dPay <= -0.05 && dNot >= 0, \"Pay geri kazan\",",
+              "        doluluk > 0.85 && Fact_Sorgu[BizimDoluluk] < 0.6",
+              "            && Fact_Sorgu[NotBandi] IN { \"A\", \"B\" }, \"Limit sikisikligi\",",
+              "        NOT ilk && dGn >= 0.10 && Fact_Sorgu[GecikmeVar] = 0, \"Proje buyumesi\",",
+              "        NOT ilk && Fact_Sorgu[SorgularArasiGun] <= 7, \"Gereksiz sorgu\",",
+              "        \"Izle\"",
+              "    )"
+            ],
+            "summarizeBy": "none"
+          },
+          {
+            "type": "calculated",
+            "name": "Potansiyel TL",
+            "dataType": "double",
+            "isDataTypeInferred": true,
+            "expression": [
+              "SWITCH (",
+              "    Fact_Sorgu[Aksiyon Etiketi],",
+              "    \"Pay geri kazan\",",
+              "        MAX ( 0, ( Fact_Sorgu[OncekiBizimPay] - Fact_Sorgu[BizimPay] ) * Fact_Sorgu[SektorToplamRisk] ),",
+              "    \"Limit sikisikligi\",",
+              "        MAX ( 0, Fact_Sorgu[BizimLimit] - Fact_Sorgu[BizimRisk] ),",
+              "    \"Proje buyumesi\",",
+              "        MAX ( 0, ( Fact_Sorgu[GayrinakdiRisk] - Fact_Sorgu[OncekiGayrinakdiRisk] ) * Fact_Sorgu[OncekiBizimPay] ),",
+              "    0",
+              ")"
+            ],
+            "summarizeBy": "none",
+            "formatString": "#,0"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fact_Sorgu",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Kaynak = Csv.Document(File.Contents(VeriKlasoru & \"\\Fact_Sorgu.csv\"), [Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),",
+                "    Basliklar = Table.PromoteHeaders(Kaynak, [PromoteAllScalars = true]),",
+                "    Bosluklar = Table.TransformColumns(Basliklar, {}, each if _ = \"\" then null else _),",
+                "    Tipler = Table.TransformColumnTypes(Bosluklar, {{\"SorguTarihi\", type date}, {\"SektorToplamLimit\", type number}, {\"SektorToplamRisk\", type number}, {\"GayrinakdiRisk\", type number}, {\"BankaSayisi\", Int64.Type}, {\"GecikmeVar\", Int64.Type}, {\"TakipVar\", Int64.Type}, {\"KKBNot\", Int64.Type}, {\"CekKarsiliksizAdet\", Int64.Type}, {\"BizimLimit\", type number}, {\"BizimRisk\", type number}, {\"SorguID\", Int64.Type}, {\"VKN\", type text}, {\"SubeKod\", type text}, {\"KullaniciID\", type text}, {\"RaporTipi\", type text}, {\"SorguNedeni\", type text}, {\"SorguSonucu\", type text}, {\"SorguMaliyetTL\", type number}, {\"NakdiRisk\", type number}, {\"OncekiSorguID\", Int64.Type}, {\"OncekiSorguTarihi\", type date}, {\"OncekiBizimRisk\", type number}, {\"OncekiSektorToplamRisk\", type number}, {\"OncekiGecikmeVar\", Int64.Type}, {\"OncekiTakipVar\", Int64.Type}, {\"OncekiKKBNot\", Int64.Type}, {\"OncekiBankaSayisi\", Int64.Type}, {\"OncekiGayrinakdiRisk\", type number}, {\"SorgularArasiGun\", Int64.Type}, {\"SonrakiSektorToplamRisk\", type number}, {\"SonrakiGecikmeVar\", Int64.Type}, {\"SonSorguMu\", Int64.Type}, {\"BizimPay\", type number}, {\"OncekiBizimPay\", type number}, {\"BizimDoluluk\", type number}, {\"DigerBankaDoluluk\", type number}, {\"NotBandi\", type text}, {\"OncekiNotBandi\", type text}}, \"en-US\")",
+                "in",
+                "    Tipler"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Sorgu Adedi",
+            "expression": [
+              "COUNTROWS ( Fact_Sorgu )"
+            ],
+            "displayFolder": "1 Ozet",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Tekil Musteri",
+            "expression": [
+              "DISTINCTCOUNT ( Fact_Sorgu[VKN] )"
+            ],
+            "displayFolder": "1 Ozet",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Musteri Basina Sorgu",
+            "expression": [
+              "DIVIDE ( [Sorgu Adedi], [Tekil Musteri] )"
+            ],
+            "displayFolder": "1 Ozet",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Basvuru Sorgusu",
+            "expression": [
+              "CALCULATE ( [Sorgu Adedi], KEEPFILTERS ( Fact_Sorgu[SorguNedeni] IN { \"Yeni Basvuru\", \"Limit Yenileme\" } ) )"
+            ],
+            "displayFolder": "1 Ozet",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Sorgu Donusum %",
+            "expression": [
+              "DIVIDE ( CALCULATE ( [Basvuru Sorgusu], KEEPFILTERS ( Fact_Sorgu[SorguSonucu] = \"Kullandirim\" ) ), [Basvuru Sorgusu] )"
+            ],
+            "displayFolder": "1 Ozet",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Olu Sorgu Orani %",
+            "expression": [
+              "DIVIDE ( CALCULATE ( [Basvuru Sorgusu], KEEPFILTERS ( Fact_Sorgu[SorguSonucu] = \"Aksiyon Yok\" ) ), [Basvuru Sorgusu] )"
+            ],
+            "displayFolder": "1 Ozet",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Toplam Sorgu Maliyeti TL",
+            "expression": [
+              "SUM ( Fact_Sorgu[SorguMaliyetTL] )"
+            ],
+            "displayFolder": "1 Ozet",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Olu Sorgu Maliyeti TL",
+            "expression": [
+              "CALCULATE ( [Toplam Sorgu Maliyeti TL], KEEPFILTERS ( Fact_Sorgu[SorguSonucu] = \"Aksiyon Yok\" ) )"
+            ],
+            "displayFolder": "1 Ozet",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Cuzdan Payi",
+            "expression": [
+              "DIVIDE ( SUM ( Fact_Sorgu[BizimRisk] ), SUM ( Fact_Sorgu[SektorToplamRisk] ) )"
+            ],
+            "displayFolder": "1 Ozet",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Payi Eriyen Musteri",
+            "expression": [
+              "CALCULATE (",
+              "    [Tekil Musteri],",
+              "    FILTER (",
+              "        Fact_Sorgu,",
+              "        NOT ISBLANK ( Fact_Sorgu[OncekiBizimPay] )",
+              "            && Fact_Sorgu[BizimPay] - Fact_Sorgu[OncekiBizimPay] < -0.05",
+              "    )",
+              ")"
+            ],
+            "displayFolder": "1 Ozet",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Yeni Gecikme Sinyali",
+            "expression": [
+              "CALCULATE (",
+              "    [Tekil Musteri],",
+              "    FILTER (",
+              "        Fact_Sorgu,",
+              "        Fact_Sorgu[GecikmeVar] = 1",
+              "            && NOT ISBLANK ( Fact_Sorgu[OncekiGecikmeVar] )",
+              "            && Fact_Sorgu[OncekiGecikmeVar] = 0",
+              "    )",
+              ")"
+            ],
+            "displayFolder": "1 Ozet",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Yeni Takip Gecisi",
+            "expression": [
+              "CALCULATE (",
+              "    [Tekil Musteri],",
+              "    FILTER (",
+              "        Fact_Sorgu,",
+              "        Fact_Sorgu[TakipVar] = 1",
+              "            && NOT ISBLANK ( Fact_Sorgu[OncekiTakipVar] )",
+              "            && Fact_Sorgu[OncekiTakipVar] = 0",
+              "    )",
+              ")"
+            ],
+            "displayFolder": "1 Ozet",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Ozet Cumle",
+            "expression": [
+              "\"Bu donemde \" & FORMAT ( [Tekil Musteri], \"#,0\" ) & \" musteriye \" & FORMAT ( [Sorgu Adedi], \"#,0\" )",
+              "    & \" sorgu attik. \" & FORMAT ( [Payi Eriyen Musteri], \"#,0\" ) & \" musteride payimiz eridi, \"",
+              "    & FORMAT ( [Yeni Gecikme Sinyali], \"#,0\" ) & \" musteride yeni gecikme sinyali var. \"",
+              "    & \"Aksiyonsuz sorgularin maliyeti \" & FORMAT ( [Olu Sorgu Maliyeti TL], \"#,0\" ) & \" TL; \"",
+              "    & FORMAT ( [Kor Nokta Musteri], \"#,0\" ) & \" riskli musteriye hic bakmadik.\""
+            ],
+            "displayFolder": "1 Ozet"
+          },
+          {
+            "name": "Huni Deger",
+            "expression": [
+              "SWITCH (",
+              "    SELECTEDVALUE ( 'Huni Asama'[Sira] ),",
+              "    1, [Basvuru Sorgusu],",
+              "    2, CALCULATE ( [Basvuru Sorgusu], KEEPFILTERS ( Fact_Sorgu[SorguSonucu] IN { \"Teklif\", \"Ret\", \"Kullandirim\" } ) ),",
+              "    3, CALCULATE ( [Basvuru Sorgusu], KEEPFILTERS ( Fact_Sorgu[SorguSonucu] = \"Kullandirim\" ) )",
+              ")"
+            ],
+            "displayFolder": "2 Davranis",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Mukerrer Sorgu (7 gun)",
+            "expression": [
+              "CALCULATE (",
+              "    [Sorgu Adedi],",
+              "    FILTER (",
+              "        Fact_Sorgu,",
+              "        NOT ISBLANK ( Fact_Sorgu[SorgularArasiGun] ) && Fact_Sorgu[SorgularArasiGun] <= 7",
+              "    )",
+              ")"
+            ],
+            "displayFolder": "2 Davranis",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Ortalama Sorgudan Kullandirima Gun",
+            "expression": [
+              "AVERAGEX (",
+              "    FILTER ( Fact_KrediSonuc, NOT ISBLANK ( Fact_KrediSonuc[KullandirimTarihi] ) ),",
+              "    DATEDIFF (",
+              "        LOOKUPVALUE ( Fact_Sorgu[SorguTarihi], Fact_Sorgu[SorguID], Fact_KrediSonuc[SorguID] ),",
+              "        Fact_KrediSonuc[KullandirimTarihi],",
+              "        DAY",
+              "    )",
+              ")"
+            ],
+            "displayFolder": "2 Davranis",
+            "formatString": "0.0"
+          },
+          {
+            "name": "Kor Nokta Musteri",
+            "expression": [
+              "VAR riskli =",
+              "    CALCULATETABLE ( VALUES ( Fact_KrediSonuc[VKN] ), KEEPFILTERS ( Fact_KrediSonuc[BizimRisk] > 0 ) )",
+              "VAR sorgulanan = VALUES ( Fact_Sorgu[VKN] )",
+              "RETURN",
+              "    COUNTROWS ( EXCEPT ( riskli, sorgulanan ) ) + 0"
+            ],
+            "displayFolder": "2 Davranis",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Kor Nokta Risk TL",
+            "expression": [
+              "VAR sonAy = MAX ( Fact_KrediSonuc[Tarih] )",
+              "VAR sorgulanan = VALUES ( Fact_Sorgu[VKN] )",
+              "RETURN",
+              "    SUMX (",
+              "        FILTER (",
+              "            Fact_KrediSonuc,",
+              "            Fact_KrediSonuc[Tarih] = sonAy",
+              "                && NOT ( Fact_KrediSonuc[VKN] IN sorgulanan )",
+              "        ),",
+              "        Fact_KrediSonuc[BizimRisk]",
+              "    )"
+            ],
+            "displayFolder": "2 Davranis",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Sektor Risk TL",
+            "expression": [
+              "SUM ( Fact_Sorgu[SektorToplamRisk] )"
+            ],
+            "displayFolder": "3 Risk Gocu",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Bizim Risk Artisi",
+            "expression": [
+              "SUMX (",
+              "    FILTER ( Fact_Sorgu, NOT ISBLANK ( Fact_Sorgu[OncekiBizimRisk] ) ),",
+              "    Fact_Sorgu[BizimRisk] - Fact_Sorgu[OncekiBizimRisk]",
+              ")"
+            ],
+            "displayFolder": "3 Risk Gocu",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Sektor Risk Artisi",
+            "expression": [
+              "SUMX (",
+              "    FILTER ( Fact_Sorgu, NOT ISBLANK ( Fact_Sorgu[OncekiSektorToplamRisk] ) ),",
+              "    Fact_Sorgu[SektorToplamRisk] - Fact_Sorgu[OncekiSektorToplamRisk]",
+              ")"
+            ],
+            "displayFolder": "3 Risk Gocu",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Rakip Risk Artisi",
+            "expression": [
+              "[Sektor Risk Artisi] - [Bizim Risk Artisi]"
+            ],
+            "displayFolder": "3 Risk Gocu",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Kopru Deger",
+            "expression": [
+              "SWITCH (",
+              "    SELECTEDVALUE ( 'Risk Kopru'[Sira] ),",
+              "    1, [Bizim Risk Artisi],",
+              "    2, [Rakip Risk Artisi]",
+              ")"
+            ],
+            "displayFolder": "3 Risk Gocu",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Sektor Risk Buyumesi %",
+            "expression": [
+              "DIVIDE (",
+              "    [Sektor Risk Artisi],",
+              "    SUMX (",
+              "        FILTER ( Fact_Sorgu, NOT ISBLANK ( Fact_Sorgu[OncekiSektorToplamRisk] ) ),",
+              "        Fact_Sorgu[OncekiSektorToplamRisk]",
+              "    )",
+              ")"
+            ],
+            "displayFolder": "3 Risk Gocu",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Buyumede Bizim Pay",
+            "expression": [
+              "DIVIDE ( [Bizim Risk Artisi], [Sektor Risk Artisi] )"
+            ],
+            "displayFolder": "3 Risk Gocu",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Not Degisimi Ort",
+            "expression": [
+              "AVERAGEX (",
+              "    FILTER ( Fact_Sorgu, NOT ISBLANK ( Fact_Sorgu[OncekiKKBNot] ) ),",
+              "    Fact_Sorgu[KKBNot] - Fact_Sorgu[OncekiKKBNot]",
+              ")"
+            ],
+            "displayFolder": "3 Risk Gocu",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Ortalama Limit Doluluk",
+            "expression": [
+              "DIVIDE ( SUM ( Fact_Sorgu[SektorToplamRisk] ), SUM ( Fact_Sorgu[SektorToplamLimit] ) )"
+            ],
+            "displayFolder": "3 Risk Gocu",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Banka Sayisi Artan Musteri",
+            "expression": [
+              "CALCULATE (",
+              "    [Tekil Musteri],",
+              "    FILTER ( Fact_Sorgu, Fact_Sorgu[BankaSayisi] > Fact_Sorgu[OncekiBankaSayisi]",
+              "        && NOT ISBLANK ( Fact_Sorgu[OncekiBankaSayisi] ) )",
+              ")"
+            ],
+            "displayFolder": "3 Risk Gocu",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Pay Degisimi",
+            "expression": [
+              "AVERAGEX (",
+              "    FILTER ( Fact_Sorgu, NOT ISBLANK ( Fact_Sorgu[OncekiBizimPay] ) ),",
+              "    Fact_Sorgu[BizimPay] - Fact_Sorgu[OncekiBizimPay]",
+              ")"
+            ],
+            "displayFolder": "4 Rakip",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Yedek Banka Endeksi",
+            "expression": [
+              "AVERAGEX ( Fact_Sorgu, Fact_Sorgu[DigerBankaDoluluk] - Fact_Sorgu[BizimDoluluk] )"
+            ],
+            "displayFolder": "4 Rakip",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Rakip Ortalama Limit",
+            "expression": [
+              "AVERAGEX (",
+              "    FILTER ( Fact_Sorgu, Fact_Sorgu[BankaSayisi] > 1 ),",
+              "    DIVIDE ( Fact_Sorgu[SektorToplamLimit] - Fact_Sorgu[BizimLimit], Fact_Sorgu[BankaSayisi] - 1 )",
+              ")"
+            ],
+            "displayFolder": "4 Rakip",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Bizim Limit / Rakip Limit",
+            "expression": [
+              "DIVIDE ( AVERAGE ( Fact_Sorgu[BizimLimit] ), [Rakip Ortalama Limit] )"
+            ],
+            "displayFolder": "4 Rakip",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Ana Banka Orani %",
+            "expression": [
+              "DIVIDE (",
+              "    CALCULATE (",
+              "        [Tekil Musteri],",
+              "        FILTER ( Fact_Sorgu, Fact_Sorgu[BizimPay] >= 1.5 / Fact_Sorgu[BankaSayisi] )",
+              "    ),",
+              "    [Tekil Musteri]",
+              ")"
+            ],
+            "displayFolder": "4 Rakip",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Ret Sonrasi Musteri",
+            "expression": [
+              "COUNTROWS (",
+              "    FILTER (",
+              "        Fact_Sorgu,",
+              "        Fact_Sorgu[SorguSonucu] IN { \"Ret\", \"Teklif\" }",
+              "            && NOT ISBLANK ( Fact_Sorgu[SonrakiSektorToplamRisk] )",
+              "    )",
+              ")"
+            ],
+            "displayFolder": "4 Rakip",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Ret Sonrasi Buyuyen %",
+            "expression": [
+              "VAR t =",
+              "    FILTER (",
+              "        Fact_Sorgu,",
+              "        Fact_Sorgu[SorguSonucu] IN { \"Ret\", \"Teklif\" }",
+              "            && NOT ISBLANK ( Fact_Sorgu[SonrakiSektorToplamRisk] )",
+              "    )",
+              "RETURN",
+              "    DIVIDE (",
+              "        COUNTROWS ( FILTER ( t, Fact_Sorgu[SonrakiSektorToplamRisk] > Fact_Sorgu[SektorToplamRisk] * 1.1 ) ),",
+              "        COUNTROWS ( t )",
+              "    )"
+            ],
+            "displayFolder": "4 Rakip",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Ret Sonrasi Gecikme %",
+            "expression": [
+              "VAR t =",
+              "    FILTER (",
+              "        Fact_Sorgu,",
+              "        Fact_Sorgu[SorguSonucu] IN { \"Ret\", \"Teklif\" }",
+              "            && NOT ISBLANK ( Fact_Sorgu[SonrakiGecikmeVar] )",
+              "            && Fact_Sorgu[GecikmeVar] = 0",
+              "    )",
+              "RETURN",
+              "    DIVIDE ( COUNTROWS ( FILTER ( t, Fact_Sorgu[SonrakiGecikmeVar] = 1 ) ), COUNTROWS ( t ) )"
+            ],
+            "displayFolder": "4 Rakip",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Ortalama KKB Not",
+            "expression": [
+              "AVERAGE ( Fact_Sorgu[KKBNot] )"
+            ],
+            "displayFolder": "5 Erken Uyari",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Aksiyon Musteri",
+            "expression": [
+              "CALCULATE ( [Tekil Musteri], KEEPFILTERS ( Fact_Sorgu[SonSorguMu] = 1 ) )"
+            ],
+            "displayFolder": "6 Aksiyon",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Potansiyel TL (son)",
+            "expression": [
+              "CALCULATE ( SUM ( Fact_Sorgu[Potansiyel TL] ), KEEPFILTERS ( Fact_Sorgu[SonSorguMu] = 1 ) )"
+            ],
+            "displayFolder": "6 Aksiyon",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Bizim Risk (son)",
+            "expression": [
+              "CALCULATE ( SUM ( Fact_Sorgu[BizimRisk] ), KEEPFILTERS ( Fact_Sorgu[SonSorguMu] = 1 ) )"
+            ],
+            "displayFolder": "6 Aksiyon",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Son Sorgu Tarihi",
+            "expression": [
+              "CALCULATE ( MAX ( Fact_Sorgu[SorguTarihi] ), KEEPFILTERS ( Fact_Sorgu[SonSorguMu] = 1 ) )"
+            ],
+            "displayFolder": "6 Aksiyon",
+            "formatString": "dd.mm.yyyy"
+          },
+          {
+            "name": "Anomali Skoru (aksiyon)",
+            "expression": [
+              "IF ( NOT ISBLANK ( [Son Sorgu Tarihi] ), [Anomali Skoru (son sorgu)] )"
+            ],
+            "displayFolder": "6 Aksiyon",
+            "formatString": "0.0"
+          }
+        ]
+      },
+      {
+        "name": "Fact_RiskDetay",
+        "columns": [
+          {
+            "name": "SorguID",
+            "dataType": "int64",
+            "sourceColumn": "SorguID",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "KrediTuru",
+            "dataType": "string",
+            "sourceColumn": "KrediTuru",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Limit",
+            "dataType": "double",
+            "sourceColumn": "Limit",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "Risk",
+            "dataType": "double",
+            "sourceColumn": "Risk",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "GecikmeGun",
+            "dataType": "int64",
+            "sourceColumn": "GecikmeGun",
+            "summarizeBy": "none",
+            "formatString": "0"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fact_RiskDetay",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Kaynak = Csv.Document(File.Contents(VeriKlasoru & \"\\Fact_RiskDetay.csv\"), [Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),",
+                "    Basliklar = Table.PromoteHeaders(Kaynak, [PromoteAllScalars = true]),",
+                "    Bosluklar = Table.TransformColumns(Basliklar, {}, each if _ = \"\" then null else _),",
+                "    Tipler = Table.TransformColumnTypes(Bosluklar, {{\"SorguID\", Int64.Type}, {\"KrediTuru\", type text}, {\"Limit\", type number}, {\"Risk\", type number}, {\"GecikmeGun\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Tipler"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Risk Detay TL",
+            "expression": [
+              "SUM ( Fact_RiskDetay[Risk] )"
+            ],
+            "displayFolder": "3 Risk Gocu",
+            "formatString": "#,0"
+          }
+        ]
+      },
+      {
+        "name": "Fact_KrediSonuc",
+        "columns": [
+          {
+            "name": "VKN",
+            "dataType": "string",
+            "sourceColumn": "VKN",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Tarih",
+            "dataType": "dateTime",
+            "sourceColumn": "Tarih",
+            "summarizeBy": "none",
+            "formatString": "dd.mm.yyyy"
+          },
+          {
+            "name": "BizimRisk",
+            "dataType": "double",
+            "sourceColumn": "BizimRisk",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "BizimLimit",
+            "dataType": "double",
+            "sourceColumn": "BizimLimit",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "IcRating",
+            "dataType": "int64",
+            "sourceColumn": "IcRating",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "SorguID",
+            "dataType": "int64",
+            "sourceColumn": "SorguID",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "TeklifTarihi",
+            "dataType": "dateTime",
+            "sourceColumn": "TeklifTarihi",
+            "summarizeBy": "none",
+            "formatString": "dd.mm.yyyy"
+          },
+          {
+            "name": "OnayTarihi",
+            "dataType": "dateTime",
+            "sourceColumn": "OnayTarihi",
+            "summarizeBy": "none",
+            "formatString": "dd.mm.yyyy"
+          },
+          {
+            "name": "KullandirimTarihi",
+            "dataType": "dateTime",
+            "sourceColumn": "KullandirimTarihi",
+            "summarizeBy": "none",
+            "formatString": "dd.mm.yyyy"
+          },
+          {
+            "name": "RetNedeni",
+            "dataType": "string",
+            "sourceColumn": "RetNedeni",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fact_KrediSonuc",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Kaynak = Csv.Document(File.Contents(VeriKlasoru & \"\\Fact_KrediSonuc.csv\"), [Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),",
+                "    Basliklar = Table.PromoteHeaders(Kaynak, [PromoteAllScalars = true]),",
+                "    Bosluklar = Table.TransformColumns(Basliklar, {}, each if _ = \"\" then null else _),",
+                "    Tipler = Table.TransformColumnTypes(Bosluklar, {{\"VKN\", type text}, {\"Tarih\", type date}, {\"BizimRisk\", type number}, {\"BizimLimit\", type number}, {\"IcRating\", Int64.Type}, {\"SorguID\", Int64.Type}, {\"TeklifTarihi\", type date}, {\"OnayTarihi\", type date}, {\"KullandirimTarihi\", type date}, {\"RetNedeni\", type text}}, \"en-US\")",
+                "in",
+                "    Tipler"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Ortalama Ic Rating",
+            "expression": [
+              "AVERAGE ( Fact_KrediSonuc[IcRating] )"
+            ],
+            "displayFolder": "5 Erken Uyari",
+            "formatString": "0.0"
+          }
+        ]
+      },
+      {
+        "name": "Fact_AnomaliSkor",
+        "columns": [
+          {
+            "name": "SorguID",
+            "dataType": "int64",
+            "sourceColumn": "SorguID",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "VKN",
+            "dataType": "string",
+            "sourceColumn": "VKN",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SorguTarihi",
+            "dataType": "dateTime",
+            "sourceColumn": "SorguTarihi",
+            "summarizeBy": "none",
+            "formatString": "dd.mm.yyyy"
+          },
+          {
+            "name": "Skor",
+            "dataType": "double",
+            "sourceColumn": "Skor",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "Neden",
+            "dataType": "string",
+            "sourceColumn": "Neden",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "BireyselSapma",
+            "dataType": "double",
+            "sourceColumn": "BireyselSapma",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "AkranSapmasi",
+            "dataType": "double",
+            "sourceColumn": "AkranSapmasi",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "SonSorguMu",
+            "dataType": "int64",
+            "sourceColumn": "SonSorguMu",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "GecikmeVar",
+            "dataType": "int64",
+            "sourceColumn": "GecikmeVar",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "SonrakiGecikmeVar",
+            "dataType": "int64",
+            "sourceColumn": "SonrakiGecikmeVar",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "RiskBuyume30g",
+            "dataType": "double",
+            "sourceColumn": "RiskBuyume30g",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "DolulukDelta",
+            "dataType": "double",
+            "sourceColumn": "DolulukDelta",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "BankaSayisiDelta",
+            "dataType": "int64",
+            "sourceColumn": "BankaSayisiDelta",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "NotDelta",
+            "dataType": "int64",
+            "sourceColumn": "NotDelta",
+            "summarizeBy": "none",
+            "formatString": "0"
+          },
+          {
+            "name": "GayrinakdiPayDelta",
+            "dataType": "double",
+            "sourceColumn": "GayrinakdiPayDelta",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "RotatifPayDelta",
+            "dataType": "double",
+            "sourceColumn": "RotatifPayDelta",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          },
+          {
+            "name": "BizimPayDelta",
+            "dataType": "double",
+            "sourceColumn": "BizimPayDelta",
+            "summarizeBy": "none",
+            "formatString": "#,0.##"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fact_AnomaliSkor",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Kaynak = Csv.Document(File.Contents(VeriKlasoru & \"\\Fact_AnomaliSkor.csv\"), [Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),",
+                "    Basliklar = Table.PromoteHeaders(Kaynak, [PromoteAllScalars = true]),",
+                "    Bosluklar = Table.TransformColumns(Basliklar, {}, each if _ = \"\" then null else _),",
+                "    Tipler = Table.TransformColumnTypes(Bosluklar, {{\"SorguID\", Int64.Type}, {\"VKN\", type text}, {\"SorguTarihi\", type date}, {\"Skor\", type number}, {\"Neden\", type text}, {\"BireyselSapma\", type number}, {\"AkranSapmasi\", type number}, {\"SonSorguMu\", Int64.Type}, {\"GecikmeVar\", Int64.Type}, {\"SonrakiGecikmeVar\", Int64.Type}, {\"RiskBuyume30g\", type number}, {\"DolulukDelta\", type number}, {\"BankaSayisiDelta\", Int64.Type}, {\"NotDelta\", Int64.Type}, {\"GayrinakdiPayDelta\", type number}, {\"RotatifPayDelta\", type number}, {\"BizimPayDelta\", type number}}, \"en-US\")",
+                "in",
+                "    Tipler"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Anomali Skoru (son sorgu)",
+            "expression": [
+              "CALCULATE ( MAX ( Fact_AnomaliSkor[Skor] ), KEEPFILTERS ( Fact_AnomaliSkor[SonSorguMu] = 1 ) )"
+            ],
+            "displayFolder": "5 Erken Uyari",
+            "formatString": "0.0"
+          },
+          {
+            "name": "Anomali Nedeni (son)",
+            "expression": [
+              "VAR s = [Anomali Skoru (son sorgu)]",
+              "RETURN",
+              "    CALCULATE (",
+              "        MAX ( Fact_AnomaliSkor[Neden] ),",
+              "        KEEPFILTERS ( Fact_AnomaliSkor[SonSorguMu] = 1 ),",
+              "        KEEPFILTERS ( Fact_AnomaliSkor[Skor] = s )",
+              "    )"
+            ],
+            "displayFolder": "5 Erken Uyari"
+          },
+          {
+            "name": "Ortalama Anomali Skoru",
+            "expression": [
+              "AVERAGE ( Fact_AnomaliSkor[Skor] )"
+            ],
+            "displayFolder": "5 Erken Uyari",
+            "formatString": "0.0"
+          },
+          {
+            "name": "Yuksek Anomali Musteri",
+            "expression": [
+              "CALCULATE (",
+              "    DISTINCTCOUNT ( Fact_AnomaliSkor[VKN] ),",
+              "    KEEPFILTERS ( Fact_AnomaliSkor[SonSorguMu] = 1 ),",
+              "    KEEPFILTERS ( Fact_AnomaliSkor[Skor] >= 70 )",
+              ") + 0"
+            ],
+            "displayFolder": "5 Erken Uyari",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Skor70 Sonraki Gecikme %",
+            "expression": [
+              "CALCULATE (",
+              "    AVERAGE ( Fact_AnomaliSkor[SonrakiGecikmeVar] ),",
+              "    KEEPFILTERS ( Fact_AnomaliSkor[Skor] >= 70 ),",
+              "    KEEPFILTERS ( Fact_AnomaliSkor[GecikmeVar] = 0 )",
+              ")"
+            ],
+            "displayFolder": "5 Erken Uyari",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Diger Sonraki Gecikme %",
+            "expression": [
+              "CALCULATE (",
+              "    AVERAGE ( Fact_AnomaliSkor[SonrakiGecikmeVar] ),",
+              "    KEEPFILTERS ( Fact_AnomaliSkor[Skor] < 70 ),",
+              "    KEEPFILTERS ( Fact_AnomaliSkor[GecikmeVar] = 0 )",
+              ")"
+            ],
+            "displayFolder": "5 Erken Uyari",
+            "formatString": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "Huni Asama",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "Sira",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Sira]",
+            "summarizeBy": "none"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Asama",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Asama]",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Huni Asama",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "DATATABLE ( \"Sira\", INTEGER, \"Asama\", STRING, { { 1, \"1. Basvuru sorgusu\" }, { 2, \"2. Teklif / karar\" }, { 3, \"3. Kullandirim\" } } )"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Risk Kopru",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "Sira",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Sira]",
+            "summarizeBy": "none"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Kalem",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Kalem]",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Risk Kopru",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "DATATABLE ( \"Sira\", INTEGER, \"Kalem\", STRING, { { 1, \"Bizim finanse ettigimiz\" }, { 2, \"Rakiplerin finanse ettigi\" } } )"
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "611c17b9-72d2-5ba6-ad2f-bbd2a1bdb123",
+        "fromTable": "Fact_Sorgu",
+        "fromColumn": "VKN",
+        "toTable": "Dim_Musteri",
+        "toColumn": "VKN"
+      },
+      {
+        "name": "94b36e9e-3153-5518-8094-d573e1f2c4d0",
+        "fromTable": "Fact_Sorgu",
+        "fromColumn": "SorguTarihi",
+        "toTable": "Dim_Tarih",
+        "toColumn": "Tarih"
+      },
+      {
+        "name": "67c3a368-7979-5f53-bb08-407bc97c6777",
+        "fromTable": "Fact_Sorgu",
+        "fromColumn": "SubeKod",
+        "toTable": "Dim_Sube",
+        "toColumn": "SubeKod"
+      },
+      {
+        "name": "343fb040-d89a-5712-8ed6-5cac0a02787f",
+        "fromTable": "Fact_Sorgu",
+        "fromColumn": "NotBandi",
+        "toTable": "Dim_NotBandi",
+        "toColumn": "Bant"
+      },
+      {
+        "name": "73e53370-34c3-5317-83c5-8afc1aadf5a6",
+        "fromTable": "Fact_RiskDetay",
+        "fromColumn": "SorguID",
+        "toTable": "Fact_Sorgu",
+        "toColumn": "SorguID"
+      },
+      {
+        "name": "34ce4928-5519-5c4c-9d68-3aa7a27023bf",
+        "fromTable": "Fact_KrediSonuc",
+        "fromColumn": "VKN",
+        "toTable": "Dim_Musteri",
+        "toColumn": "VKN"
+      },
+      {
+        "name": "2de6165d-94aa-5706-834d-a45d44e4192a",
+        "fromTable": "Fact_KrediSonuc",
+        "fromColumn": "Tarih",
+        "toTable": "Dim_Tarih",
+        "toColumn": "Tarih"
+      },
+      {
+        "name": "dc9fad2a-0471-5502-bdf6-23a27e97f7ac",
+        "fromTable": "Fact_AnomaliSkor",
+        "fromColumn": "VKN",
+        "toTable": "Dim_Musteri",
+        "toColumn": "VKN"
+      },
+      {
+        "name": "2c472f7a-92c2-54d0-b50b-28ce0fd7e220",
+        "fromTable": "Fact_AnomaliSkor",
+        "fromColumn": "SorguTarihi",
+        "toTable": "Dim_Tarih",
+        "toColumn": "Tarih"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "VeriKlasoru",
+        "kind": "m",
+        "expression": "\"C:\\KKB\\data\" meta [IsParameterQuery = true, Type = \"Text\", IsParameterQueryRequired = true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"VeriKlasoru\", \"Dim_Tarih\", \"Dim_Sube\", \"Dim_Musteri\", \"Dim_NotBandi\", \"Fact_Sorgu\", \"Fact_RiskDetay\", \"Fact_KrediSonuc\", \"Fact_AnomaliSkor\"]"
+      }
+    ]
+  }
+}

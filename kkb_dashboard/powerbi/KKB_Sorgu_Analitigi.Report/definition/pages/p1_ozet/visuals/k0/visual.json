@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "k0",
+  "position": {
+    "x": 14,
+    "y": 76,
+    "z": 300,
+    "width": 172,
+    "height": 110,
+    "tabOrder": 300
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Sorgu Adedi"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Sorgu Adedi",
+              "nativeQueryRef": "Sorgu Adedi"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Toplam sorgu'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

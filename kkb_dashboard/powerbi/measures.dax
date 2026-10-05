@@ -1,41 +1,45 @@
-// KKB Kurumsal Sorgu Analitigi - DAX olculeri
-// Tablo ve alan adlari generate_sample_data.py ciktisiyla ve sql/fact_sorgu_view.sql ile aynidir.
-// Onceki... alanlari SQL / Power Query'de uretilir; burada yalnizca kullanilir.
+// KKB Kurumsal Sorgu Analitigi - DAX olculeri ve hesaplanmis sutunlar
+// Bu dosya powerbi/build_pbip.py tarafindan uretilir; elle duzenlemeyin.
 
-// ---------- Sayfa 1: Yonetici ozeti ----------
+// ---------- 1 Ozet ----------
 
-Sorgu Adedi = COUNTROWS ( Fact_Sorgu )
+// Tablo: Fact_Sorgu | Bicim: #,0
+Sorgu Adedi =
+COUNTROWS ( Fact_Sorgu )
 
-Tekil Musteri = DISTINCTCOUNT ( Fact_Sorgu[VKN] )
+// Tablo: Fact_Sorgu | Bicim: #,0
+Tekil Musteri =
+DISTINCTCOUNT ( Fact_Sorgu[VKN] )
 
-Musteri Basina Sorgu = DIVIDE ( [Sorgu Adedi], [Tekil Musteri] )
+// Tablo: Fact_Sorgu | Bicim: 0.00
+Musteri Basina Sorgu =
+DIVIDE ( [Sorgu Adedi], [Tekil Musteri] )
 
+// Tablo: Fact_Sorgu | Bicim: #,0
 Basvuru Sorgusu =
-CALCULATE (
-    [Sorgu Adedi],
-    Fact_Sorgu[SorguNedeni] IN { "Yeni Basvuru", "Limit Yenileme" }
-)
+CALCULATE ( [Sorgu Adedi], KEEPFILTERS ( Fact_Sorgu[SorguNedeni] IN { "Yeni Basvuru", "Limit Yenileme" } ) )
 
+// Tablo: Fact_Sorgu | Bicim: 0.0%
 Sorgu Donusum % =
-DIVIDE (
-    CALCULATE ( [Sorgu Adedi], Fact_Sorgu[SorguSonucu] = "Kullandirim" ),
-    [Basvuru Sorgusu]
-)
+DIVIDE ( CALCULATE ( [Basvuru Sorgusu], KEEPFILTERS ( Fact_Sorgu[SorguSonucu] = "Kullandirim" ) ), [Basvuru Sorgusu] )
 
+// Tablo: Fact_Sorgu | Bicim: 0.0%
 Olu Sorgu Orani % =
-DIVIDE (
-    CALCULATE ( [Sorgu Adedi], Fact_Sorgu[SorguSonucu] = "Aksiyon Yok" ),
-    [Basvuru Sorgusu]
-)
+DIVIDE ( CALCULATE ( [Basvuru Sorgusu], KEEPFILTERS ( Fact_Sorgu[SorguSonucu] = "Aksiyon Yok" ) ), [Basvuru Sorgusu] )
 
-Toplam Sorgu Maliyeti TL = SUM ( Fact_Sorgu[SorguMaliyetTL] )
+// Tablo: Fact_Sorgu | Bicim: #,0
+Toplam Sorgu Maliyeti TL =
+SUM ( Fact_Sorgu[SorguMaliyetTL] )
 
+// Tablo: Fact_Sorgu | Bicim: #,0
 Olu Sorgu Maliyeti TL =
-CALCULATE ( [Toplam Sorgu Maliyeti TL], Fact_Sorgu[SorguSonucu] = "Aksiyon Yok" )
+CALCULATE ( [Toplam Sorgu Maliyeti TL], KEEPFILTERS ( Fact_Sorgu[SorguSonucu] = "Aksiyon Yok" ) )
 
+// Tablo: Fact_Sorgu | Bicim: 0.0%
 Cuzdan Payi =
 DIVIDE ( SUM ( Fact_Sorgu[BizimRisk] ), SUM ( Fact_Sorgu[SektorToplamRisk] ) )
 
+// Tablo: Fact_Sorgu | Bicim: #,0
 Payi Eriyen Musteri =
 CALCULATE (
     [Tekil Musteri],
@@ -46,37 +50,60 @@ CALCULATE (
     )
 )
 
+// Tablo: Fact_Sorgu | Bicim: #,0
 Yeni Gecikme Sinyali =
 CALCULATE (
     [Tekil Musteri],
-    Fact_Sorgu[GecikmeVar] = 1,
-    Fact_Sorgu[OncekiGecikmeVar] = 0
+    FILTER (
+        Fact_Sorgu,
+        Fact_Sorgu[GecikmeVar] = 1
+            && NOT ISBLANK ( Fact_Sorgu[OncekiGecikmeVar] )
+            && Fact_Sorgu[OncekiGecikmeVar] = 0
+    )
 )
 
+// Tablo: Fact_Sorgu | Bicim: #,0
 Yeni Takip Gecisi =
 CALCULATE (
     [Tekil Musteri],
-    Fact_Sorgu[TakipVar] = 1,
-    Fact_Sorgu[OncekiTakipVar] = 0
+    FILTER (
+        Fact_Sorgu,
+        Fact_Sorgu[TakipVar] = 1
+            && NOT ISBLANK ( Fact_Sorgu[OncekiTakipVar] )
+            && Fact_Sorgu[OncekiTakipVar] = 0
+    )
 )
 
-// Onceki doneme gore fark (KPI kartlarindaki ▲▼ icin). Dim_Tarih tarih tablosu olarak isaretlenmeli.
-Sorgu Adedi Onceki Ceyrek =
-CALCULATE ( [Sorgu Adedi], DATEADD ( Dim_Tarih[Tarih], -1, QUARTER ) )
-
-Sorgu Adedi Degisim % =
-DIVIDE ( [Sorgu Adedi] - [Sorgu Adedi Onceki Ceyrek], [Sorgu Adedi Onceki Ceyrek] )
-
+// Tablo: Fact_Sorgu
 Ozet Cumle =
-VAR donem = SELECTEDVALUE ( Dim_Tarih[Ceyrek], "secili donem" )
-RETURN
-    "Bu " & donem & " " & FORMAT ( [Tekil Musteri], "#,0" ) & " musteriye baktik; "
-        & FORMAT ( [Payi Eriyen Musteri], "#,0" ) & " musteride payimiz eridi, "
-        & FORMAT ( [Yeni Gecikme Sinyali], "#,0" ) & " musteride yeni gecikme sinyali var. "
-        & "Aksiyonsuz sorgularin maliyeti " & FORMAT ( [Olu Sorgu Maliyeti TL], "#,0" ) & " TL."
+"Bu donemde " & FORMAT ( [Tekil Musteri], "#,0" ) & " musteriye " & FORMAT ( [Sorgu Adedi], "#,0" )
+    & " sorgu attik. " & FORMAT ( [Payi Eriyen Musteri], "#,0" ) & " musteride payimiz eridi, "
+    & FORMAT ( [Yeni Gecikme Sinyali], "#,0" ) & " musteride yeni gecikme sinyali var. "
+    & "Aksiyonsuz sorgularin maliyeti " & FORMAT ( [Olu Sorgu Maliyeti TL], "#,0" ) & " TL; "
+    & FORMAT ( [Kor Nokta Musteri], "#,0" ) & " riskli musteriye hic bakmadik."
 
-// ---------- Sayfa 2: Sorgu davranisi ----------
+// ---------- 2 Davranis ----------
 
+// Tablo: Fact_Sorgu | Bicim: #,0
+Huni Deger =
+SWITCH (
+    SELECTEDVALUE ( 'Huni Asama'[Sira] ),
+    1, [Basvuru Sorgusu],
+    2, CALCULATE ( [Basvuru Sorgusu], KEEPFILTERS ( Fact_Sorgu[SorguSonucu] IN { "Teklif", "Ret", "Kullandirim" } ) ),
+    3, CALCULATE ( [Basvuru Sorgusu], KEEPFILTERS ( Fact_Sorgu[SorguSonucu] = "Kullandirim" ) )
+)
+
+// Tablo: Fact_Sorgu | Bicim: #,0
+Mukerrer Sorgu (7 gun) =
+CALCULATE (
+    [Sorgu Adedi],
+    FILTER (
+        Fact_Sorgu,
+        NOT ISBLANK ( Fact_Sorgu[SorgularArasiGun] ) && Fact_Sorgu[SorgularArasiGun] <= 7
+    )
+)
+
+// Tablo: Fact_Sorgu | Bicim: 0.0
 Ortalama Sorgudan Kullandirima Gun =
 AVERAGEX (
     FILTER ( Fact_KrediSonuc, NOT ISBLANK ( Fact_KrediSonuc[KullandirimTarihi] ) ),
@@ -87,76 +114,122 @@ AVERAGEX (
     )
 )
 
-Mukerrer Sorgu (7 gun) =
-CALCULATE ( [Sorgu Adedi], Fact_Sorgu[SorgularArasiGun] <= 7 )
-
-// Bizde riski olup secili donemde hic sorgulanmamis musteriler.
+// Tablo: Fact_Sorgu | Bicim: #,0
 Kor Nokta Musteri =
 VAR riskli =
-    CALCULATETABLE (
-        VALUES ( Fact_KrediSonuc[VKN] ),
-        Fact_KrediSonuc[BizimRisk] > 0
-    )
+    CALCULATETABLE ( VALUES ( Fact_KrediSonuc[VKN] ), KEEPFILTERS ( Fact_KrediSonuc[BizimRisk] > 0 ) )
 VAR sorgulanan = VALUES ( Fact_Sorgu[VKN] )
 RETURN
-    COUNTROWS ( EXCEPT ( riskli, sorgulanan ) )
+    COUNTROWS ( EXCEPT ( riskli, sorgulanan ) ) + 0
 
+// Tablo: Fact_Sorgu | Bicim: #,0
 Kor Nokta Risk TL =
 VAR sonAy = MAX ( Fact_KrediSonuc[Tarih] )
 VAR sorgulanan = VALUES ( Fact_Sorgu[VKN] )
 RETURN
-    CALCULATE (
-        SUM ( Fact_KrediSonuc[BizimRisk] ),
-        Fact_KrediSonuc[Tarih] = sonAy,
-        NOT Fact_KrediSonuc[VKN] IN sorgulanan
+    SUMX (
+        FILTER (
+            Fact_KrediSonuc,
+            Fact_KrediSonuc[Tarih] = sonAy
+                && NOT ( Fact_KrediSonuc[VKN] IN sorgulanan )
+        ),
+        Fact_KrediSonuc[BizimRisk]
     )
 
-// ---------- Sayfa 3: Risk gocu ----------
+// ---------- 3 Risk Gocu ----------
 
+// Tablo: Fact_Sorgu | Bicim: #,0
+Sektor Risk TL =
+SUM ( Fact_Sorgu[SektorToplamRisk] )
+
+// Tablo: Fact_Sorgu | Bicim: #,0
+Bizim Risk Artisi =
+SUMX (
+    FILTER ( Fact_Sorgu, NOT ISBLANK ( Fact_Sorgu[OncekiBizimRisk] ) ),
+    Fact_Sorgu[BizimRisk] - Fact_Sorgu[OncekiBizimRisk]
+)
+
+// Tablo: Fact_Sorgu | Bicim: #,0
+Sektor Risk Artisi =
+SUMX (
+    FILTER ( Fact_Sorgu, NOT ISBLANK ( Fact_Sorgu[OncekiSektorToplamRisk] ) ),
+    Fact_Sorgu[SektorToplamRisk] - Fact_Sorgu[OncekiSektorToplamRisk]
+)
+
+// Tablo: Fact_Sorgu | Bicim: #,0
+Rakip Risk Artisi =
+[Sektor Risk Artisi] - [Bizim Risk Artisi]
+
+// Tablo: Fact_Sorgu | Bicim: #,0
+Kopru Deger =
+SWITCH (
+    SELECTEDVALUE ( 'Risk Kopru'[Sira] ),
+    1, [Bizim Risk Artisi],
+    2, [Rakip Risk Artisi]
+)
+
+// Tablo: Fact_Sorgu | Bicim: 0.0%
 Sektor Risk Buyumesi % =
 DIVIDE (
-    SUM ( Fact_Sorgu[SektorToplamRisk] ) - SUM ( Fact_Sorgu[OncekiSektorToplamRisk] ),
-    SUM ( Fact_Sorgu[OncekiSektorToplamRisk] )
+    [Sektor Risk Artisi],
+    SUMX (
+        FILTER ( Fact_Sorgu, NOT ISBLANK ( Fact_Sorgu[OncekiSektorToplamRisk] ) ),
+        Fact_Sorgu[OncekiSektorToplamRisk]
+    )
 )
 
-// Sektor risk artisinin ne kadarini bizim finanse ettigimiz (waterfall icin).
+// Tablo: Fact_Sorgu | Bicim: 0.0%
 Buyumede Bizim Pay =
-DIVIDE (
-    SUM ( Fact_Sorgu[BizimRisk] ) - SUMX ( Fact_Sorgu, Fact_Sorgu[OncekiBizimPay] * Fact_Sorgu[OncekiSektorToplamRisk] ),
-    SUM ( Fact_Sorgu[SektorToplamRisk] ) - SUM ( Fact_Sorgu[OncekiSektorToplamRisk] )
+DIVIDE ( [Bizim Risk Artisi], [Sektor Risk Artisi] )
+
+// Tablo: Fact_Sorgu | Bicim: #,0
+Not Degisimi Ort =
+AVERAGEX (
+    FILTER ( Fact_Sorgu, NOT ISBLANK ( Fact_Sorgu[OncekiKKBNot] ) ),
+    Fact_Sorgu[KKBNot] - Fact_Sorgu[OncekiKKBNot]
 )
 
+// Tablo: Fact_Sorgu | Bicim: 0.0%
 Ortalama Limit Doluluk =
 DIVIDE ( SUM ( Fact_Sorgu[SektorToplamRisk] ), SUM ( Fact_Sorgu[SektorToplamLimit] ) )
 
+// Tablo: Fact_Sorgu | Bicim: #,0
 Banka Sayisi Artan Musteri =
 CALCULATE (
     [Tekil Musteri],
-    FILTER ( Fact_Sorgu, Fact_Sorgu[BankaSayisi] > Fact_Sorgu[OncekiBankaSayisi] )
+    FILTER ( Fact_Sorgu, Fact_Sorgu[BankaSayisi] > Fact_Sorgu[OncekiBankaSayisi]
+        && NOT ISBLANK ( Fact_Sorgu[OncekiBankaSayisi] ) )
 )
 
-// ---------- Sayfa 4: Rakip sinyalleri ----------
+// Tablo: Fact_RiskDetay | Bicim: #,0
+Risk Detay TL =
+SUM ( Fact_RiskDetay[Risk] )
 
+// ---------- 4 Rakip ----------
+
+// Tablo: Fact_Sorgu | Bicim: 0.0%
 Pay Degisimi =
 AVERAGEX (
     FILTER ( Fact_Sorgu, NOT ISBLANK ( Fact_Sorgu[OncekiBizimPay] ) ),
     Fact_Sorgu[BizimPay] - Fact_Sorgu[OncekiBizimPay]
 )
 
-// Pozitif ve buyukse musteri once rakip limitlerini kullaniyor, bizi yedekte tutuyor.
+// Tablo: Fact_Sorgu | Bicim: 0.00
 Yedek Banka Endeksi =
 AVERAGEX ( Fact_Sorgu, Fact_Sorgu[DigerBankaDoluluk] - Fact_Sorgu[BizimDoluluk] )
 
+// Tablo: Fact_Sorgu | Bicim: #,0
 Rakip Ortalama Limit =
 AVERAGEX (
     FILTER ( Fact_Sorgu, Fact_Sorgu[BankaSayisi] > 1 ),
     DIVIDE ( Fact_Sorgu[SektorToplamLimit] - Fact_Sorgu[BizimLimit], Fact_Sorgu[BankaSayisi] - 1 )
 )
 
+// Tablo: Fact_Sorgu | Bicim: 0.00
 Bizim Limit / Rakip Limit =
 DIVIDE ( AVERAGE ( Fact_Sorgu[BizimLimit] ), [Rakip Ortalama Limit] )
 
-// Yaklasik ana banka tanimi: payimiz, esit paydan 1,5 kat fazla.
+// Tablo: Fact_Sorgu | Bicim: 0.0%
 Ana Banka Orani % =
 DIVIDE (
     CALCULATE (
@@ -166,53 +239,225 @@ DIVIDE (
     [Tekil Musteri]
 )
 
-// Cuzdan matrisi bolgesi (hesaplanmis sutun olarak Fact_Sorgu'ya eklenir).
-// Cuzdan Bolgesi =
-// VAR dPay = Fact_Sorgu[BizimPay] - Fact_Sorgu[OncekiBizimPay]
-// VAR dRisk = Fact_Sorgu[SektorToplamRisk] - Fact_Sorgu[OncekiSektorToplamRisk]
-// RETURN
-//     SWITCH (
-//         TRUE (),
-//         ISBLANK ( Fact_Sorgu[OncekiBizimPay] ), "Tek sorgu",
-//         dRisk >= 0 && dPay < 0, "Rakip buyutuyor",
-//         dRisk >= 0, "Birlikte buyuyoruz",
-//         dPay < 0, "Sessiz cikis",
-//         "Ana bankaya donusuyoruz"
-//     )
+// Tablo: Fact_Sorgu | Bicim: #,0
+Ret Sonrasi Musteri =
+COUNTROWS (
+    FILTER (
+        Fact_Sorgu,
+        Fact_Sorgu[SorguSonucu] IN { "Ret", "Teklif" }
+            && NOT ISBLANK ( Fact_Sorgu[SonrakiSektorToplamRisk] )
+    )
+)
 
-// ---------- Sayfa 5: Erken uyari ve anomali ----------
+// Tablo: Fact_Sorgu | Bicim: 0.0%
+Ret Sonrasi Buyuyen % =
+VAR t =
+    FILTER (
+        Fact_Sorgu,
+        Fact_Sorgu[SorguSonucu] IN { "Ret", "Teklif" }
+            && NOT ISBLANK ( Fact_Sorgu[SonrakiSektorToplamRisk] )
+    )
+RETURN
+    DIVIDE (
+        COUNTROWS ( FILTER ( t, Fact_Sorgu[SonrakiSektorToplamRisk] > Fact_Sorgu[SektorToplamRisk] * 1.1 ) ),
+        COUNTROWS ( t )
+    )
 
+// Tablo: Fact_Sorgu | Bicim: 0.0%
+Ret Sonrasi Gecikme % =
+VAR t =
+    FILTER (
+        Fact_Sorgu,
+        Fact_Sorgu[SorguSonucu] IN { "Ret", "Teklif" }
+            && NOT ISBLANK ( Fact_Sorgu[SonrakiGecikmeVar] )
+            && Fact_Sorgu[GecikmeVar] = 0
+    )
+RETURN
+    DIVIDE ( COUNTROWS ( FILTER ( t, Fact_Sorgu[SonrakiGecikmeVar] = 1 ) ), COUNTROWS ( t ) )
+
+// ---------- 5 Erken Uyari ----------
+
+// Tablo: Fact_AnomaliSkor | Bicim: 0.0
 Anomali Skoru (son sorgu) =
-CALCULATE ( MAX ( Fact_AnomaliSkor[Skor] ), Fact_AnomaliSkor[SonSorguMu] = 1 )
+CALCULATE ( MAX ( Fact_AnomaliSkor[Skor] ), KEEPFILTERS ( Fact_AnomaliSkor[SonSorguMu] = 1 ) )
 
+// Tablo: Fact_AnomaliSkor
+Anomali Nedeni (son) =
+VAR s = [Anomali Skoru (son sorgu)]
+RETURN
+    CALCULATE (
+        MAX ( Fact_AnomaliSkor[Neden] ),
+        KEEPFILTERS ( Fact_AnomaliSkor[SonSorguMu] = 1 ),
+        KEEPFILTERS ( Fact_AnomaliSkor[Skor] = s )
+    )
+
+// Tablo: Fact_AnomaliSkor | Bicim: 0.0
+Ortalama Anomali Skoru =
+AVERAGE ( Fact_AnomaliSkor[Skor] )
+
+// Tablo: Fact_AnomaliSkor | Bicim: #,0
 Yuksek Anomali Musteri =
 CALCULATE (
     DISTINCTCOUNT ( Fact_AnomaliSkor[VKN] ),
-    Fact_AnomaliSkor[SonSorguMu] = 1,
-    Fact_AnomaliSkor[Skor] >= 70
+    KEEPFILTERS ( Fact_AnomaliSkor[SonSorguMu] = 1 ),
+    KEEPFILTERS ( Fact_AnomaliSkor[Skor] >= 70 )
+) + 0
+
+// Tablo: Fact_AnomaliSkor | Bicim: 0.0%
+Skor70 Sonraki Gecikme % =
+CALCULATE (
+    AVERAGE ( Fact_AnomaliSkor[SonrakiGecikmeVar] ),
+    KEEPFILTERS ( Fact_AnomaliSkor[Skor] >= 70 ),
+    KEEPFILTERS ( Fact_AnomaliSkor[GecikmeVar] = 0 )
 )
 
-// ---------- Sayfa 6: Aksiyon ----------
-// Aksiyon etiketi: Fact_Sorgu'ya hesaplanmis sutun. Esikler pilot sonrasi kalibre edilmeli.
-// Aksiyon Etiketi =
-// VAR dPay = Fact_Sorgu[BizimPay] - Fact_Sorgu[OncekiBizimPay]
-// VAR dRisk = Fact_Sorgu[SektorToplamRisk] - Fact_Sorgu[OncekiSektorToplamRisk]
-// VAR dGn = DIVIDE ( Fact_Sorgu[GayrinakdiRisk], Fact_Sorgu[SektorToplamRisk] )
-//     - DIVIDE ( Fact_Sorgu[OncekiGayrinakdiRisk], Fact_Sorgu[OncekiSektorToplamRisk] )
-// VAR dNot = Fact_Sorgu[KKBNot] - Fact_Sorgu[OncekiKKBNot]
-// VAR dBanka = Fact_Sorgu[BankaSayisi] - Fact_Sorgu[OncekiBankaSayisi]
-// VAR skor = LOOKUPVALUE ( Fact_AnomaliSkor[Skor], Fact_AnomaliSkor[SorguID], Fact_Sorgu[SorguID] )
-// RETURN
-//     SWITCH (
-//         TRUE (),
-//         Fact_Sorgu[GecikmeVar] = 1 && Fact_Sorgu[OncekiGecikmeVar] = 0, "Erken uyari",
-//         Fact_Sorgu[TakipVar] = 1, "Erken uyari",
-//         skor >= 70 && dNot < 0, "Erken uyari",
-//         dBanka >= 2 && dNot < 0, "Kredi acligi",
-//         dRisk > 0 && dPay <= -0.05 && dNot >= 0, "Pay geri kazan",
-//         DIVIDE ( Fact_Sorgu[SektorToplamRisk], Fact_Sorgu[SektorToplamLimit] ) > 0.85
-//             && Fact_Sorgu[BizimDoluluk] < 0.6 && Fact_Sorgu[NotBandi] IN { "A", "B" }, "Limit sikisikligi",
-//         dGn >= 0.10 && Fact_Sorgu[GecikmeVar] = 0, "Proje buyumesi",
-//         Fact_Sorgu[SorgularArasiGun] <= 7, "Gereksiz sorgu",
-//         "Izle"
-//     )
+// Tablo: Fact_AnomaliSkor | Bicim: 0.0%
+Diger Sonraki Gecikme % =
+CALCULATE (
+    AVERAGE ( Fact_AnomaliSkor[SonrakiGecikmeVar] ),
+    KEEPFILTERS ( Fact_AnomaliSkor[Skor] < 70 ),
+    KEEPFILTERS ( Fact_AnomaliSkor[GecikmeVar] = 0 )
+)
+
+// Tablo: Fact_Sorgu | Bicim: #,0
+Ortalama KKB Not =
+AVERAGE ( Fact_Sorgu[KKBNot] )
+
+// Tablo: Fact_KrediSonuc | Bicim: 0.0
+Ortalama Ic Rating =
+AVERAGE ( Fact_KrediSonuc[IcRating] )
+
+// ---------- 6 Aksiyon ----------
+
+// Tablo: Fact_Sorgu | Bicim: #,0
+Aksiyon Musteri =
+CALCULATE ( [Tekil Musteri], KEEPFILTERS ( Fact_Sorgu[SonSorguMu] = 1 ) )
+
+// Tablo: Fact_Sorgu | Bicim: #,0
+Potansiyel TL (son) =
+CALCULATE ( SUM ( Fact_Sorgu[Potansiyel TL] ), KEEPFILTERS ( Fact_Sorgu[SonSorguMu] = 1 ) )
+
+// Tablo: Fact_Sorgu | Bicim: #,0
+Bizim Risk (son) =
+CALCULATE ( SUM ( Fact_Sorgu[BizimRisk] ), KEEPFILTERS ( Fact_Sorgu[SonSorguMu] = 1 ) )
+
+// Tablo: Fact_Sorgu | Bicim: dd.mm.yyyy
+Son Sorgu Tarihi =
+CALCULATE ( MAX ( Fact_Sorgu[SorguTarihi] ), KEEPFILTERS ( Fact_Sorgu[SonSorguMu] = 1 ) )
+
+// Tablo: Fact_Sorgu | Bicim: 0.0
+Anomali Skoru (aksiyon) =
+IF ( NOT ISBLANK ( [Son Sorgu Tarihi] ), [Anomali Skoru (son sorgu)] )
+
+// ---------- Hesaplanmis sutunlar ----------
+
+// Tablo: Dim_Tarih
+Ay Donemi =
+IF ( Dim_Tarih[AySonuMu] = 1, "Ay sonu (son 5 gun)", "Ay ici" )
+
+// Tablo: Dim_Tarih
+Gun Adi =
+SWITCH ( Dim_Tarih[HaftaninGunu], 1, "1 Pzt", 2, "2 Sal", 3, "3 Car", 4, "4 Per", 5, "5 Cum", 6, "6 Cmt", "7 Paz" )
+
+// Tablo: Dim_Tarih
+Yil Ceyrek =
+Dim_Tarih[Yil] & "-" & Dim_Tarih[Ceyrek]
+
+// Tablo: Fact_Sorgu
+Tekrar Araligi =
+SWITCH (
+    TRUE (),
+    ISBLANK ( Fact_Sorgu[SorgularArasiGun] ), "0) Ilk sorgu",
+    Fact_Sorgu[SorgularArasiGun] <= 7, "1) 0-7 gun",
+    Fact_Sorgu[SorgularArasiGun] <= 30, "2) 8-30 gun",
+    Fact_Sorgu[SorgularArasiGun] <= 90, "3) 31-90 gun",
+    Fact_Sorgu[SorgularArasiGun] <= 180, "4) 91-180 gun",
+    "5) 180+ gun"
+)
+
+// Tablo: Fact_Sorgu
+Banka Degisimi =
+VAR d = Fact_Sorgu[BankaSayisi] - Fact_Sorgu[OncekiBankaSayisi]
+RETURN
+    SWITCH (
+        TRUE (),
+        ISBLANK ( Fact_Sorgu[OncekiBankaSayisi] ), "Ilk sorgu",
+        d > 0, "Artti",
+        d < 0, "Azaldi",
+        "Ayni"
+    )
+
+// Tablo: Fact_Sorgu
+Not Degisimi =
+VAR d = Fact_Sorgu[KKBNot] - Fact_Sorgu[OncekiKKBNot]
+RETURN
+    SWITCH (
+        TRUE (),
+        ISBLANK ( Fact_Sorgu[OncekiKKBNot] ), "Ilk sorgu",
+        d >= 50, "Yukseldi",
+        d <= -50, "Dustu",
+        "Ayni"
+    )
+
+// Tablo: Fact_Sorgu
+Cuzdan Bolgesi =
+VAR dPay = Fact_Sorgu[BizimPay] - Fact_Sorgu[OncekiBizimPay]
+VAR dRisk = Fact_Sorgu[SektorToplamRisk] - Fact_Sorgu[OncekiSektorToplamRisk]
+RETURN
+    SWITCH (
+        TRUE (),
+        ISBLANK ( Fact_Sorgu[OncekiBizimPay] ), "Tek sorgu",
+        dRisk >= 0 && dPay < 0, "Rakip buyutuyor",
+        dRisk >= 0, "Birlikte buyuyoruz",
+        dPay < 0, "Sessiz cikis",
+        "Ana bankaya donusuyoruz"
+    )
+
+// Tablo: Fact_Sorgu
+Aksiyon Etiketi =
+VAR ilk = ISBLANK ( Fact_Sorgu[OncekiSorguID] )
+VAR dPay = Fact_Sorgu[BizimPay] - Fact_Sorgu[OncekiBizimPay]
+VAR dRisk = Fact_Sorgu[SektorToplamRisk] - Fact_Sorgu[OncekiSektorToplamRisk]
+VAR dGn =
+    DIVIDE ( Fact_Sorgu[GayrinakdiRisk], Fact_Sorgu[SektorToplamRisk] )
+        - DIVIDE ( Fact_Sorgu[OncekiGayrinakdiRisk], Fact_Sorgu[OncekiSektorToplamRisk] )
+VAR dNot = Fact_Sorgu[KKBNot] - Fact_Sorgu[OncekiKKBNot]
+VAR dBanka = Fact_Sorgu[BankaSayisi] - Fact_Sorgu[OncekiBankaSayisi]
+VAR skor =
+    LOOKUPVALUE ( Fact_AnomaliSkor[Skor], Fact_AnomaliSkor[SorguID], Fact_Sorgu[SorguID] )
+VAR doluluk = DIVIDE ( Fact_Sorgu[SektorToplamRisk], Fact_Sorgu[SektorToplamLimit] )
+RETURN
+    SWITCH (
+        TRUE (),
+        Fact_Sorgu[GecikmeVar] = 1, "Erken uyari",
+        Fact_Sorgu[TakipVar] = 1, "Erken uyari",
+        NOT ilk && skor >= 70 && dNot < 0, "Erken uyari",
+        NOT ilk && dBanka >= 2 && dNot < 0, "Kredi acligi",
+        NOT ilk && dRisk > 0 && dPay <= -0.05 && dNot >= 0, "Pay geri kazan",
+        doluluk > 0.85 && Fact_Sorgu[BizimDoluluk] < 0.6
+            && Fact_Sorgu[NotBandi] IN { "A", "B" }, "Limit sikisikligi",
+        NOT ilk && dGn >= 0.10 && Fact_Sorgu[GecikmeVar] = 0, "Proje buyumesi",
+        NOT ilk && Fact_Sorgu[SorgularArasiGun] <= 7, "Gereksiz sorgu",
+        "Izle"
+    )
+
+// Tablo: Fact_Sorgu
+Potansiyel TL =
+SWITCH (
+    Fact_Sorgu[Aksiyon Etiketi],
+    "Pay geri kazan",
+        MAX ( 0, ( Fact_Sorgu[OncekiBizimPay] - Fact_Sorgu[BizimPay] ) * Fact_Sorgu[SektorToplamRisk] ),
+    "Limit sikisikligi",
+        MAX ( 0, Fact_Sorgu[BizimLimit] - Fact_Sorgu[BizimRisk] ),
+    "Proje buyumesi",
+        MAX ( 0, ( Fact_Sorgu[GayrinakdiRisk] - Fact_Sorgu[OncekiGayrinakdiRisk] ) * Fact_Sorgu[OncekiBizimPay] ),
+    0
+)
+
+// ---------- Hesaplanmis tablolar ----------
+
+Huni Asama =
+DATATABLE ( "Sira", INTEGER, "Asama", STRING, { { 1, "1. Basvuru sorgusu" }, { 2, "2. Teklif / karar" }, { 3, "3. Kullandirim" } } )
+
+Risk Kopru =
+DATATABLE ( "Sira", INTEGER, "Kalem", STRING, { { 1, "Bizim finanse ettigimiz" }, { 2, "Rakiplerin finanse ettigi" } } )

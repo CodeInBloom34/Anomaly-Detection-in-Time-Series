@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "musbasina",
+  "position": {
+    "x": 1068,
+    "y": 608,
+    "z": 1700,
+    "width": 198,
+    "height": 100,
+    "tabOrder": 1700
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Musteri Basina Sorgu"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Musteri Basina Sorgu",
+              "nativeQueryRef": "Musteri Basina Sorgu"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Müşteri başına sorgu'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

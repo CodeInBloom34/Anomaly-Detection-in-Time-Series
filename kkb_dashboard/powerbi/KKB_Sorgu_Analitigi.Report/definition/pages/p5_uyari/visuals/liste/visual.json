@@ -1,0 +1,134 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "liste",
+  "position": {
+    "x": 14,
+    "y": 182,
+    "z": 600,
+    "width": 620,
+    "height": 526,
+    "tabOrder": 600
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Musteri"
+                    }
+                  },
+                  "Property": "Unvan"
+                }
+              },
+              "queryRef": "Dim_Musteri.Unvan",
+              "nativeQueryRef": "Unvan"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Musteri"
+                    }
+                  },
+                  "Property": "Segment"
+                }
+              },
+              "queryRef": "Dim_Musteri.Segment",
+              "nativeQueryRef": "Segment"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_AnomaliSkor"
+                    }
+                  },
+                  "Property": "Anomali Skoru (son sorgu)"
+                }
+              },
+              "queryRef": "Fact_AnomaliSkor.Anomali Skoru (son sorgu)",
+              "nativeQueryRef": "Anomali Skoru (son sorgu)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_AnomaliSkor"
+                    }
+                  },
+                  "Property": "Anomali Nedeni (son)"
+                }
+              },
+              "queryRef": "Fact_AnomaliSkor.Anomali Nedeni (son)",
+              "nativeQueryRef": "Anomali Nedeni (son)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Bizim Risk (son)"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Bizim Risk (son)",
+              "nativeQueryRef": "Bizim Risk (son)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_AnomaliSkor"
+                  }
+                },
+                "Property": "Anomali Skoru (son sorgu)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Bu hafta kime bakmalıyız?'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

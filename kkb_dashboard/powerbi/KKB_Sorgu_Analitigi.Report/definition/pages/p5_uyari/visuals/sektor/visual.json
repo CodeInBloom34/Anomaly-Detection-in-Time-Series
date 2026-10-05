@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "sektor",
+  "position": {
+    "x": 644,
+    "y": 480,
+    "z": 900,
+    "width": 300,
+    "height": 228,
+    "tabOrder": 900
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Musteri"
+                    }
+                  },
+                  "Property": "NACEAciklama"
+                }
+              },
+              "queryRef": "Dim_Musteri.NACEAciklama",
+              "nativeQueryRef": "NACEAciklama"
+            }
+          ]
+        },
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Tarih"
+                    }
+                  },
+                  "Property": "Yil Ceyrek"
+                }
+              },
+              "queryRef": "Dim_Tarih.Yil Ceyrek",
+              "nativeQueryRef": "Yil Ceyrek"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_AnomaliSkor"
+                    }
+                  },
+                  "Property": "Ortalama Anomali Skoru"
+                }
+              },
+              "queryRef": "Fact_AnomaliSkor.Ortalama Anomali Skoru",
+              "nativeQueryRef": "Ortalama Anomali Skoru"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sektör × çeyrek ortalama skor'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

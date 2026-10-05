@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "gun",
+  "position": {
+    "x": 920,
+    "y": 6,
+    "z": 100,
+    "width": 170,
+    "height": 60,
+    "tabOrder": 100
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Ortalama Sorgudan Kullandirima Gun"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Ortalama Sorgudan Kullandirima Gun",
+              "nativeQueryRef": "Ortalama Sorgudan Kullandirima Gun"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sorgu → kullandırım (gün)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -150,6 +150,9 @@ def skorla(sorgu, detay, musteri, seed=42):
         "BireyselSapma": np.round(birey_puan, 1),
         "AkranSapmasi": np.round(akran_puan, 1),
         "SonSorguMu": (s.groupby("VKN").SorguTarihi.transform("max") == s.SorguTarihi).astype(int),
+        # Geriye donuk test: skor aninda gecikme var miydi, bir sonraki sorguda var mi?
+        "GecikmeVar": s.GecikmeVar.astype(int),
+        "SonrakiGecikmeVar": s.SonrakiGecikmeVar if "SonrakiGecikmeVar" in s else np.nan,
     })
     for c in OZELLIKLER:
         out[c] = s[c].round(4)
@@ -173,7 +176,7 @@ def main():
     sorgu, detay, musteri = oku(args.data)
     skor = skorla(sorgu, detay, musteri, args.seed)
     out = Path(args.out) if args.out else Path(args.data) / "Fact_AnomaliSkor.csv"
-    skor.to_csv(out, index=False, encoding="utf-8-sig")
+    skor.to_csv(out, index=False, encoding="utf-8")
     print(f"{len(skor)} sorgu skorlandi, skor >= 70: {(skor.Skor >= 70).sum()} -> {out}")
 
 

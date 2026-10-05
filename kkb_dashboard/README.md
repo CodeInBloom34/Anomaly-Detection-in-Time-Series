@@ -8,34 +8,55 @@ Son 12 ayda kurumsal müşteriler için yapılan KKB / Risk Merkezi sorguların�
 
 | Dosya | Ne yapar |
 | --- | --- |
-| `generate_sample_data.py` | Yıldız şemasındaki tüm tabloları CSV olarak üretir: `Dim_Tarih`, `Dim_Sube`, `Dim_Musteri`, `Dim_NotBandi`, `Fact_Sorgu`, `Fact_RiskDetay`, `Fact_KrediSonuc`. |
+| `powerbi/KKB_Sorgu_Analitigi.pbip` | **Power BI projesi.** Power BI Desktop'ta bu dosyayı açın. 6 sayfa, 50 ölçü, 10 tablo içerir. |
+| `data/` | Projenin okuduğu sentetik örnek CSV'ler (8 dosya). |
+| `generate_sample_data.py` | Örnek CSV'leri yeniden üretir: `Dim_Tarih`, `Dim_Sube`, `Dim_Musteri`, `Dim_NotBandi`, `Fact_Sorgu`, `Fact_RiskDetay`, `Fact_KrediSonuc`. |
 | `anomaly_score.py` | Her müşterinin ardışık sorgularından davranışsal anomali skoru (0–100) ve "neden" alanı üretir, `Fact_AnomaliSkor.csv` dosyasına yazar. |
-| `powerbi/measures.dax` | Rapordaki tüm DAX ölçüleri ile cüzdan bölgesi ve aksiyon etiketi hesaplanmış sütunları. |
-| `sql/fact_sorgu_view.sql` | Gerçek veride `Fact_Sorgu` tablosunu kuran view örneği (LAG ile önceki sorgu alanları ve 60 günlük sorgu sonucu). |
-| `tests/test_pipeline.py` | Veri tutarlılığı ve skorun senaryoları ayırt ettiğini kontrol eden testler. |
+| `powerbi/build_pbip.py` | Power BI projesini ve `measures.dax` dosyasını üretir. Ölçü veya görsel değişikliği burada yapılır. |
+| `powerbi/measures.dax` | Tüm DAX ölçüleri, hesaplanmış sütunlar ve tablolar (okumak için; üretilmiş dosya). |
+| `sql/fact_sorgu_view.sql` | Gerçek veride `Fact_Sorgu` tablosunu kuran view örneği. |
+| `tests/` | Veri tutarlılığı, skor ve Power BI projesinin iç tutarlılığı testleri. |
 
-## Hızlı başlangıç
+## Power BI'da açma
+
+Ön koşul: Power BI Desktop'ta *Dosya → Seçenekler ve ayarlar → Seçenekler → Önizleme özellikleri* altında **Power BI Project (.pbip) kaydetme seçeneği** ve **PBIR biçiminde rapor depolama** açık olmalı. Yeni sürümlerde bu seçenekler varsayılan olarak açıktır.
+
+1. Repoyu indirin (GitHub'da *Code → Download ZIP*) ve bir klasöre çıkarın, örneğin `C:\KKB`.
+2. `kkb_dashboard\powerbi\KKB_Sorgu_Analitigi.pbip` dosyasını Power BI Desktop ile açın.
+3. *Giriş → Verileri dönüştür → Parametreleri düzenle* ile `VeriKlasoru` parametresini CSV'lerin bulunduğu klasöre ayarlayın, örneğin `C:\KKB\<indirilen klasör>\kkb_dashboard\data`. Sonda `\` olmasın.
+4. *Değişiklikleri uygula* deyin ve verilerin yüklenmesini bekleyin.
+5. İsterseniz *Dosya → Farklı kaydet* ile `.pbix` olarak kaydedin.
+
+Doğru yüklendiğini kontrol etmek için 1. sayfada şu değerleri görmelisiniz (filtre yokken):
+
+| Kart | Beklenen değer |
+| --- | --- |
+| Toplam sorgu | 1.767 |
+| Tekil müşteri | 564 |
+| Sorgu → kullandırım | %38,2 |
+| Ölü sorgu maliyeti (TL) | 14.725 |
+| Cüzdan payı | %25,5 |
+| Kör nokta müşteri | 36 |
+
+Projede elle tamamlanması gereken birkaç adım var:
+
+- **Isı haritası renkleri:** 2. sayfadaki "Ayın haftası × gün" matrisine *Koşullu biçimlendirme → Arka plan rengi* ekleyin.
+- **Sankey:** 3. sayfadaki not göçü matrisini isterseniz AppSource'taki Sankey görseliyle değiştirebilirsiniz.
+- **Drill-through:** 5. sayfadaki müşteri zaman serisi şimdilik dilimleyiciyle çalışıyor. İsterseniz ayrı bir drill-through sayfasına taşıyın.
+- **Satır düzeyi güvenlik (RLS):** *Modelleme → Rolleri yönet* ile portföy yöneticisi rolünü `Dim_Musteri[PortfoyYoneticisi]` üzerinden tanımlayın.
+
+Proje açılırken hata verirse hata mesajının ekran görüntüsünü paylaşın. Dosyalar Microsoft'un yayımladığı PBIR şemalarına göre doğrulandı, ancak Power BI Desktop'ta açılarak test edilmedi.
+
+## Hızlı başlangıç (veriyi yeniden üretmek için)
 
 ```bash
 cd kkb_dashboard
 pip install -r requirements.txt
 python generate_sample_data.py --out data --musteri 600
 python anomaly_score.py --data data
+python powerbi/build_pbip.py
 python -m unittest discover tests
 ```
-
-Ardından Power BI Desktop'ta:
-
-1. *Veri al → Metin/CSV* ile `data/` klasöründeki 8 dosyayı yükleyin. VKN alanlarını **metin** tipine çevirin.
-2. İlişkileri kurun. Hepsi tek yönlü ve 1→* olmalı:
-   - `Dim_Musteri[VKN]` → `Fact_Sorgu`, `Fact_KrediSonuc`, `Fact_AnomaliSkor`
-   - `Dim_Tarih[Tarih]` → `Fact_Sorgu[SorguTarihi]`, `Fact_KrediSonuc[Tarih]`
-   - `Dim_Sube[SubeKod]` → `Fact_Sorgu[SubeKod]`
-   - `Dim_NotBandi[Bant]` → `Fact_Sorgu[NotBandi]`
-   - `Fact_Sorgu[SorguID]` → `Fact_RiskDetay[SorguID]`
-3. `Dim_Tarih` tablosunu *tarih tablosu olarak işaretleyin*.
-4. `powerbi/measures.dax` içindeki ölçüleri ekleyin. Yorum satırındaki iki hesaplanmış sütunu (`Cuzdan Bolgesi`, `Aksiyon Etiketi`) `Fact_Sorgu` tablosuna ekleyin.
-5. `Dim_Musteri[_Senaryo]` sütununu gizleyin. Bu alan yalnızca sentetik verinin doğrulaması içindir, gerçek veride yoktur.
 
 ## Anomali skoru nasıl çalışır?
 
@@ -57,7 +78,7 @@ Her sorgu bir önceki sorguyla karşılaştırılır ve 7 özellikten oluşan bi
 
 Skor = 0,5 × bireysel + 0,5 × akran. Bireysel geçmiş yoksa yalnızca akran sapması kullanılır. `Neden` alanı en büyük sapmayı veren özelliği ve yönünü yazar.
 
-Örnek veride (600 müşteri) senaryo bazında medyan skorlar şöyle çıktı: stabil ≈ 27, bozulma ≈ 80, proje büyümesi ≈ 78. Gerçek veride eşikler (≥ 70 gibi) pilot dönemde geriye dönük testle kalibre edilmelidir.
+Örnek veride (600 müşteri) senaryo bazında medyan skorlar şöyle çıktı: stabil ≈ 27, bozulma ≈ 79, proje büyümesi ≈ 76. Gerçek veride eşikler (≥ 70 gibi) pilot dönemde geriye dönük testle kalibre edilmelidir.
 
 ## Gerçek veriye geçiş
 

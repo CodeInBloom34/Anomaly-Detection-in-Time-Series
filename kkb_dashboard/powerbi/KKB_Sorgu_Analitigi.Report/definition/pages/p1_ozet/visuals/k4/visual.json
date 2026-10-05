@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "k4",
+  "position": {
+    "x": 734,
+    "y": 76,
+    "z": 700,
+    "width": 172,
+    "height": 110,
+    "tabOrder": 700
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Cuzdan Payi"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Cuzdan Payi",
+              "nativeQueryRef": "Cuzdan Payi"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cüzdan payı'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

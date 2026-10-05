@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "kor",
+  "position": {
+    "x": 864,
+    "y": 388,
+    "z": 1200,
+    "width": 198,
+    "height": 100,
+    "tabOrder": 1200
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Kor Nokta Musteri"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Kor Nokta Musteri",
+              "nativeQueryRef": "Kor Nokta Musteri"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Kör nokta müşteri'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

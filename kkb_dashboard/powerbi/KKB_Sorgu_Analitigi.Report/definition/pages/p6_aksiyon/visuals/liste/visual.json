@@ -1,0 +1,223 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "liste",
+  "position": {
+    "x": 14,
+    "y": 76,
+    "z": 200,
+    "width": 760,
+    "height": 632,
+    "tabOrder": 200
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Musteri"
+                    }
+                  },
+                  "Property": "Unvan"
+                }
+              },
+              "queryRef": "Dim_Musteri.Unvan",
+              "nativeQueryRef": "Unvan"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Musteri"
+                    }
+                  },
+                  "Property": "PortfoyYoneticisi"
+                }
+              },
+              "queryRef": "Dim_Musteri.PortfoyYoneticisi",
+              "nativeQueryRef": "PortfoyYoneticisi"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Aksiyon Etiketi"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Aksiyon Etiketi",
+              "nativeQueryRef": "Aksiyon Etiketi"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Potansiyel TL (son)"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Potansiyel TL (son)",
+              "nativeQueryRef": "Potansiyel TL (son)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Bizim Risk (son)"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Bizim Risk (son)",
+              "nativeQueryRef": "Bizim Risk (son)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Anomali Skoru (aksiyon)"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Anomali Skoru (aksiyon)",
+              "nativeQueryRef": "Anomali Skoru (aksiyon)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Son Sorgu Tarihi"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Son Sorgu Tarihi",
+              "nativeQueryRef": "Son Sorgu Tarihi"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_Sorgu"
+                  }
+                },
+                "Property": "Potansiyel TL (son)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Aksiyon listesi'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "liste_filtre",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Sorgu"
+              }
+            },
+            "Property": "Aksiyon Etiketi"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "t",
+              "Entity": "Fact_Sorgu",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "t"
+                              }
+                            },
+                            "Property": "Aksiyon Etiketi"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Izle'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

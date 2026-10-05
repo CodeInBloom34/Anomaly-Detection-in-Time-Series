@@ -1,3 +1,5 @@
-kkb_dashboard/data/
+# Power BI proje dosyalarinin yerel onbellegi
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
 __pycache__/
 *.pyc

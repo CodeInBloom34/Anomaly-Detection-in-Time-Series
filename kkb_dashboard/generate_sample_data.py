@@ -175,7 +175,7 @@ def musteri_yolu(rng, m, tarihler):
     # Yillik egilimler (t: donem icindeki yil orani, 0-1)
     buyume = {"stabil": rng.normal(0.05, 0.05), "birlikte_buyume": 0.45, "rakip_buyutuyor": 0.55,
               "proje_buyumesi": 0.35, "bozulma": 0.4, "sessiz_cikis": -0.35, "ana_banka": -0.2}[s]
-    pay_trend = {"stabil": 0.0, "birlikte_buyume": 0.12, "rakip_buyutuyor": -0.18, "proje_buyumesi": 0.0,
+    pay_trend = {"stabil": 0.0, "birlikte_buyume": 0.12, "rakip_buyutuyor": -0.32, "proje_buyumesi": 0.0,
                  "bozulma": -0.05, "sessiz_cikis": -0.15, "ana_banka": 0.25}[s]
 
     rows = []
@@ -201,7 +201,7 @@ def musteri_yolu(rng, m, tarihler):
             banka += int(round(2 * t))
             doluluk += 0.1 * t
         elif s == "proje_buyumesi":
-            gnakdi += 0.3 * t
+            gnakdi += 0.5 * t
         elif s == "birlikte_buyume":
             knot += 120 * t
         elif s == "sessiz_cikis":
@@ -336,6 +336,10 @@ def uret(n_musteri, seed):
                 "TakipVar", "KKBNot", "BankaSayisi", "GayrinakdiRisk"]:
         sorgu["Onceki" + col] = g[col].shift(1)
     sorgu["SorgularArasiGun"] = (sorgu.SorguTarihi - sorgu.OncekiSorguTarihi).dt.days
+    # Sonraki sorgu alanlari (LEAD): ret sonrasi kader ve skorun geriye donuk testi icin.
+    sorgu["SonrakiSektorToplamRisk"] = g.SektorToplamRisk.shift(-1)
+    sorgu["SonrakiGecikmeVar"] = g.GecikmeVar.shift(-1)
+    sorgu["SonSorguMu"] = (g.SorguTarihi.transform("max") == sorgu.SorguTarihi).astype(int)
     sorgu["BizimPay"] = (sorgu.BizimRisk / sorgu.SektorToplamRisk).round(4)
     sorgu["OncekiBizimPay"] = (sorgu.OncekiBizimRisk / sorgu.OncekiSektorToplamRisk).round(4)
     sorgu["BizimDoluluk"] = (sorgu.BizimRisk / sorgu.BizimLimit).round(4)
@@ -363,7 +367,10 @@ def uret(n_musteri, seed):
                 once = ms[ms.SorguTarihi <= d]
                 ref = once.iloc[-1] if not once.empty else ms.iloc[0]
                 seri.append((d, ref.BizimRisk, ref.BizimLimit))
-        ic = rng.choice(["1", "2", "3", "4", "5", "6", "7", "8"])
+        # Ic rating (1 = en iyi, 8 = en kotu) ilk KKB notuyla iliskili, ama gecikmeli guncellenir:
+        # not dustugu halde rating'i degismeyen musteriler "uyumsuzluk" olarak gorunur.
+        ilk_not = ms.KKBNot.iloc[0] if not ms.empty else rng.uniform(1250, 1800)
+        ic = int(np.clip(round((1900 - ilk_not) / 120 + rng.normal(0, 1)), 1, 8))
         for d, risk, limit in seri:
             snap.append({"VKN": m.VKN, "Tarih": d.date(), "BizimRisk": round(risk, 0),
                          "BizimLimit": round(limit, 0), "IcRating": ic})
@@ -396,7 +403,7 @@ def main():
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     for ad, df in uret(args.musteri, args.seed).items():
-        df.to_csv(out / f"{ad}.csv", index=False, encoding="utf-8-sig")
+        df.to_csv(out / f"{ad}.csv", index=False, encoding="utf-8")
         print(f"{ad:16s} {len(df):7d} satir")
 
 
