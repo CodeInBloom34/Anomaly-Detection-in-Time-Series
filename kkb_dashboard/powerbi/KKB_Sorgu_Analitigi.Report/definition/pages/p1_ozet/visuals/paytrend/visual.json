@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "trend",
+  "name": "paytrend",
   "position": {
     "x": 14,
-    "y": 198,
-    "z": 1000,
+    "y": 458,
+    "z": 1100,
     "width": 840,
     "height": 250,
-    "tabOrder": 1000
+    "tabOrder": 1100
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -41,11 +41,11 @@
                       "Entity": "Fact_Sorgu"
                     }
                   },
-                  "Property": "Sorgu Adedi"
+                  "Property": "Cuzdan Payi"
                 }
               },
-              "queryRef": "Fact_Sorgu.Sorgu Adedi",
-              "nativeQueryRef": "Sorgu Adedi"
+              "queryRef": "Fact_Sorgu.Cuzdan Payi",
+              "nativeQueryRef": "Cuzdan Payi"
             }
           ]
         }
@@ -84,7 +84,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Aylık sorgu adedi'"
+                  "Value": "'Aylık cüzdan payı'"
                 }
               }
             }

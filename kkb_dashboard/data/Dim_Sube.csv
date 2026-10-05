@@ -1,28 +1,28 @@
 SubeKod,SubeAdi,Il,Bolge,SubeTipi
-S000,Istanbul Kurumsal Subesi,Istanbul,Marmara,Kurumsal
-S001,Istanbul Ticari Subesi,Istanbul,Marmara,Ticari
-S002,Istanbul KOBI Subesi,Istanbul,Marmara,KOBI
-S011,Kocaeli Ticari Subesi,Kocaeli,Marmara,Ticari
-S012,Kocaeli KOBI Subesi,Kocaeli,Marmara,KOBI
-S021,Bursa Ticari Subesi,Bursa,Marmara,Ticari
-S022,Bursa KOBI Subesi,Bursa,Marmara,KOBI
-S030,Ankara Kurumsal Subesi,Ankara,Ic Anadolu,Kurumsal
-S031,Ankara Ticari Subesi,Ankara,Ic Anadolu,Ticari
-S032,Ankara KOBI Subesi,Ankara,Ic Anadolu,KOBI
-S041,Konya Ticari Subesi,Konya,Ic Anadolu,Ticari
-S042,Konya KOBI Subesi,Konya,Ic Anadolu,KOBI
-S050,Izmir Kurumsal Subesi,Izmir,Ege,Kurumsal
-S051,Izmir Ticari Subesi,Izmir,Ege,Ticari
-S052,Izmir KOBI Subesi,Izmir,Ege,KOBI
-S061,Denizli Ticari Subesi,Denizli,Ege,Ticari
-S062,Denizli KOBI Subesi,Denizli,Ege,KOBI
-S071,Antalya Ticari Subesi,Antalya,Akdeniz,Ticari
-S072,Antalya KOBI Subesi,Antalya,Akdeniz,KOBI
-S081,Adana Ticari Subesi,Adana,Akdeniz,Ticari
-S082,Adana KOBI Subesi,Adana,Akdeniz,KOBI
-S091,Gaziantep Ticari Subesi,Gaziantep,Guneydogu,Ticari
-S092,Gaziantep KOBI Subesi,Gaziantep,Guneydogu,KOBI
-S101,Kayseri Ticari Subesi,Kayseri,Ic Anadolu,Ticari
-S102,Kayseri KOBI Subesi,Kayseri,Ic Anadolu,KOBI
-S111,Trabzon Ticari Subesi,Trabzon,Karadeniz,Ticari
-S112,Trabzon KOBI Subesi,Trabzon,Karadeniz,KOBI
+S000,İstanbul Kurumsal Şubesi,İstanbul,Marmara,Kurumsal
+S001,İstanbul Ticari Şubesi,İstanbul,Marmara,Ticari
+S002,İstanbul KOBİ Şubesi,İstanbul,Marmara,KOBI
+S011,Kocaeli Ticari Şubesi,Kocaeli,Marmara,Ticari
+S012,Kocaeli KOBİ Şubesi,Kocaeli,Marmara,KOBI
+S021,Bursa Ticari Şubesi,Bursa,Marmara,Ticari
+S022,Bursa KOBİ Şubesi,Bursa,Marmara,KOBI
+S030,Ankara Kurumsal Şubesi,Ankara,İç Anadolu,Kurumsal
+S031,Ankara Ticari Şubesi,Ankara,İç Anadolu,Ticari
+S032,Ankara KOBİ Şubesi,Ankara,İç Anadolu,KOBI
+S041,Konya Ticari Şubesi,Konya,İç Anadolu,Ticari
+S042,Konya KOBİ Şubesi,Konya,İç Anadolu,KOBI
+S050,İzmir Kurumsal Şubesi,İzmir,Ege,Kurumsal
+S051,İzmir Ticari Şubesi,İzmir,Ege,Ticari
+S052,İzmir KOBİ Şubesi,İzmir,Ege,KOBI
+S061,Denizli Ticari Şubesi,Denizli,Ege,Ticari
+S062,Denizli KOBİ Şubesi,Denizli,Ege,KOBI
+S071,Antalya Ticari Şubesi,Antalya,Akdeniz,Ticari
+S072,Antalya KOBİ Şubesi,Antalya,Akdeniz,KOBI
+S081,Adana Ticari Şubesi,Adana,Akdeniz,Ticari
+S082,Adana KOBİ Şubesi,Adana,Akdeniz,KOBI
+S091,Gaziantep Ticari Şubesi,Gaziantep,Güneydoğu,Ticari
+S092,Gaziantep KOBİ Şubesi,Gaziantep,Güneydoğu,KOBI
+S101,Kayseri Ticari Şubesi,Kayseri,İç Anadolu,Ticari
+S102,Kayseri KOBİ Şubesi,Kayseri,İç Anadolu,KOBI
+S111,Trabzon Ticari Şubesi,Trabzon,Karadeniz,Ticari
+S112,Trabzon KOBİ Şubesi,Trabzon,Karadeniz,KOBI

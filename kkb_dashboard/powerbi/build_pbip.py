@@ -60,9 +60,9 @@ ILISKILER = [
 HESAPLANMIS_SUTUNLAR = {
     "Dim_Tarih": [
         ("Ay Donemi", "string",
-         'IF ( Dim_Tarih[AySonuMu] = 1, "Ay sonu (son 5 gun)", "Ay ici" )'),
+         'IF ( Dim_Tarih[AySonuMu] = 1, "Ay sonu (son 5 gün)", "Ay içi" )'),
         ("Gun Adi", "string",
-         'SWITCH ( Dim_Tarih[HaftaninGunu], 1, "1 Pzt", 2, "2 Sal", 3, "3 Car", 4, "4 Per", '
+         'SWITCH ( Dim_Tarih[HaftaninGunu], 1, "1 Pzt", 2, "2 Sal", 3, "3 Çar", 4, "4 Per", '
          '5, "5 Cum", 6, "6 Cmt", "7 Paz" )'),
         ("Yil Ceyrek", "string", 'Dim_Tarih[Yil] & "-" & Dim_Tarih[Ceyrek]'),
     ],
@@ -70,32 +70,32 @@ HESAPLANMIS_SUTUNLAR = {
         ("Tekrar Araligi", "string", """
 SWITCH (
     TRUE (),
-    ISBLANK ( Fact_Sorgu[SorgularArasiGun] ), "0) Ilk sorgu",
-    Fact_Sorgu[SorgularArasiGun] <= 7, "1) 0-7 gun",
-    Fact_Sorgu[SorgularArasiGun] <= 30, "2) 8-30 gun",
-    Fact_Sorgu[SorgularArasiGun] <= 90, "3) 31-90 gun",
-    Fact_Sorgu[SorgularArasiGun] <= 180, "4) 91-180 gun",
-    "5) 180+ gun"
+    ISBLANK ( Fact_Sorgu[SorgularArasiGun] ), "0) İlk sorgu",
+    Fact_Sorgu[SorgularArasiGun] <= 7, "1) 0-7 gün",
+    Fact_Sorgu[SorgularArasiGun] <= 30, "2) 8-30 gün",
+    Fact_Sorgu[SorgularArasiGun] <= 90, "3) 31-90 gün",
+    Fact_Sorgu[SorgularArasiGun] <= 180, "4) 91-180 gün",
+    "5) 180+ gün"
 )"""),
         ("Banka Degisimi", "string", """
 VAR d = Fact_Sorgu[BankaSayisi] - Fact_Sorgu[OncekiBankaSayisi]
 RETURN
     SWITCH (
         TRUE (),
-        ISBLANK ( Fact_Sorgu[OncekiBankaSayisi] ), "Ilk sorgu",
-        d > 0, "Artti",
-        d < 0, "Azaldi",
-        "Ayni"
+        ISBLANK ( Fact_Sorgu[OncekiBankaSayisi] ), "İlk sorgu",
+        d > 0, "Arttı",
+        d < 0, "Azaldı",
+        "Aynı"
     )"""),
         ("Not Degisimi", "string", """
 VAR d = Fact_Sorgu[KKBNot] - Fact_Sorgu[OncekiKKBNot]
 RETURN
     SWITCH (
         TRUE (),
-        ISBLANK ( Fact_Sorgu[OncekiKKBNot] ), "Ilk sorgu",
-        d >= 50, "Yukseldi",
-        d <= -50, "Dustu",
-        "Ayni"
+        ISBLANK ( Fact_Sorgu[OncekiKKBNot] ), "İlk sorgu",
+        d >= 50, "Yükseldi",
+        d <= -50, "Düştü",
+        "Aynı"
     )"""),
         ("Cuzdan Bolgesi", "string", """
 VAR dPay = Fact_Sorgu[BizimPay] - Fact_Sorgu[OncekiBizimPay]
@@ -104,10 +104,10 @@ RETURN
     SWITCH (
         TRUE (),
         ISBLANK ( Fact_Sorgu[OncekiBizimPay] ), "Tek sorgu",
-        dRisk >= 0 && dPay < 0, "Rakip buyutuyor",
-        dRisk >= 0, "Birlikte buyuyoruz",
-        dPay < 0, "Sessiz cikis",
-        "Ana bankaya donusuyoruz"
+        dRisk >= 0 && dPay < 0, "Rakip büyütüyor",
+        dRisk >= 0, "Birlikte büyüyoruz",
+        dPay < 0, "Sessiz çıkış",
+        "Ana bankaya dönüşüyoruz"
     )"""),
         ("Aksiyon Etiketi", "string", """
 VAR ilk = ISBLANK ( Fact_Sorgu[OncekiSorguID] )
@@ -124,16 +124,16 @@ VAR doluluk = DIVIDE ( Fact_Sorgu[SektorToplamRisk], Fact_Sorgu[SektorToplamLimi
 RETURN
     SWITCH (
         TRUE (),
-        Fact_Sorgu[GecikmeVar] = 1, "Erken uyari",
-        Fact_Sorgu[TakipVar] = 1, "Erken uyari",
-        NOT ilk && skor >= 70 && dNot < 0, "Erken uyari",
-        NOT ilk && dBanka >= 2 && dNot < 0, "Kredi acligi",
+        Fact_Sorgu[GecikmeVar] = 1, "Erken uyarı",
+        Fact_Sorgu[TakipVar] = 1, "Erken uyarı",
+        NOT ilk && skor >= 70 && dNot < 0, "Erken uyarı",
+        NOT ilk && dBanka >= 2 && dNot < 0, "Kredi açlığı",
         NOT ilk && dRisk > 0 && dPay <= -0.05 && dNot >= 0, "Pay geri kazan",
         doluluk > 0.85 && Fact_Sorgu[BizimDoluluk] < 0.6
-            && Fact_Sorgu[NotBandi] IN { "A", "B" }, "Limit sikisikligi",
-        NOT ilk && dGn >= 0.10 && Fact_Sorgu[GecikmeVar] = 0, "Proje buyumesi",
+            && Fact_Sorgu[NotBandi] IN { "A", "B" }, "Limit sıkışıklığı",
+        NOT ilk && dGn >= 0.10 && Fact_Sorgu[GecikmeVar] = 0, "Proje büyümesi",
         NOT ilk && Fact_Sorgu[SorgularArasiGun] <= 7, "Gereksiz sorgu",
-        "Izle"
+        "İzle"
     )"""),
         # Kaba potansiyel tahmini: pilot sonrasi kalibre edilmelidir.
         ("Potansiyel TL", "double", """
@@ -141,9 +141,9 @@ SWITCH (
     Fact_Sorgu[Aksiyon Etiketi],
     "Pay geri kazan",
         MAX ( 0, ( Fact_Sorgu[OncekiBizimPay] - Fact_Sorgu[BizimPay] ) * Fact_Sorgu[SektorToplamRisk] ),
-    "Limit sikisikligi",
+    "Limit sıkışıklığı",
         MAX ( 0, Fact_Sorgu[BizimLimit] - Fact_Sorgu[BizimRisk] ),
-    "Proje buyumesi",
+    "Proje büyümesi",
         MAX ( 0, ( Fact_Sorgu[GayrinakdiRisk] - Fact_Sorgu[OncekiGayrinakdiRisk] ) * Fact_Sorgu[OncekiBizimPay] ),
     0
 )"""),
@@ -153,12 +153,12 @@ SWITCH (
 HESAPLANMIS_TABLOLAR = {
     "Huni Asama": (
         'DATATABLE ( "Sira", INTEGER, "Asama", STRING, '
-        '{ { 1, "1. Basvuru sorgusu" }, { 2, "2. Teklif / karar" }, { 3, "3. Kullandirim" } } )',
+        '{ { 1, "1. Başvuru sorgusu" }, { 2, "2. Teklif / karar" }, { 3, "3. Kullandırım" } } )',
         [("Sira", "int64"), ("Asama", "string")],
     ),
     "Risk Kopru": (
         'DATATABLE ( "Sira", INTEGER, "Kalem", STRING, '
-        '{ { 1, "Bizim finanse ettigimiz" }, { 2, "Rakiplerin finanse ettigi" } } )',
+        '{ { 1, "Bizim finanse ettiğimiz" }, { 2, "Rakiplerin finanse ettiği" } } )',
         [("Sira", "int64"), ("Kalem", "string")],
     ),
 }
@@ -215,11 +215,12 @@ CALCULATE (
     )
 )""", "#,0", "1 Ozet"),
     ("Fact_Sorgu", "Ozet Cumle", """
-"Bu donemde " & FORMAT ( [Tekil Musteri], "#,0" ) & " musteriye " & FORMAT ( [Sorgu Adedi], "#,0" )
-    & " sorgu attik. " & FORMAT ( [Payi Eriyen Musteri], "#,0" ) & " musteride payimiz eridi, "
-    & FORMAT ( [Yeni Gecikme Sinyali], "#,0" ) & " musteride yeni gecikme sinyali var. "
-    & "Aksiyonsuz sorgularin maliyeti " & FORMAT ( [Olu Sorgu Maliyeti TL], "#,0" ) & " TL; "
-    & FORMAT ( [Kor Nokta Musteri], "#,0" ) & " riskli musteriye hic bakmadik.\"""", None, "1 Ozet"),
+"Bu dönemde " & FORMAT ( [Tekil Musteri], "#,0" ) & " müşteriye " & FORMAT ( [Sorgu Adedi], "#,0" )
+    & " sorgu attık. " & FORMAT ( [Payi Eriyen Musteri], "#,0" ) & " müşteride payımız eridi, "
+    & FORMAT ( [Yeni Gecikme Sinyali], "#,0" ) & " müşteride yeni gecikme sinyali var. "
+    & "Aksiyonsuz sorguların maliyeti " & FORMAT ( [Olu Sorgu Maliyeti TL], "#,0" ) & " TL; "
+    & FORMAT ( [Kor Nokta Musteri], "#,0" ) & " riskli müşteriye hiç bakmadık."
+""", None, "1 Ozet"),
 
     # Sayfa 2 - Sorgu davranisi
     ("Fact_Sorgu", "Huni Deger", """
@@ -603,6 +604,7 @@ class Sayfa:
         self.ad = ad
         self.sekme = sekme
         self.gorseller = []
+        self.etkilesimler = []  # (kaynak gorsel, hedef gorsel, tur)
         self.textbox("baslik", 0, 0, 900, 64, baslik, alt_baslik)
 
     def ekle(self, ad, tip, x, y, w, h, roller, baslik=None, siralama=None, haric=None, nesneler=None):
@@ -672,16 +674,20 @@ def sayfalar():
     p = Sayfa("p1_ozet", "1 Yönetici Özeti", "Bir yılda ne gördük?",
               "KKB kurumsal sorgularından çıkan efor, risk ve cüzdan payı özeti")
     p.dilimleyici("seg", 920, 6, 170, 56, C(D, "Segment"), "Segment")
-    p.dilimleyici("bolge", 1100, 6, 170, 56, C(D, "Bolge"), "Bolge")
+    p.dilimleyici("bolge", 1100, 6, 170, 56, C(D, "Bolge"), "Bölge")
     kartlar = [("Sorgu Adedi", "Toplam sorgu"), ("Tekil Musteri", "Tekil müşteri"),
                ("Sorgu Donusum %", "Sorgu → kullandırım"), ("Olu Sorgu Maliyeti TL", "Ölü sorgu maliyeti (TL)"),
                ("Cuzdan Payi", "Cüzdan payı"), ("Payi Eriyen Musteri", "Payı eriyen müşteri"),
                ("Yeni Gecikme Sinyali", "Yeni gecikme sinyali")]
     for i, (olcu, baslik) in enumerate(kartlar):
         p.kart(f"k{i}", 14 + i * 180, 76, 172, 110, M(S, olcu), baslik)
-    p.ekle("trend", "lineClusteredColumnComboChart", 14, 198, 840, 510,
-           {"Category": [ay], "Y": [M(S, "Sorgu Adedi")], "Y2": [M(S, "Cuzdan Payi")]},
-           baslik="Aylık sorgu adedi ve cüzdan payı", siralama=(ay, "Ascending"))
+    # Iki farkli olcek iki ayri grafikte (cift eksenli grafik yaniltici okunur).
+    p.ekle("trend", "clusteredColumnChart", 14, 198, 840, 250,
+           {"Category": [ay], "Y": [M(S, "Sorgu Adedi")]},
+           baslik="Aylık sorgu adedi", siralama=(ay, "Ascending"))
+    p.ekle("paytrend", "lineChart", 14, 458, 840, 250,
+           {"Category": [ay], "Y": [M(S, "Cuzdan Payi")]},
+           baslik="Aylık cüzdan payı", siralama=(ay, "Ascending"))
     p.ekle("ozet", "tableEx", 864, 198, 402, 180, {"Values": [M(S, "Ozet Cumle")]},
            baslik="Bu dönemin özeti",
            nesneler={"values": [{"properties": {"wordWrap": lit("true")}}],
@@ -696,8 +702,8 @@ def sayfalar():
 
     # 2 - Sorgu davranisi
     p = Sayfa("p2_davranis", "2 Sorgu Davranışı", "Ne zaman, neden bakıyoruz?", "Sorgu eforunun ticari karşılığı")
-    p.kart("gun", 920, 6, 170, 60, M(S, "Ortalama Sorgudan Kullandirima Gun"), "Sorgu → kullandırım (gün)")
-    p.kart("maliyet", 1100, 6, 170, 60, M(S, "Toplam Sorgu Maliyeti TL"), "Toplam maliyet (TL)")
+    p.kart("gun", 920, 6, 170, 60, M(S, "Ortalama Sorgudan Kullandirima Gun"), "Kullandırıma gün")
+    p.kart("maliyet", 1100, 6, 170, 60, M(S, "Toplam Sorgu Maliyeti TL"), "Sorgu maliyeti (TL)")
     p.ekle("huni", "funnel", 14, 76, 420, 300,
            {"Category": [C("Huni Asama", "Asama")], "Y": [M(S, "Huni Deger")]},
            baslik="Başvuru sorgusundan kullandırıma", siralama=(C("Huni Asama", "Asama"), "Ascending"))
@@ -712,7 +718,7 @@ def sayfalar():
     p.ekle("tekrar", "clusteredColumnChart", 444, 386, 300, 322,
            {"Category": [C(S, "Tekrar Araligi")], "Y": [M(S, "Sorgu Adedi")]},
            baslik="Aynı müşteriye tekrar bakma aralığı", siralama=(C(S, "Tekrar Araligi"), "Ascending"),
-           haric=(C(S, "Tekrar Araligi"), ["0) Ilk sorgu"]))
+           haric=(C(S, "Tekrar Araligi"), ["0) İlk sorgu"]))
     p.ekle("sube", "tableEx", 754, 386, 512, 322,
            {"Values": [C("Dim_Sube", "SubeAdi"), M(S, "Sorgu Adedi"), M(S, "Sorgu Donusum %"),
                        M(S, "Olu Sorgu Orani %"), M(S, "Olu Sorgu Maliyeti TL")]},
@@ -723,10 +729,10 @@ def sayfalar():
     p = Sayfa("p3_risk", "3 Risk Göçü", "İki sorgu arasında ne değişti?", "Yalnızca en az iki kez sorgulanan müşteriler")
     p.ekle("notgocu", "pivotTable", 14, 76, 420, 300,
            {"Rows": [C(S, "OncekiNotBandi")], "Columns": [C(S, "NotBandi")], "Values": [M(S, "Tekil Musteri")]},
-           baslik="KKB not bandı göçü (önceki → son)", haric=(C(S, "Not Degisimi"), ["Ilk sorgu"]))
+           baslik="KKB not bandı göçü (önceki → son)", haric=(C(S, "Not Degisimi"), ["İlk sorgu"]))
     p.ekle("bankanot", "pivotTable", 444, 76, 420, 300,
            {"Rows": [C(S, "Banka Degisimi")], "Columns": [C(S, "Not Degisimi")], "Values": [M(S, "Tekil Musteri")]},
-           baslik="Banka sayısı × not değişimi", haric=(C(S, "Banka Degisimi"), ["Ilk sorgu"]))
+           baslik="Banka sayısı × not değişimi", haric=(C(S, "Banka Degisimi"), ["İlk sorgu"]))
     p.ekle("kopru", "waterfallChart", 874, 76, 392, 300,
            {"Category": [C("Risk Kopru", "Kalem")], "Y": [M(S, "Kopru Deger")]},
            baslik="Sektör risk artışını kim finanse etti?", siralama=(C("Risk Kopru", "Kalem"), "Ascending"))
@@ -778,9 +784,15 @@ def sayfalar():
                        M(S, "Bizim Risk (son)")]},
            baslik="Bu hafta kime bakmalıyız?", siralama=(M(A, "Anomali Skoru (son sorgu)"), "Descending"))
     p.dilimleyici("musteri", 644, 182, 300, 56, unvan, "Müşteri seç")
-    p.ekle("seri", "lineClusteredColumnComboChart", 644, 244, 622, 226,
-           {"Category": [ay], "Y": [M(S, "Sektor Risk TL")], "Y2": [M(S, "Ortalama Limit Doluluk")]},
-           baslik="Seçili müşterinin sektör riski ve doluluğu", siralama=(ay, "Ascending"))
+    # Musteri secimi yalnizca zaman serisi grafiklerini filtreler; liste ve kartlar tum portfoyu gosterir.
+    for hedef in ["k0", "k1", "k2", "k3", "k4", "liste", "sektor", "rating"]:
+        p.etkilesimler.append(("musteri", hedef, "NoFilter"))
+    p.ekle("seri", "lineChart", 644, 244, 306, 226,
+           {"Category": [ay], "Y": [M(S, "Sektor Risk TL")]},
+           baslik="Seçili müşteri: sektör riski (TL)", siralama=(ay, "Ascending"))
+    p.ekle("seridol", "lineChart", 960, 244, 306, 226,
+           {"Category": [ay], "Y": [M(S, "Ortalama Limit Doluluk")]},
+           baslik="Seçili müşteri: limit doluluğu", siralama=(ay, "Ascending"))
     p.ekle("sektor", "pivotTable", 644, 480, 300, 228,
            {"Rows": [C(D, "NACEAciklama")], "Columns": [C(T, "Yil Ceyrek")], "Values": [M(A, "Ortalama Anomali Skoru")]},
            baslik="Sektör × çeyrek ortalama skor")
@@ -792,7 +804,7 @@ def sayfalar():
     # 6 - Aksiyon
     p = Sayfa("p6_aksiyon", "6 Aksiyon", "Pazartesi kimi arıyoruz?", "Son sorguya göre aksiyon etiketi ve potansiyel")
     p.dilimleyici("py", 1100, 6, 170, 56, C(D, "PortfoyYoneticisi"), "Portföy yöneticisi")
-    izle = (C(S, "Aksiyon Etiketi"), ["Izle"])
+    izle = (C(S, "Aksiyon Etiketi"), ["İzle"])
     p.ekle("liste", "tableEx", 14, 76, 760, 632,
            {"Values": [unvan, C(D, "PortfoyYoneticisi"), C(S, "Aksiyon Etiketi"), M(S, "Potansiyel TL (son)"),
                        M(S, "Bizim Risk (son)"), M(S, "Anomali Skoru (aksiyon)"), M(S, "Son Sorgu Tarihi")]},
@@ -809,13 +821,14 @@ def sayfalar():
 
 TEMA = {
     "name": "KKB Tema",
-    "dataColors": ["#1F4E79", "#2E86C1", "#E67E22", "#C0392B", "#27AE60", "#8E44AD", "#7F8C8D", "#16A085"],
+    # Renk korlugu testinden gecen kategorik palet (sira onemli, degistirmeyin).
+    "dataColors": ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#4a3aa7", "#e34948"],
     "background": "#FFFFFF",
-    "foreground": "#252423",
-    "tableAccent": "#1F4E79",
-    "good": "#27AE60",
-    "neutral": "#E67E22",
-    "bad": "#C0392B",
+    "foreground": "#0b0b0b",
+    "tableAccent": "#2a78d6",
+    "good": "#0ca30c",
+    "neutral": "#fab219",
+    "bad": "#d03b3b",
 }
 
 
@@ -892,6 +905,8 @@ def proje_yaz(hedef):
             "displayOption": "FitToPage",
             "height": 720,
             "width": 1280,
+            **({"visualInteractions": [{"source": a, "target": b, "type": c} for a, b, c in p.etkilesimler]}
+               if p.etkilesimler else {}),
         })
         for g in p.gorseller:
             yaz(tanim / "pages" / p.ad / "visuals" / g["name"] / "visual.json", g)

@@ -13,6 +13,8 @@ Son 12 ayda kurumsal müşteriler için yapılan KKB / Risk Merkezi sorguların�
 | `generate_sample_data.py` | Örnek CSV'leri yeniden üretir: `Dim_Tarih`, `Dim_Sube`, `Dim_Musteri`, `Dim_NotBandi`, `Fact_Sorgu`, `Fact_RiskDetay`, `Fact_KrediSonuc`. |
 | `anomaly_score.py` | Her müşterinin ardışık sorgularından davranışsal anomali skoru (0–100) ve "neden" alanı üretir, `Fact_AnomaliSkor.csv` dosyasına yazar. |
 | `powerbi/build_pbip.py` | Power BI projesini ve `measures.dax` dosyasını üretir. Ölçü veya görsel değişikliği burada yapılır. |
+| `docs/KKB_Dashboard_Taslak.pdf` | Paylaşılabilir taslak: 6 sayfanın örnek veriyle çizilmiş görüntüsü ve görsel bazında yapım kılavuzu. |
+| `powerbi/render_mockup.py`, `powerbi/mockup_pdf.py` | Sayfa görüntülerini PBIP yerleşiminden çizer ve PDF'i üretir (`python powerbi/mockup_pdf.py`). |
 | `powerbi/measures.dax` | Tüm DAX ölçüleri, hesaplanmış sütunlar ve tablolar (okumak için; üretilmiş dosya). |
 | `sql/fact_sorgu_view.sql` | Gerçek veride `Fact_Sorgu` tablosunu kuran view örneği. |
 | `tests/` | Veri tutarlılığı, skor ve Power BI projesinin iç tutarlılığı testleri. |
@@ -31,11 +33,11 @@ Doğru yüklendiğini kontrol etmek için 1. sayfada şu değerleri görmelisini
 
 | Kart | Beklenen değer |
 | --- | --- |
-| Toplam sorgu | 1.767 |
+| Toplam sorgu | 1.760 |
 | Tekil müşteri | 564 |
-| Sorgu → kullandırım | %38,2 |
-| Ölü sorgu maliyeti (TL) | 14.725 |
-| Cüzdan payı | %25,5 |
+| Sorgu → kullandırım | %39,0 |
+| Ölü sorgu maliyeti (TL) | 14.150 |
+| Cüzdan payı | %24,2 |
 | Kör nokta müşteri | 36 |
 
 Projede elle tamamlanması gereken birkaç adım var:
@@ -55,6 +57,7 @@ pip install -r requirements.txt
 python generate_sample_data.py --out data --musteri 600
 python anomaly_score.py --data data
 python powerbi/build_pbip.py
+python powerbi/mockup_pdf.py --data data --out docs
 python -m unittest discover tests
 ```
 
@@ -78,7 +81,7 @@ Her sorgu bir önceki sorguyla karşılaştırılır ve 7 özellikten oluşan bi
 
 Skor = 0,5 × bireysel + 0,5 × akran. Bireysel geçmiş yoksa yalnızca akran sapması kullanılır. `Neden` alanı en büyük sapmayı veren özelliği ve yönünü yazar.
 
-Örnek veride (600 müşteri) senaryo bazında medyan skorlar şöyle çıktı: stabil ≈ 27, bozulma ≈ 79, proje büyümesi ≈ 76. Gerçek veride eşikler (≥ 70 gibi) pilot dönemde geriye dönük testle kalibre edilmelidir.
+Örnek veride (600 müşteri) senaryo bazında medyan skorlar şöyle çıktı: stabil ≈ 27, bozulma ≈ 78, proje büyümesi ≈ 78. Gerçek veride eşikler (≥ 70 gibi) pilot dönemde geriye dönük testle kalibre edilmelidir.
 
 ## Gerçek veriye geçiş
 

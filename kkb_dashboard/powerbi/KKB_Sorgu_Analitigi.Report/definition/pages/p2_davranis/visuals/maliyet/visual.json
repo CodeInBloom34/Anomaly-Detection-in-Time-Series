@@ -48,7 +48,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Toplam maliyet (TL)'"
+                  "Value": "'Sorgu maliyeti (TL)'"
                 }
               }
             }

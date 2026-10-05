@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "trend",
+  "name": "seridol",
   "position": {
-    "x": 14,
-    "y": 198,
-    "z": 1000,
-    "width": 840,
-    "height": 250,
-    "tabOrder": 1000
+    "x": 960,
+    "y": 244,
+    "z": 900,
+    "width": 306,
+    "height": 226,
+    "tabOrder": 900
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -41,11 +41,11 @@
                       "Entity": "Fact_Sorgu"
                     }
                   },
-                  "Property": "Sorgu Adedi"
+                  "Property": "Ortalama Limit Doluluk"
                 }
               },
-              "queryRef": "Fact_Sorgu.Sorgu Adedi",
-              "nativeQueryRef": "Sorgu Adedi"
+              "queryRef": "Fact_Sorgu.Ortalama Limit Doluluk",
+              "nativeQueryRef": "Ortalama Limit Doluluk"
             }
           ]
         }
@@ -84,7 +84,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Aylık sorgu adedi'"
+                  "Value": "'Seçili müşteri: limit doluluğu'"
                 }
               }
             }

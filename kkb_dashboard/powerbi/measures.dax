@@ -76,11 +76,11 @@ CALCULATE (
 
 // Tablo: Fact_Sorgu
 Ozet Cumle =
-"Bu donemde " & FORMAT ( [Tekil Musteri], "#,0" ) & " musteriye " & FORMAT ( [Sorgu Adedi], "#,0" )
-    & " sorgu attik. " & FORMAT ( [Payi Eriyen Musteri], "#,0" ) & " musteride payimiz eridi, "
-    & FORMAT ( [Yeni Gecikme Sinyali], "#,0" ) & " musteride yeni gecikme sinyali var. "
-    & "Aksiyonsuz sorgularin maliyeti " & FORMAT ( [Olu Sorgu Maliyeti TL], "#,0" ) & " TL; "
-    & FORMAT ( [Kor Nokta Musteri], "#,0" ) & " riskli musteriye hic bakmadik."
+"Bu dönemde " & FORMAT ( [Tekil Musteri], "#,0" ) & " müşteriye " & FORMAT ( [Sorgu Adedi], "#,0" )
+    & " sorgu attık. " & FORMAT ( [Payi Eriyen Musteri], "#,0" ) & " müşteride payımız eridi, "
+    & FORMAT ( [Yeni Gecikme Sinyali], "#,0" ) & " müşteride yeni gecikme sinyali var. "
+    & "Aksiyonsuz sorguların maliyeti " & FORMAT ( [Olu Sorgu Maliyeti TL], "#,0" ) & " TL; "
+    & FORMAT ( [Kor Nokta Musteri], "#,0" ) & " riskli müşteriye hiç bakmadık."
 
 // ---------- 2 Davranis ----------
 
@@ -353,11 +353,11 @@ IF ( NOT ISBLANK ( [Son Sorgu Tarihi] ), [Anomali Skoru (son sorgu)] )
 
 // Tablo: Dim_Tarih
 Ay Donemi =
-IF ( Dim_Tarih[AySonuMu] = 1, "Ay sonu (son 5 gun)", "Ay ici" )
+IF ( Dim_Tarih[AySonuMu] = 1, "Ay sonu (son 5 gün)", "Ay içi" )
 
 // Tablo: Dim_Tarih
 Gun Adi =
-SWITCH ( Dim_Tarih[HaftaninGunu], 1, "1 Pzt", 2, "2 Sal", 3, "3 Car", 4, "4 Per", 5, "5 Cum", 6, "6 Cmt", "7 Paz" )
+SWITCH ( Dim_Tarih[HaftaninGunu], 1, "1 Pzt", 2, "2 Sal", 3, "3 Çar", 4, "4 Per", 5, "5 Cum", 6, "6 Cmt", "7 Paz" )
 
 // Tablo: Dim_Tarih
 Yil Ceyrek =
@@ -367,12 +367,12 @@ Dim_Tarih[Yil] & "-" & Dim_Tarih[Ceyrek]
 Tekrar Araligi =
 SWITCH (
     TRUE (),
-    ISBLANK ( Fact_Sorgu[SorgularArasiGun] ), "0) Ilk sorgu",
-    Fact_Sorgu[SorgularArasiGun] <= 7, "1) 0-7 gun",
-    Fact_Sorgu[SorgularArasiGun] <= 30, "2) 8-30 gun",
-    Fact_Sorgu[SorgularArasiGun] <= 90, "3) 31-90 gun",
-    Fact_Sorgu[SorgularArasiGun] <= 180, "4) 91-180 gun",
-    "5) 180+ gun"
+    ISBLANK ( Fact_Sorgu[SorgularArasiGun] ), "0) İlk sorgu",
+    Fact_Sorgu[SorgularArasiGun] <= 7, "1) 0-7 gün",
+    Fact_Sorgu[SorgularArasiGun] <= 30, "2) 8-30 gün",
+    Fact_Sorgu[SorgularArasiGun] <= 90, "3) 31-90 gün",
+    Fact_Sorgu[SorgularArasiGun] <= 180, "4) 91-180 gün",
+    "5) 180+ gün"
 )
 
 // Tablo: Fact_Sorgu
@@ -381,10 +381,10 @@ VAR d = Fact_Sorgu[BankaSayisi] - Fact_Sorgu[OncekiBankaSayisi]
 RETURN
     SWITCH (
         TRUE (),
-        ISBLANK ( Fact_Sorgu[OncekiBankaSayisi] ), "Ilk sorgu",
-        d > 0, "Artti",
-        d < 0, "Azaldi",
-        "Ayni"
+        ISBLANK ( Fact_Sorgu[OncekiBankaSayisi] ), "İlk sorgu",
+        d > 0, "Arttı",
+        d < 0, "Azaldı",
+        "Aynı"
     )
 
 // Tablo: Fact_Sorgu
@@ -393,10 +393,10 @@ VAR d = Fact_Sorgu[KKBNot] - Fact_Sorgu[OncekiKKBNot]
 RETURN
     SWITCH (
         TRUE (),
-        ISBLANK ( Fact_Sorgu[OncekiKKBNot] ), "Ilk sorgu",
-        d >= 50, "Yukseldi",
-        d <= -50, "Dustu",
-        "Ayni"
+        ISBLANK ( Fact_Sorgu[OncekiKKBNot] ), "İlk sorgu",
+        d >= 50, "Yükseldi",
+        d <= -50, "Düştü",
+        "Aynı"
     )
 
 // Tablo: Fact_Sorgu
@@ -407,10 +407,10 @@ RETURN
     SWITCH (
         TRUE (),
         ISBLANK ( Fact_Sorgu[OncekiBizimPay] ), "Tek sorgu",
-        dRisk >= 0 && dPay < 0, "Rakip buyutuyor",
-        dRisk >= 0, "Birlikte buyuyoruz",
-        dPay < 0, "Sessiz cikis",
-        "Ana bankaya donusuyoruz"
+        dRisk >= 0 && dPay < 0, "Rakip büyütüyor",
+        dRisk >= 0, "Birlikte büyüyoruz",
+        dPay < 0, "Sessiz çıkış",
+        "Ana bankaya dönüşüyoruz"
     )
 
 // Tablo: Fact_Sorgu
@@ -429,16 +429,16 @@ VAR doluluk = DIVIDE ( Fact_Sorgu[SektorToplamRisk], Fact_Sorgu[SektorToplamLimi
 RETURN
     SWITCH (
         TRUE (),
-        Fact_Sorgu[GecikmeVar] = 1, "Erken uyari",
-        Fact_Sorgu[TakipVar] = 1, "Erken uyari",
-        NOT ilk && skor >= 70 && dNot < 0, "Erken uyari",
-        NOT ilk && dBanka >= 2 && dNot < 0, "Kredi acligi",
+        Fact_Sorgu[GecikmeVar] = 1, "Erken uyarı",
+        Fact_Sorgu[TakipVar] = 1, "Erken uyarı",
+        NOT ilk && skor >= 70 && dNot < 0, "Erken uyarı",
+        NOT ilk && dBanka >= 2 && dNot < 0, "Kredi açlığı",
         NOT ilk && dRisk > 0 && dPay <= -0.05 && dNot >= 0, "Pay geri kazan",
         doluluk > 0.85 && Fact_Sorgu[BizimDoluluk] < 0.6
-            && Fact_Sorgu[NotBandi] IN { "A", "B" }, "Limit sikisikligi",
-        NOT ilk && dGn >= 0.10 && Fact_Sorgu[GecikmeVar] = 0, "Proje buyumesi",
+            && Fact_Sorgu[NotBandi] IN { "A", "B" }, "Limit sıkışıklığı",
+        NOT ilk && dGn >= 0.10 && Fact_Sorgu[GecikmeVar] = 0, "Proje büyümesi",
         NOT ilk && Fact_Sorgu[SorgularArasiGun] <= 7, "Gereksiz sorgu",
-        "Izle"
+        "İzle"
     )
 
 // Tablo: Fact_Sorgu
@@ -447,9 +447,9 @@ SWITCH (
     Fact_Sorgu[Aksiyon Etiketi],
     "Pay geri kazan",
         MAX ( 0, ( Fact_Sorgu[OncekiBizimPay] - Fact_Sorgu[BizimPay] ) * Fact_Sorgu[SektorToplamRisk] ),
-    "Limit sikisikligi",
+    "Limit sıkışıklığı",
         MAX ( 0, Fact_Sorgu[BizimLimit] - Fact_Sorgu[BizimRisk] ),
-    "Proje buyumesi",
+    "Proje büyümesi",
         MAX ( 0, ( Fact_Sorgu[GayrinakdiRisk] - Fact_Sorgu[OncekiGayrinakdiRisk] ) * Fact_Sorgu[OncekiBizimPay] ),
     0
 )
@@ -457,7 +457,7 @@ SWITCH (
 // ---------- Hesaplanmis tablolar ----------
 
 Huni Asama =
-DATATABLE ( "Sira", INTEGER, "Asama", STRING, { { 1, "1. Basvuru sorgusu" }, { 2, "2. Teklif / karar" }, { 3, "3. Kullandirim" } } )
+DATATABLE ( "Sira", INTEGER, "Asama", STRING, { { 1, "1. Başvuru sorgusu" }, { 2, "2. Teklif / karar" }, { 3, "3. Kullandırım" } } )
 
 Risk Kopru =
-DATATABLE ( "Sira", INTEGER, "Kalem", STRING, { { 1, "Bizim finanse ettigimiz" }, { 2, "Rakiplerin finanse ettigi" } } )
+DATATABLE ( "Sira", INTEGER, "Kalem", STRING, { { 1, "Bizim finanse ettiğimiz" }, { 2, "Rakiplerin finanse ettiği" } } )

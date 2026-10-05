@@ -24,17 +24,17 @@ import pandas as pd
 from sklearn.ensemble import IsolationForest
 
 OZELLIKLER = {
-    "RiskBuyume30g": "Sektor riski hizli degisti",
-    "DolulukDelta": "Limit dolulugu degisti",
-    "BankaSayisiDelta": "Banka sayisi degisti",
-    "NotDelta": "KKB notu degisti",
-    "GayrinakdiPayDelta": "Gayrinakdi pay kaydi",
-    "RotatifPayDelta": "Rotatif pay kaydi",
-    "BizimPayDelta": "Bizim pay degisti",
+    "RiskBuyume30g": "Sektör riski hızlı değişti",
+    "DolulukDelta": "Limit doluluğu değişti",
+    "BankaSayisiDelta": "Banka sayısı değişti",
+    "NotDelta": "KKB notu değişti",
+    "GayrinakdiPayDelta": "Gayrinakdi pay kaydı",
+    "RotatifPayDelta": "Rotatif pay kaydı",
+    "BizimPayDelta": "Bizim pay değişti",
 }
 YENI_SINYAL_NEDENI = {
     "YeniGecikme": "Yeni gecikme sinyali",
-    "YeniTakip": "Takibe dusus",
+    "YeniTakip": "Takibe düşüş",
 }
 BIREYSEL_AGIRLIK = 0.5
 MIN_GECMIS = 2  # bireysel sapma icin gereken en az onceki degisim sayisi
@@ -137,7 +137,7 @@ def skorla(sorgu, detay, musteri, seed=42):
     neden_kol = katki.astype(float).idxmax(axis=1)
     neden = neden_kol.map(OZELLIKLER)
     yon = np.sign([s.at[i, c] for i, c in neden_kol.items()])
-    neden = neden + np.where(yon > 0, " (artis)", " (azalis)")
+    neden = neden + np.where(yon > 0, " (artış)", " (azalış)")
     neden = np.where(s.YeniGecikme == 1, YENI_SINYAL_NEDENI["YeniGecikme"], neden)
     neden = np.where(s.YeniTakip == 1, YENI_SINYAL_NEDENI["YeniTakip"], neden)
 

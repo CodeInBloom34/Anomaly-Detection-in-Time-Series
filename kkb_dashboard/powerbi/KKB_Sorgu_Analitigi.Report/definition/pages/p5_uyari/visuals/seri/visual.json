@@ -5,12 +5,12 @@
     "x": 644,
     "y": 244,
     "z": 800,
-    "width": 622,
+    "width": 306,
     "height": 226,
     "tabOrder": 800
   },
   "visual": {
-    "visualType": "lineClusteredColumnComboChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -46,24 +46,6 @@
               },
               "queryRef": "Fact_Sorgu.Sektor Risk TL",
               "nativeQueryRef": "Sektor Risk TL"
-            }
-          ]
-        },
-        "Y2": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fact_Sorgu"
-                    }
-                  },
-                  "Property": "Ortalama Limit Doluluk"
-                }
-              },
-              "queryRef": "Fact_Sorgu.Ortalama Limit Doluluk",
-              "nativeQueryRef": "Ortalama Limit Doluluk"
             }
           ]
         }
@@ -102,7 +84,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Seçili müşterinin sektör riski ve doluluğu'"
+                  "Value": "'Seçili müşteri: sektör riski (TL)'"
                 }
               }
             }

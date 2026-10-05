@@ -4,5 +4,47 @@
   "displayName": "5 Erken Uyarı",
   "displayOption": "FitToPage",
   "height": 720,
-  "width": 1280
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "musteri",
+      "target": "k0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "musteri",
+      "target": "k1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "musteri",
+      "target": "k2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "musteri",
+      "target": "k3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "musteri",
+      "target": "k4",
+      "type": "NoFilter"
+    },
+    {
+      "source": "musteri",
+      "target": "liste",
+      "type": "NoFilter"
+    },
+    {
+      "source": "musteri",
+      "target": "sektor",
+      "type": "NoFilter"
+    },
+    {
+      "source": "musteri",
+      "target": "rating",
+      "type": "NoFilter"
+    }
+  ]
 }

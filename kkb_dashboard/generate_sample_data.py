@@ -21,26 +21,26 @@ DONEM_SON = pd.Timestamp("2026-09-30")
 SORGU_MALIYET_TL = {"Risk Merkezi": 40.0, "Ticari Kredi Notu": 65.0, "Cek Raporu": 30.0}
 
 SEKTORLER = {
-    "C": "Imalat",
-    "F": "Insaat",
+    "C": "İmalat",
+    "F": "İnşaat",
     "G": "Toptan ve perakende ticaret",
-    "H": "Ulastirma ve depolama",
+    "H": "Ulaştırma ve depolama",
     "I": "Konaklama ve yiyecek",
-    "J": "Bilgi ve iletisim",
+    "J": "Bilgi ve iletişim",
     "M": "Mesleki ve teknik faaliyetler",
 }
 ILLER = {
-    "Istanbul": "Marmara",
+    "İstanbul": "Marmara",
     "Kocaeli": "Marmara",
     "Bursa": "Marmara",
-    "Ankara": "Ic Anadolu",
-    "Konya": "Ic Anadolu",
-    "Izmir": "Ege",
+    "Ankara": "İç Anadolu",
+    "Konya": "İç Anadolu",
+    "İzmir": "Ege",
     "Denizli": "Ege",
     "Antalya": "Akdeniz",
     "Adana": "Akdeniz",
-    "Gaziantep": "Guneydogu",
-    "Kayseri": "Ic Anadolu",
+    "Gaziantep": "Güneydoğu",
+    "Kayseri": "İç Anadolu",
     "Trabzon": "Karadeniz",
 }
 SEGMENTLER = ["Kurumsal", "Ticari", "KOBI"]
@@ -102,11 +102,11 @@ def dim_sube(rng):
     rows = []
     for i, (il, bolge) in enumerate(ILLER.items()):
         for j, tip in enumerate(["Kurumsal", "Ticari", "KOBI"]):
-            if il not in ("Istanbul", "Ankara", "Izmir") and tip == "Kurumsal":
+            if il not in ("İstanbul", "Ankara", "İzmir") and tip == "Kurumsal":
                 continue
             rows.append({
                 "SubeKod": f"S{i:02d}{j}",
-                "SubeAdi": f"{il} {tip} Subesi",
+                "SubeAdi": f"{il} {tip.replace('KOBI', 'KOBİ')} Şubesi",
                 "Il": il,
                 "Bolge": bolge,
                 "SubeTipi": tip,
@@ -122,7 +122,7 @@ def dim_musteri(rng, n, subeler):
         sube = subeler[subeler.SubeTipi == segment[i]].sample(1, random_state=int(rng.integers(1e9))).iloc[0]
         rows.append({
             "VKN": f"9{rng.integers(10**8, 10**9):09d}",
-            "Unvan": f"Musteri {i + 1:04d} A.S.",
+            "Unvan": f"Müşteri {i + 1:04d} A.Ş.",
             "Segment": segment[i],
             "NACE": rng.choice(list(SEKTORLER)),
             "Il": sube.Il,
@@ -156,7 +156,9 @@ def sorgu_tarihleri(rng, senaryo):
             d -= pd.Timedelta(days=1)
         gunler.append(d)
     if rng.random() < 0.06:  # 7 gun icinde mukerrer sorgu
-        gunler.append(gunler[0] + pd.Timedelta(days=int(rng.integers(1, 7))))
+        tekrar = gunler[0] + pd.Timedelta(days=int(rng.integers(1, 7)))
+        if tekrar <= DONEM_SON:
+            gunler.append(tekrar)
     return sorted(set(gunler))
 
 
