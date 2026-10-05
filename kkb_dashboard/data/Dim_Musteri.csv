@@ -1,0 +1,601 @@
+VKN,Unvan,Segment,NACE,Il,Bolge,SubeKod,GrupKod,MusteriSinceTarihi,PortfoyYoneticisi,_Senaryo,NACEAciklama
+9609778585,Müşteri 0001 A.Ş.,Ticari,J,Kayseri,İç Anadolu,S101,,2019-08-10,PY102,proje_buyumesi,Bilgi ve iletişim
+9517727538,Müşteri 0002 A.Ş.,KOBI,C,Bursa,Marmara,S022,G074,2019-01-24,PY022,stabil,İmalat
+9657261830,Müşteri 0003 A.Ş.,KOBI,F,Ankara,İç Anadolu,S032,,2022-09-26,PY033,bozulma,İnşaat
+9843950336,Müşteri 0004 A.Ş.,KOBI,G,Adana,Akdeniz,S082,,2019-07-01,PY083,rakip_buyutuyor,Toptan ve perakende ticaret
+9219048284,Müşteri 0005 A.Ş.,KOBI,H,Bursa,Marmara,S022,,2020-09-06,PY022,stabil,Ulaştırma ve depolama
+9859858350,Müşteri 0006 A.Ş.,KOBI,C,Denizli,Ege,S062,G001,2023-03-26,PY062,ana_banka,İmalat
+9796187133,Müşteri 0007 A.Ş.,KOBI,I,Gaziantep,Güneydoğu,S092,G067,2015-12-23,PY091,proje_buyumesi,Konaklama ve yiyecek
+9847033530,Müşteri 0008 A.Ş.,Kurumsal,H,İzmir,Ege,S050,,2020-06-04,PY051,proje_buyumesi,Ulaştırma ve depolama
+9627194192,Müşteri 0009 A.Ş.,KOBI,H,Gaziantep,Güneydoğu,S092,,2023-05-31,PY091,stabil,Ulaştırma ve depolama
+9903107311,Müşteri 0010 A.Ş.,Ticari,C,Gaziantep,Güneydoğu,S091,G009,2020-12-24,PY092,birlikte_buyume,İmalat
+9221222822,Müşteri 0011 A.Ş.,Ticari,I,Ankara,İç Anadolu,S031,,2016-04-18,PY032,stabil,Konaklama ve yiyecek
+9319870421,Müşteri 0012 A.Ş.,KOBI,C,Adana,Akdeniz,S082,,2021-11-03,PY081,sessiz_cikis,İmalat
+9649436560,Müşteri 0013 A.Ş.,KOBI,G,Gaziantep,Güneydoğu,S092,,2023-04-22,PY091,rakip_buyutuyor,Toptan ve perakende ticaret
+9729478084,Müşteri 0014 A.Ş.,KOBI,C,Bursa,Marmara,S022,G005,2024-04-09,PY022,bozulma,İmalat
+9466592382,Müşteri 0015 A.Ş.,Ticari,C,İzmir,Ege,S051,,2015-03-15,PY053,stabil,İmalat
+9722789982,Müşteri 0016 A.Ş.,KOBI,H,Kayseri,İç Anadolu,S102,,2020-10-07,PY101,stabil,Ulaştırma ve depolama
+9461138467,Müşteri 0017 A.Ş.,KOBI,C,Ankara,İç Anadolu,S032,,2022-01-14,PY031,birlikte_buyume,İmalat
+9825571868,Müşteri 0018 A.Ş.,Ticari,M,Kayseri,İç Anadolu,S101,,2023-09-06,PY101,stabil,Mesleki ve teknik faaliyetler
+9577757216,Müşteri 0019 A.Ş.,Kurumsal,H,İzmir,Ege,S050,,2015-04-08,PY052,bozulma,Ulaştırma ve depolama
+9457772521,Müşteri 0020 A.Ş.,Kurumsal,J,İstanbul,Marmara,S000,G047,2018-07-01,PY001,rakip_buyutuyor,Bilgi ve iletişim
+9983689845,Müşteri 0021 A.Ş.,KOBI,C,Bursa,Marmara,S022,,2025-03-04,PY022,proje_buyumesi,İmalat
+9422805512,Müşteri 0022 A.Ş.,Ticari,I,Adana,Akdeniz,S081,,2021-02-17,PY083,stabil,Konaklama ve yiyecek
+9441142289,Müşteri 0023 A.Ş.,KOBI,M,Ankara,İç Anadolu,S032,,2017-09-07,PY032,ana_banka,Mesleki ve teknik faaliyetler
+9343835894,Müşteri 0024 A.Ş.,Ticari,H,Gaziantep,Güneydoğu,S091,,2021-05-25,PY092,bozulma,Ulaştırma ve depolama
+9692878068,Müşteri 0025 A.Ş.,KOBI,G,Bursa,Marmara,S022,,2019-07-28,PY023,proje_buyumesi,Toptan ve perakende ticaret
+9440733508,Müşteri 0026 A.Ş.,Ticari,H,Ankara,İç Anadolu,S031,G008,2020-02-23,PY033,stabil,Ulaştırma ve depolama
+9450187040,Müşteri 0027 A.Ş.,KOBI,M,Denizli,Ege,S062,,2023-03-18,PY063,birlikte_buyume,Mesleki ve teknik faaliyetler
+9579189070,Müşteri 0028 A.Ş.,Kurumsal,F,Ankara,İç Anadolu,S030,,2015-02-11,PY033,stabil,İnşaat
+9194135482,Müşteri 0029 A.Ş.,Ticari,I,Trabzon,Karadeniz,S111,G052,2015-05-21,PY113,stabil,Konaklama ve yiyecek
+9931510360,Müşteri 0030 A.Ş.,KOBI,M,Denizli,Ege,S062,G046,2018-11-27,PY061,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9922085802,Müşteri 0031 A.Ş.,KOBI,H,Antalya,Akdeniz,S072,G027,2017-07-19,PY071,rakip_buyutuyor,Ulaştırma ve depolama
+9519181696,Müşteri 0032 A.Ş.,KOBI,H,İzmir,Ege,S052,,2025-06-12,PY053,ana_banka,Ulaştırma ve depolama
+9892527591,Müşteri 0033 A.Ş.,Kurumsal,M,Ankara,İç Anadolu,S030,,2016-05-25,PY032,stabil,Mesleki ve teknik faaliyetler
+9343307609,Müşteri 0034 A.Ş.,Ticari,I,Trabzon,Karadeniz,S111,,2023-10-15,PY111,stabil,Konaklama ve yiyecek
+9582839131,Müşteri 0035 A.Ş.,Kurumsal,F,İstanbul,Marmara,S000,,2015-03-04,PY003,birlikte_buyume,İnşaat
+9866358176,Müşteri 0036 A.Ş.,Kurumsal,F,İstanbul,Marmara,S000,,2015-03-16,PY003,stabil,İnşaat
+9190995549,Müşteri 0037 A.Ş.,KOBI,G,İstanbul,Marmara,S002,,2016-10-28,PY001,stabil,Toptan ve perakende ticaret
+9674267814,Müşteri 0038 A.Ş.,KOBI,M,Trabzon,Karadeniz,S112,,2015-10-06,PY112,birlikte_buyume,Mesleki ve teknik faaliyetler
+9432985930,Müşteri 0039 A.Ş.,KOBI,C,Trabzon,Karadeniz,S112,G033,2016-01-27,PY113,stabil,İmalat
+9853945172,Müşteri 0040 A.Ş.,KOBI,C,Adana,Akdeniz,S082,,2022-06-18,PY083,rakip_buyutuyor,İmalat
+9159455520,Müşteri 0041 A.Ş.,KOBI,C,Trabzon,Karadeniz,S112,,2020-01-31,PY112,stabil,İmalat
+9721114092,Müşteri 0042 A.Ş.,KOBI,I,Denizli,Ege,S062,,2023-10-04,PY061,bozulma,Konaklama ve yiyecek
+9656843300,Müşteri 0043 A.Ş.,Kurumsal,C,Ankara,İç Anadolu,S030,,2025-01-28,PY033,rakip_buyutuyor,İmalat
+9938339867,Müşteri 0044 A.Ş.,Ticari,F,Adana,Akdeniz,S081,G046,2023-06-28,PY082,stabil,İnşaat
+9267156736,Müşteri 0045 A.Ş.,Ticari,C,Adana,Akdeniz,S081,,2023-05-18,PY082,bozulma,İmalat
+9828072642,Müşteri 0046 A.Ş.,KOBI,G,Adana,Akdeniz,S082,G077,2019-04-09,PY082,proje_buyumesi,Toptan ve perakende ticaret
+9884268177,Müşteri 0047 A.Ş.,Kurumsal,M,Ankara,İç Anadolu,S030,,2018-09-19,PY031,stabil,Mesleki ve teknik faaliyetler
+9132308997,Müşteri 0048 A.Ş.,Ticari,F,Kocaeli,Marmara,S011,,2019-10-13,PY012,stabil,İnşaat
+9694640063,Müşteri 0049 A.Ş.,KOBI,C,Ankara,İç Anadolu,S032,,2019-09-02,PY031,rakip_buyutuyor,İmalat
+9912690237,Müşteri 0050 A.Ş.,Kurumsal,G,İzmir,Ege,S050,,2025-01-08,PY053,stabil,Toptan ve perakende ticaret
+9920446003,Müşteri 0051 A.Ş.,Ticari,C,Kocaeli,Marmara,S011,G001,2016-07-27,PY013,stabil,İmalat
+9749952104,Müşteri 0052 A.Ş.,KOBI,H,Gaziantep,Güneydoğu,S092,,2016-03-06,PY092,stabil,Ulaştırma ve depolama
+9457509971,Müşteri 0053 A.Ş.,KOBI,J,İstanbul,Marmara,S002,G036,2023-08-30,PY003,proje_buyumesi,Bilgi ve iletişim
+9379588766,Müşteri 0054 A.Ş.,Ticari,J,Ankara,İç Anadolu,S031,G015,2023-05-22,PY033,rakip_buyutuyor,Bilgi ve iletişim
+9706543930,Müşteri 0055 A.Ş.,KOBI,M,Bursa,Marmara,S022,,2019-09-19,PY023,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9978307786,Müşteri 0056 A.Ş.,Ticari,I,Bursa,Marmara,S021,,2016-06-28,PY022,proje_buyumesi,Konaklama ve yiyecek
+9930611370,Müşteri 0057 A.Ş.,KOBI,J,Trabzon,Karadeniz,S112,,2021-05-08,PY112,birlikte_buyume,Bilgi ve iletişim
+9909029418,Müşteri 0058 A.Ş.,Ticari,F,Konya,İç Anadolu,S041,,2015-02-07,PY043,birlikte_buyume,İnşaat
+9510991509,Müşteri 0059 A.Ş.,Ticari,H,Gaziantep,Güneydoğu,S091,,2022-07-05,PY092,stabil,Ulaştırma ve depolama
+9452356157,Müşteri 0060 A.Ş.,Ticari,C,Gaziantep,Güneydoğu,S091,G008,2019-06-04,PY093,stabil,İmalat
+9501465603,Müşteri 0061 A.Ş.,Ticari,F,Adana,Akdeniz,S081,,2015-07-18,PY081,rakip_buyutuyor,İnşaat
+9383698032,Müşteri 0062 A.Ş.,KOBI,F,Bursa,Marmara,S022,G023,2015-01-22,PY023,birlikte_buyume,İnşaat
+9445188790,Müşteri 0063 A.Ş.,Kurumsal,H,Ankara,İç Anadolu,S030,,2016-03-06,PY033,birlikte_buyume,Ulaştırma ve depolama
+9312724391,Müşteri 0064 A.Ş.,Kurumsal,H,Ankara,İç Anadolu,S030,G004,2015-07-09,PY031,proje_buyumesi,Ulaştırma ve depolama
+9275611816,Müşteri 0065 A.Ş.,Ticari,F,Ankara,İç Anadolu,S031,,2019-06-02,PY031,rakip_buyutuyor,İnşaat
+9694080718,Müşteri 0066 A.Ş.,KOBI,I,Denizli,Ege,S062,G041,2016-12-07,PY063,birlikte_buyume,Konaklama ve yiyecek
+9686702194,Müşteri 0067 A.Ş.,KOBI,M,Adana,Akdeniz,S082,,2024-02-21,PY082,birlikte_buyume,Mesleki ve teknik faaliyetler
+9181521152,Müşteri 0068 A.Ş.,KOBI,H,Adana,Akdeniz,S082,,2023-02-01,PY082,stabil,Ulaştırma ve depolama
+9864449000,Müşteri 0069 A.Ş.,Ticari,G,Kayseri,İç Anadolu,S101,,2024-03-07,PY102,stabil,Toptan ve perakende ticaret
+9264527893,Müşteri 0070 A.Ş.,Ticari,I,Trabzon,Karadeniz,S111,,2022-01-26,PY111,stabil,Konaklama ve yiyecek
+9245884522,Müşteri 0071 A.Ş.,Kurumsal,H,Ankara,İç Anadolu,S030,G061,2017-10-11,PY033,stabil,Ulaştırma ve depolama
+9743604799,Müşteri 0072 A.Ş.,Ticari,M,İzmir,Ege,S051,G065,2024-05-10,PY052,stabil,Mesleki ve teknik faaliyetler
+9577971496,Müşteri 0073 A.Ş.,KOBI,H,Kocaeli,Marmara,S012,,2015-06-24,PY012,bozulma,Ulaştırma ve depolama
+9995333403,Müşteri 0074 A.Ş.,KOBI,C,Kayseri,İç Anadolu,S102,,2020-04-19,PY103,stabil,İmalat
+9975971488,Müşteri 0075 A.Ş.,Ticari,C,Trabzon,Karadeniz,S111,,2022-12-06,PY111,stabil,İmalat
+9650052945,Müşteri 0076 A.Ş.,Ticari,C,Konya,İç Anadolu,S041,,2025-04-27,PY042,stabil,İmalat
+9907079834,Müşteri 0077 A.Ş.,KOBI,F,Kocaeli,Marmara,S012,G038,2016-12-05,PY013,stabil,İnşaat
+9683365356,Müşteri 0078 A.Ş.,Ticari,J,Trabzon,Karadeniz,S111,,2017-02-19,PY112,rakip_buyutuyor,Bilgi ve iletişim
+9273780372,Müşteri 0079 A.Ş.,Kurumsal,J,İzmir,Ege,S050,,2022-04-11,PY052,birlikte_buyume,Bilgi ve iletişim
+9696276634,Müşteri 0080 A.Ş.,Ticari,J,Denizli,Ege,S061,,2018-04-25,PY063,proje_buyumesi,Bilgi ve iletişim
+9639162006,Müşteri 0081 A.Ş.,Kurumsal,G,Ankara,İç Anadolu,S030,,2021-07-20,PY032,rakip_buyutuyor,Toptan ve perakende ticaret
+9762915783,Müşteri 0082 A.Ş.,Ticari,H,Kocaeli,Marmara,S011,G037,2019-02-07,PY013,stabil,Ulaştırma ve depolama
+9218039652,Müşteri 0083 A.Ş.,Kurumsal,G,Ankara,İç Anadolu,S030,,2023-05-19,PY031,proje_buyumesi,Toptan ve perakende ticaret
+9759199383,Müşteri 0084 A.Ş.,Ticari,F,Trabzon,Karadeniz,S111,G008,2015-04-09,PY113,stabil,İnşaat
+9277900283,Müşteri 0085 A.Ş.,Ticari,G,Kocaeli,Marmara,S011,,2022-05-21,PY011,stabil,Toptan ve perakende ticaret
+9754886329,Müşteri 0086 A.Ş.,Ticari,J,İstanbul,Marmara,S001,,2016-07-21,PY001,stabil,Bilgi ve iletişim
+9421914368,Müşteri 0087 A.Ş.,Ticari,J,Antalya,Akdeniz,S071,G038,2021-05-04,PY071,rakip_buyutuyor,Bilgi ve iletişim
+9377499883,Müşteri 0088 A.Ş.,KOBI,G,Konya,İç Anadolu,S042,,2024-02-22,PY043,birlikte_buyume,Toptan ve perakende ticaret
+9234139153,Müşteri 0089 A.Ş.,KOBI,C,Gaziantep,Güneydoğu,S092,,2022-12-07,PY093,stabil,İmalat
+9773191115,Müşteri 0090 A.Ş.,Ticari,C,Bursa,Marmara,S021,,2016-10-12,PY022,birlikte_buyume,İmalat
+9349162040,Müşteri 0091 A.Ş.,Ticari,F,Konya,İç Anadolu,S041,,2023-07-24,PY041,stabil,İnşaat
+9409020143,Müşteri 0092 A.Ş.,KOBI,G,Konya,İç Anadolu,S042,G072,2017-06-16,PY041,rakip_buyutuyor,Toptan ve perakende ticaret
+9265196185,Müşteri 0093 A.Ş.,Ticari,F,İzmir,Ege,S051,G002,2020-10-22,PY053,stabil,İnşaat
+9874411344,Müşteri 0094 A.Ş.,Ticari,G,İstanbul,Marmara,S001,G043,2017-05-03,PY001,stabil,Toptan ve perakende ticaret
+9428463121,Müşteri 0095 A.Ş.,KOBI,H,Antalya,Akdeniz,S072,,2025-04-02,PY073,stabil,Ulaştırma ve depolama
+9998946673,Müşteri 0096 A.Ş.,Ticari,H,İzmir,Ege,S051,,2018-12-09,PY053,rakip_buyutuyor,Ulaştırma ve depolama
+9553852690,Müşteri 0097 A.Ş.,KOBI,J,Denizli,Ege,S062,,2017-05-14,PY061,stabil,Bilgi ve iletişim
+9114224999,Müşteri 0098 A.Ş.,Ticari,I,Adana,Akdeniz,S081,,2020-05-25,PY082,stabil,Konaklama ve yiyecek
+9506218841,Müşteri 0099 A.Ş.,KOBI,H,Ankara,İç Anadolu,S032,,2018-08-17,PY033,stabil,Ulaştırma ve depolama
+9197791392,Müşteri 0100 A.Ş.,Ticari,I,İzmir,Ege,S051,,2023-02-04,PY051,ana_banka,Konaklama ve yiyecek
+9793490676,Müşteri 0101 A.Ş.,Ticari,M,Antalya,Akdeniz,S071,,2024-03-27,PY073,sessiz_cikis,Mesleki ve teknik faaliyetler
+9382913148,Müşteri 0102 A.Ş.,Ticari,C,Trabzon,Karadeniz,S111,G032,2016-09-14,PY112,rakip_buyutuyor,İmalat
+9944924818,Müşteri 0103 A.Ş.,Kurumsal,H,İstanbul,Marmara,S000,,2021-10-25,PY002,stabil,Ulaştırma ve depolama
+9293893148,Müşteri 0104 A.Ş.,KOBI,F,Denizli,Ege,S062,G059,2024-11-19,PY062,ana_banka,İnşaat
+9788997352,Müşteri 0105 A.Ş.,Ticari,G,Kayseri,İç Anadolu,S101,,2025-06-21,PY103,proje_buyumesi,Toptan ve perakende ticaret
+9765883316,Müşteri 0106 A.Ş.,Ticari,F,Kocaeli,Marmara,S011,,2015-01-09,PY011,rakip_buyutuyor,İnşaat
+9792466882,Müşteri 0107 A.Ş.,KOBI,C,İstanbul,Marmara,S002,,2014-10-23,PY003,stabil,İmalat
+9311730749,Müşteri 0108 A.Ş.,KOBI,M,Denizli,Ege,S062,,2022-07-20,PY062,stabil,Mesleki ve teknik faaliyetler
+9104810947,Müşteri 0109 A.Ş.,Ticari,H,Trabzon,Karadeniz,S111,,2018-01-06,PY111,stabil,Ulaştırma ve depolama
+9798211977,Müşteri 0110 A.Ş.,Ticari,I,Bursa,Marmara,S021,,2017-03-30,PY023,sessiz_cikis,Konaklama ve yiyecek
+9856954769,Müşteri 0111 A.Ş.,KOBI,F,Bursa,Marmara,S022,G046,2019-05-23,PY022,birlikte_buyume,İnşaat
+9134779878,Müşteri 0112 A.Ş.,KOBI,F,İzmir,Ege,S052,,2023-04-12,PY053,stabil,İnşaat
+9790857820,Müşteri 0113 A.Ş.,KOBI,C,Kocaeli,Marmara,S012,,2021-11-18,PY013,stabil,İmalat
+9434388887,Müşteri 0114 A.Ş.,KOBI,F,Denizli,Ege,S062,G015,2019-06-19,PY062,birlikte_buyume,İnşaat
+9531475367,Müşteri 0115 A.Ş.,KOBI,J,Denizli,Ege,S062,,2016-04-12,PY063,stabil,Bilgi ve iletişim
+9220836521,Müşteri 0116 A.Ş.,Kurumsal,M,İstanbul,Marmara,S000,,2018-07-09,PY002,bozulma,Mesleki ve teknik faaliyetler
+9931012270,Müşteri 0117 A.Ş.,Ticari,C,Trabzon,Karadeniz,S111,,2022-11-15,PY111,proje_buyumesi,İmalat
+9972558987,Müşteri 0118 A.Ş.,Kurumsal,C,İzmir,Ege,S050,,2024-02-07,PY051,rakip_buyutuyor,İmalat
+9266837745,Müşteri 0119 A.Ş.,KOBI,G,Adana,Akdeniz,S082,G037,2023-06-13,PY083,stabil,Toptan ve perakende ticaret
+9916844402,Müşteri 0120 A.Ş.,KOBI,H,Gaziantep,Güneydoğu,S092,G064,2019-01-25,PY091,rakip_buyutuyor,Ulaştırma ve depolama
+9348076449,Müşteri 0121 A.Ş.,Ticari,C,Adana,Akdeniz,S081,,2020-01-04,PY082,birlikte_buyume,İmalat
+9302220526,Müşteri 0122 A.Ş.,Ticari,G,Antalya,Akdeniz,S071,,2016-06-10,PY071,rakip_buyutuyor,Toptan ve perakende ticaret
+9245747413,Müşteri 0123 A.Ş.,Kurumsal,J,İzmir,Ege,S050,,2018-08-30,PY051,stabil,Bilgi ve iletişim
+9453456356,Müşteri 0124 A.Ş.,KOBI,M,İstanbul,Marmara,S002,,2022-11-06,PY003,stabil,Mesleki ve teknik faaliyetler
+9145482389,Müşteri 0125 A.Ş.,Kurumsal,M,İstanbul,Marmara,S000,,2016-03-21,PY001,stabil,Mesleki ve teknik faaliyetler
+9583904337,Müşteri 0126 A.Ş.,Kurumsal,J,Ankara,İç Anadolu,S030,G010,2017-02-22,PY031,birlikte_buyume,Bilgi ve iletişim
+9195352626,Müşteri 0127 A.Ş.,Ticari,J,Ankara,İç Anadolu,S031,,2024-11-24,PY033,stabil,Bilgi ve iletişim
+9986082312,Müşteri 0128 A.Ş.,Kurumsal,J,İzmir,Ege,S050,,2023-10-12,PY053,stabil,Bilgi ve iletişim
+9359069388,Müşteri 0129 A.Ş.,Ticari,G,Trabzon,Karadeniz,S111,G010,2022-03-15,PY112,stabil,Toptan ve perakende ticaret
+9554749229,Müşteri 0130 A.Ş.,Ticari,H,Kayseri,İç Anadolu,S101,,2019-04-08,PY103,birlikte_buyume,Ulaştırma ve depolama
+9964905739,Müşteri 0131 A.Ş.,Ticari,M,Denizli,Ege,S061,G062,2017-08-15,PY061,stabil,Mesleki ve teknik faaliyetler
+9327672410,Müşteri 0132 A.Ş.,Kurumsal,H,İstanbul,Marmara,S000,G027,2016-12-28,PY002,sessiz_cikis,Ulaştırma ve depolama
+9107164404,Müşteri 0133 A.Ş.,Kurumsal,J,İzmir,Ege,S050,,2023-10-30,PY053,birlikte_buyume,Bilgi ve iletişim
+9416845606,Müşteri 0134 A.Ş.,Ticari,G,Gaziantep,Güneydoğu,S091,,2018-09-03,PY091,stabil,Toptan ve perakende ticaret
+9299892333,Müşteri 0135 A.Ş.,Kurumsal,C,Ankara,İç Anadolu,S030,,2018-12-01,PY033,birlikte_buyume,İmalat
+9355646179,Müşteri 0136 A.Ş.,KOBI,H,Bursa,Marmara,S022,,2017-01-26,PY022,stabil,Ulaştırma ve depolama
+9532048228,Müşteri 0137 A.Ş.,Ticari,M,İstanbul,Marmara,S001,,2022-11-01,PY003,ana_banka,Mesleki ve teknik faaliyetler
+9403170889,Müşteri 0138 A.Ş.,Ticari,F,Antalya,Akdeniz,S071,,2019-01-06,PY073,birlikte_buyume,İnşaat
+9953158515,Müşteri 0139 A.Ş.,Ticari,C,Gaziantep,Güneydoğu,S091,G073,2017-11-19,PY091,proje_buyumesi,İmalat
+9546044570,Müşteri 0140 A.Ş.,Ticari,H,Trabzon,Karadeniz,S111,,2024-11-30,PY113,stabil,Ulaştırma ve depolama
+9775374339,Müşteri 0141 A.Ş.,Kurumsal,C,İzmir,Ege,S050,,2021-01-17,PY053,birlikte_buyume,İmalat
+9145792660,Müşteri 0142 A.Ş.,Kurumsal,G,İstanbul,Marmara,S000,G060,2019-11-21,PY003,birlikte_buyume,Toptan ve perakende ticaret
+9761284833,Müşteri 0143 A.Ş.,KOBI,M,Denizli,Ege,S062,G044,2019-10-26,PY062,sessiz_cikis,Mesleki ve teknik faaliyetler
+9819143736,Müşteri 0144 A.Ş.,Kurumsal,F,İstanbul,Marmara,S000,G033,2025-03-19,PY002,birlikte_buyume,İnşaat
+9498306165,Müşteri 0145 A.Ş.,Ticari,I,İstanbul,Marmara,S001,,2021-07-12,PY003,birlikte_buyume,Konaklama ve yiyecek
+9578451626,Müşteri 0146 A.Ş.,Ticari,C,Denizli,Ege,S061,,2020-05-29,PY061,stabil,İmalat
+9379405529,Müşteri 0147 A.Ş.,Ticari,F,Gaziantep,Güneydoğu,S091,,2016-07-17,PY093,stabil,İnşaat
+9414607250,Müşteri 0148 A.Ş.,Ticari,M,Trabzon,Karadeniz,S111,G046,2022-09-09,PY113,birlikte_buyume,Mesleki ve teknik faaliyetler
+9912603418,Müşteri 0149 A.Ş.,KOBI,I,İzmir,Ege,S052,,2015-08-21,PY053,stabil,Konaklama ve yiyecek
+9361872311,Müşteri 0150 A.Ş.,KOBI,F,İstanbul,Marmara,S002,G015,2024-03-21,PY002,stabil,İnşaat
+9155149048,Müşteri 0151 A.Ş.,Ticari,M,Gaziantep,Güneydoğu,S091,G003,2024-02-01,PY092,bozulma,Mesleki ve teknik faaliyetler
+9622216194,Müşteri 0152 A.Ş.,Ticari,C,Denizli,Ege,S061,,2017-03-20,PY062,bozulma,İmalat
+9376779777,Müşteri 0153 A.Ş.,Ticari,I,Bursa,Marmara,S021,,2015-06-16,PY023,stabil,Konaklama ve yiyecek
+9502653476,Müşteri 0154 A.Ş.,Ticari,I,Konya,İç Anadolu,S041,,2021-10-19,PY041,birlikte_buyume,Konaklama ve yiyecek
+9478637566,Müşteri 0155 A.Ş.,KOBI,J,Antalya,Akdeniz,S072,G034,2023-11-11,PY073,stabil,Bilgi ve iletişim
+9819573704,Müşteri 0156 A.Ş.,Ticari,J,Trabzon,Karadeniz,S111,,2015-04-22,PY113,rakip_buyutuyor,Bilgi ve iletişim
+9870768667,Müşteri 0157 A.Ş.,Ticari,M,Gaziantep,Güneydoğu,S091,,2024-09-03,PY091,stabil,Mesleki ve teknik faaliyetler
+9777398662,Müşteri 0158 A.Ş.,KOBI,F,Bursa,Marmara,S022,,2018-07-17,PY023,rakip_buyutuyor,İnşaat
+9365517287,Müşteri 0159 A.Ş.,Kurumsal,M,Ankara,İç Anadolu,S030,G045,2021-11-15,PY032,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9659675827,Müşteri 0160 A.Ş.,Ticari,H,İstanbul,Marmara,S001,,2018-12-21,PY003,proje_buyumesi,Ulaştırma ve depolama
+9724186422,Müşteri 0161 A.Ş.,KOBI,I,İzmir,Ege,S052,,2018-04-13,PY052,stabil,Konaklama ve yiyecek
+9776155155,Müşteri 0162 A.Ş.,Kurumsal,H,İzmir,Ege,S050,,2020-11-05,PY051,sessiz_cikis,Ulaştırma ve depolama
+9300131134,Müşteri 0163 A.Ş.,Kurumsal,G,İzmir,Ege,S050,,2020-10-13,PY053,stabil,Toptan ve perakende ticaret
+9846774918,Müşteri 0164 A.Ş.,Kurumsal,H,Ankara,İç Anadolu,S030,,2019-08-30,PY033,stabil,Ulaştırma ve depolama
+9586451252,Müşteri 0165 A.Ş.,KOBI,H,Konya,İç Anadolu,S042,,2017-10-13,PY043,birlikte_buyume,Ulaştırma ve depolama
+9963085302,Müşteri 0166 A.Ş.,Kurumsal,H,İzmir,Ege,S050,,2014-10-25,PY053,stabil,Ulaştırma ve depolama
+9164665301,Müşteri 0167 A.Ş.,Kurumsal,G,Ankara,İç Anadolu,S030,,2019-12-26,PY032,bozulma,Toptan ve perakende ticaret
+9401390819,Müşteri 0168 A.Ş.,Kurumsal,H,İzmir,Ege,S050,,2015-02-21,PY053,proje_buyumesi,Ulaştırma ve depolama
+9630071989,Müşteri 0169 A.Ş.,Kurumsal,F,Ankara,İç Anadolu,S030,G012,2024-06-26,PY032,stabil,İnşaat
+9681555488,Müşteri 0170 A.Ş.,Ticari,H,Gaziantep,Güneydoğu,S091,,2019-09-27,PY093,ana_banka,Ulaştırma ve depolama
+9128934178,Müşteri 0171 A.Ş.,Ticari,F,Adana,Akdeniz,S081,G046,2024-05-17,PY083,stabil,İnşaat
+9250628499,Müşteri 0172 A.Ş.,Ticari,G,Denizli,Ege,S061,,2018-10-18,PY062,birlikte_buyume,Toptan ve perakende ticaret
+9377257875,Müşteri 0173 A.Ş.,Ticari,G,Kocaeli,Marmara,S011,,2023-11-13,PY011,stabil,Toptan ve perakende ticaret
+9915212667,Müşteri 0174 A.Ş.,KOBI,M,Konya,İç Anadolu,S042,,2020-02-25,PY042,sessiz_cikis,Mesleki ve teknik faaliyetler
+9423995062,Müşteri 0175 A.Ş.,Kurumsal,M,Ankara,İç Anadolu,S030,G058,2022-06-08,PY032,stabil,Mesleki ve teknik faaliyetler
+9713997692,Müşteri 0176 A.Ş.,KOBI,F,İstanbul,Marmara,S002,,2017-06-20,PY003,stabil,İnşaat
+9991250278,Müşteri 0177 A.Ş.,Ticari,C,Denizli,Ege,S061,,2019-11-13,PY063,stabil,İmalat
+9461781639,Müşteri 0178 A.Ş.,Kurumsal,M,İstanbul,Marmara,S000,G030,2019-11-06,PY003,ana_banka,Mesleki ve teknik faaliyetler
+9372881868,Müşteri 0179 A.Ş.,KOBI,M,Gaziantep,Güneydoğu,S092,,2020-10-18,PY092,bozulma,Mesleki ve teknik faaliyetler
+9927384295,Müşteri 0180 A.Ş.,KOBI,M,İzmir,Ege,S052,,2015-03-23,PY051,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9388765066,Müşteri 0181 A.Ş.,Ticari,I,Kocaeli,Marmara,S011,,2019-08-25,PY011,bozulma,Konaklama ve yiyecek
+9618130408,Müşteri 0182 A.Ş.,KOBI,I,İstanbul,Marmara,S002,,2018-03-29,PY003,bozulma,Konaklama ve yiyecek
+9400194933,Müşteri 0183 A.Ş.,Ticari,G,Ankara,İç Anadolu,S031,G027,2020-11-25,PY031,birlikte_buyume,Toptan ve perakende ticaret
+9865468790,Müşteri 0184 A.Ş.,Ticari,M,Gaziantep,Güneydoğu,S091,G036,2024-05-20,PY093,stabil,Mesleki ve teknik faaliyetler
+9259163454,Müşteri 0185 A.Ş.,KOBI,C,Bursa,Marmara,S022,,2024-04-22,PY021,proje_buyumesi,İmalat
+9690285574,Müşteri 0186 A.Ş.,Ticari,M,İzmir,Ege,S051,G022,2025-05-25,PY051,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9623554567,Müşteri 0187 A.Ş.,KOBI,J,Antalya,Akdeniz,S072,,2025-04-10,PY071,stabil,Bilgi ve iletişim
+9567050564,Müşteri 0188 A.Ş.,Ticari,I,Trabzon,Karadeniz,S111,,2018-04-13,PY112,stabil,Konaklama ve yiyecek
+9506687736,Müşteri 0189 A.Ş.,KOBI,J,İstanbul,Marmara,S002,,2024-02-26,PY001,rakip_buyutuyor,Bilgi ve iletişim
+9634592203,Müşteri 0190 A.Ş.,Ticari,M,Kayseri,İç Anadolu,S101,,2018-03-17,PY101,stabil,Mesleki ve teknik faaliyetler
+9827446828,Müşteri 0191 A.Ş.,Ticari,I,Ankara,İç Anadolu,S031,,2023-05-27,PY032,sessiz_cikis,Konaklama ve yiyecek
+9957833541,Müşteri 0192 A.Ş.,Ticari,M,Adana,Akdeniz,S081,,2020-03-20,PY083,stabil,Mesleki ve teknik faaliyetler
+9794463532,Müşteri 0193 A.Ş.,Ticari,G,İstanbul,Marmara,S001,G058,2025-01-05,PY001,stabil,Toptan ve perakende ticaret
+9533832130,Müşteri 0194 A.Ş.,Kurumsal,I,Ankara,İç Anadolu,S030,G026,2020-10-20,PY032,bozulma,Konaklama ve yiyecek
+9322896789,Müşteri 0195 A.Ş.,Kurumsal,I,Ankara,İç Anadolu,S030,,2019-12-01,PY033,stabil,Konaklama ve yiyecek
+9740535238,Müşteri 0196 A.Ş.,Ticari,C,Ankara,İç Anadolu,S031,,2024-05-28,PY032,stabil,İmalat
+9725375690,Müşteri 0197 A.Ş.,Kurumsal,F,İstanbul,Marmara,S000,G069,2023-02-10,PY002,birlikte_buyume,İnşaat
+9246120977,Müşteri 0198 A.Ş.,Kurumsal,G,Ankara,İç Anadolu,S030,G012,2016-09-05,PY032,bozulma,Toptan ve perakende ticaret
+9492387041,Müşteri 0199 A.Ş.,KOBI,F,Denizli,Ege,S062,,2019-10-21,PY061,stabil,İnşaat
+9932466225,Müşteri 0200 A.Ş.,KOBI,H,Antalya,Akdeniz,S072,G076,2016-02-28,PY073,stabil,Ulaştırma ve depolama
+9276574680,Müşteri 0201 A.Ş.,KOBI,M,Ankara,İç Anadolu,S032,,2023-06-16,PY032,proje_buyumesi,Mesleki ve teknik faaliyetler
+9170340525,Müşteri 0202 A.Ş.,Ticari,C,Ankara,İç Anadolu,S031,,2016-05-29,PY033,ana_banka,İmalat
+9532900577,Müşteri 0203 A.Ş.,KOBI,G,Kocaeli,Marmara,S012,,2020-02-19,PY011,birlikte_buyume,Toptan ve perakende ticaret
+9765793023,Müşteri 0204 A.Ş.,Ticari,I,İzmir,Ege,S051,,2024-09-13,PY051,stabil,Konaklama ve yiyecek
+9571461236,Müşteri 0205 A.Ş.,Kurumsal,H,İstanbul,Marmara,S000,,2019-09-04,PY001,stabil,Ulaştırma ve depolama
+9121001061,Müşteri 0206 A.Ş.,Kurumsal,G,İstanbul,Marmara,S000,G030,2023-02-26,PY003,stabil,Toptan ve perakende ticaret
+9568946291,Müşteri 0207 A.Ş.,KOBI,J,Konya,İç Anadolu,S042,G075,2016-04-21,PY042,stabil,Bilgi ve iletişim
+9279822879,Müşteri 0208 A.Ş.,Kurumsal,J,İzmir,Ege,S050,G047,2018-11-19,PY052,rakip_buyutuyor,Bilgi ve iletişim
+9211690642,Müşteri 0209 A.Ş.,Ticari,F,Adana,Akdeniz,S081,,2018-08-11,PY083,stabil,İnşaat
+9235538458,Müşteri 0210 A.Ş.,KOBI,H,Gaziantep,Güneydoğu,S092,,2024-07-23,PY093,birlikte_buyume,Ulaştırma ve depolama
+9379109355,Müşteri 0211 A.Ş.,Kurumsal,C,Ankara,İç Anadolu,S030,,2017-06-05,PY033,rakip_buyutuyor,İmalat
+9356610160,Müşteri 0212 A.Ş.,Kurumsal,H,Ankara,İç Anadolu,S030,,2021-12-01,PY033,birlikte_buyume,Ulaştırma ve depolama
+9385740951,Müşteri 0213 A.Ş.,KOBI,J,Adana,Akdeniz,S082,,2016-12-06,PY083,stabil,Bilgi ve iletişim
+9685715130,Müşteri 0214 A.Ş.,Ticari,F,Antalya,Akdeniz,S071,,2024-04-06,PY073,proje_buyumesi,İnşaat
+9354536579,Müşteri 0215 A.Ş.,Kurumsal,C,İzmir,Ege,S050,G015,2018-02-22,PY051,rakip_buyutuyor,İmalat
+9588106364,Müşteri 0216 A.Ş.,KOBI,G,Ankara,İç Anadolu,S032,G017,2020-10-13,PY033,rakip_buyutuyor,Toptan ve perakende ticaret
+9587544563,Müşteri 0217 A.Ş.,KOBI,H,Trabzon,Karadeniz,S112,G034,2025-02-28,PY113,stabil,Ulaştırma ve depolama
+9375519696,Müşteri 0218 A.Ş.,Ticari,G,Antalya,Akdeniz,S071,,2017-05-16,PY071,stabil,Toptan ve perakende ticaret
+9112399619,Müşteri 0219 A.Ş.,Ticari,H,Kocaeli,Marmara,S011,,2022-11-06,PY011,sessiz_cikis,Ulaştırma ve depolama
+9788293633,Müşteri 0220 A.Ş.,Ticari,J,Ankara,İç Anadolu,S031,,2016-06-09,PY032,stabil,Bilgi ve iletişim
+9230436015,Müşteri 0221 A.Ş.,Kurumsal,C,İstanbul,Marmara,S000,,2017-05-29,PY002,stabil,İmalat
+9479152114,Müşteri 0222 A.Ş.,Ticari,J,Gaziantep,Güneydoğu,S091,,2024-06-06,PY093,birlikte_buyume,Bilgi ve iletişim
+9392160065,Müşteri 0223 A.Ş.,Ticari,C,Kocaeli,Marmara,S011,,2022-11-10,PY013,rakip_buyutuyor,İmalat
+9356326829,Müşteri 0224 A.Ş.,KOBI,J,İzmir,Ege,S052,,2017-01-27,PY051,ana_banka,Bilgi ve iletişim
+9984793426,Müşteri 0225 A.Ş.,KOBI,M,Bursa,Marmara,S022,G029,2020-09-28,PY023,stabil,Mesleki ve teknik faaliyetler
+9582552063,Müşteri 0226 A.Ş.,Kurumsal,F,İzmir,Ege,S050,,2024-07-09,PY053,sessiz_cikis,İnşaat
+9114607410,Müşteri 0227 A.Ş.,Ticari,C,Konya,İç Anadolu,S041,,2020-08-29,PY042,stabil,İmalat
+9102834852,Müşteri 0228 A.Ş.,Ticari,H,Bursa,Marmara,S021,,2022-05-22,PY022,birlikte_buyume,Ulaştırma ve depolama
+9217829180,Müşteri 0229 A.Ş.,KOBI,F,Kayseri,İç Anadolu,S102,,2024-12-13,PY103,rakip_buyutuyor,İnşaat
+9553657515,Müşteri 0230 A.Ş.,Ticari,C,Antalya,Akdeniz,S071,,2024-07-14,PY071,stabil,İmalat
+9757303219,Müşteri 0231 A.Ş.,Ticari,H,Trabzon,Karadeniz,S111,,2015-01-29,PY111,stabil,Ulaştırma ve depolama
+9554090715,Müşteri 0232 A.Ş.,Ticari,J,Adana,Akdeniz,S081,,2016-04-21,PY081,stabil,Bilgi ve iletişim
+9472165082,Müşteri 0233 A.Ş.,Ticari,J,İstanbul,Marmara,S001,,2021-12-24,PY002,ana_banka,Bilgi ve iletişim
+9978874359,Müşteri 0234 A.Ş.,KOBI,F,Kocaeli,Marmara,S012,,2023-07-05,PY011,birlikte_buyume,İnşaat
+9452653938,Müşteri 0235 A.Ş.,KOBI,H,Antalya,Akdeniz,S072,,2023-05-13,PY072,sessiz_cikis,Ulaştırma ve depolama
+9556260484,Müşteri 0236 A.Ş.,Ticari,I,Kocaeli,Marmara,S011,G041,2021-09-14,PY012,proje_buyumesi,Konaklama ve yiyecek
+9514217895,Müşteri 0237 A.Ş.,KOBI,H,Gaziantep,Güneydoğu,S092,,2024-06-03,PY093,birlikte_buyume,Ulaştırma ve depolama
+9339239422,Müşteri 0238 A.Ş.,KOBI,F,Kayseri,İç Anadolu,S102,,2020-11-28,PY102,proje_buyumesi,İnşaat
+9135081439,Müşteri 0239 A.Ş.,Ticari,H,İzmir,Ege,S051,G040,2015-04-23,PY051,stabil,Ulaştırma ve depolama
+9772399785,Müşteri 0240 A.Ş.,Ticari,G,Antalya,Akdeniz,S071,,2024-02-08,PY073,stabil,Toptan ve perakende ticaret
+9303680074,Müşteri 0241 A.Ş.,Kurumsal,I,Ankara,İç Anadolu,S030,,2021-01-19,PY033,bozulma,Konaklama ve yiyecek
+9993527161,Müşteri 0242 A.Ş.,KOBI,H,Kocaeli,Marmara,S012,G027,2024-04-23,PY012,proje_buyumesi,Ulaştırma ve depolama
+9579924828,Müşteri 0243 A.Ş.,Ticari,J,Trabzon,Karadeniz,S111,,2023-08-08,PY112,stabil,Bilgi ve iletişim
+9934901562,Müşteri 0244 A.Ş.,Ticari,I,Gaziantep,Güneydoğu,S091,G021,2015-05-23,PY091,birlikte_buyume,Konaklama ve yiyecek
+9316224053,Müşteri 0245 A.Ş.,Kurumsal,G,İzmir,Ege,S050,G022,2021-09-25,PY051,rakip_buyutuyor,Toptan ve perakende ticaret
+9273647562,Müşteri 0246 A.Ş.,KOBI,M,İstanbul,Marmara,S002,,2021-06-14,PY003,bozulma,Mesleki ve teknik faaliyetler
+9407518238,Müşteri 0247 A.Ş.,Ticari,G,Konya,İç Anadolu,S041,G048,2025-03-27,PY041,rakip_buyutuyor,Toptan ve perakende ticaret
+9362340049,Müşteri 0248 A.Ş.,KOBI,J,İzmir,Ege,S052,,2021-09-29,PY053,stabil,Bilgi ve iletişim
+9553797419,Müşteri 0249 A.Ş.,Kurumsal,J,İzmir,Ege,S050,,2019-10-24,PY051,stabil,Bilgi ve iletişim
+9161203641,Müşteri 0250 A.Ş.,KOBI,J,Gaziantep,Güneydoğu,S092,,2020-05-18,PY093,stabil,Bilgi ve iletişim
+9490914323,Müşteri 0251 A.Ş.,Kurumsal,C,Ankara,İç Anadolu,S030,,2017-04-18,PY033,rakip_buyutuyor,İmalat
+9161259812,Müşteri 0252 A.Ş.,Kurumsal,M,İzmir,Ege,S050,G074,2014-11-11,PY052,bozulma,Mesleki ve teknik faaliyetler
+9183943814,Müşteri 0253 A.Ş.,KOBI,F,İstanbul,Marmara,S002,G052,2018-05-07,PY003,birlikte_buyume,İnşaat
+9819300629,Müşteri 0254 A.Ş.,KOBI,J,Ankara,İç Anadolu,S032,,2019-01-21,PY032,stabil,Bilgi ve iletişim
+9776766621,Müşteri 0255 A.Ş.,Ticari,F,Antalya,Akdeniz,S071,,2016-05-21,PY071,stabil,İnşaat
+9503394478,Müşteri 0256 A.Ş.,Ticari,H,Konya,İç Anadolu,S041,,2022-09-01,PY043,rakip_buyutuyor,Ulaştırma ve depolama
+9143448279,Müşteri 0257 A.Ş.,KOBI,M,Adana,Akdeniz,S082,G069,2015-12-09,PY083,proje_buyumesi,Mesleki ve teknik faaliyetler
+9781275411,Müşteri 0258 A.Ş.,KOBI,G,Denizli,Ege,S062,,2024-12-12,PY062,stabil,Toptan ve perakende ticaret
+9331635081,Müşteri 0259 A.Ş.,Ticari,G,Antalya,Akdeniz,S071,G040,2017-04-18,PY072,stabil,Toptan ve perakende ticaret
+9609211197,Müşteri 0260 A.Ş.,Ticari,H,İstanbul,Marmara,S001,,2021-01-29,PY003,birlikte_buyume,Ulaştırma ve depolama
+9702526764,Müşteri 0261 A.Ş.,KOBI,M,Ankara,İç Anadolu,S032,,2020-03-09,PY033,stabil,Mesleki ve teknik faaliyetler
+9854322899,Müşteri 0262 A.Ş.,KOBI,F,Denizli,Ege,S062,,2023-12-26,PY062,bozulma,İnşaat
+9836404617,Müşteri 0263 A.Ş.,KOBI,G,Trabzon,Karadeniz,S112,G047,2023-09-23,PY113,stabil,Toptan ve perakende ticaret
+9203667447,Müşteri 0264 A.Ş.,Ticari,G,Kocaeli,Marmara,S011,,2019-06-21,PY011,stabil,Toptan ve perakende ticaret
+9403241394,Müşteri 0265 A.Ş.,Kurumsal,I,İzmir,Ege,S050,,2025-05-17,PY051,sessiz_cikis,Konaklama ve yiyecek
+9365396061,Müşteri 0266 A.Ş.,KOBI,F,Bursa,Marmara,S022,,2021-06-13,PY021,stabil,İnşaat
+9943346287,Müşteri 0267 A.Ş.,KOBI,F,Kayseri,İç Anadolu,S102,G071,2022-09-18,PY101,stabil,İnşaat
+9628871477,Müşteri 0268 A.Ş.,KOBI,G,İstanbul,Marmara,S002,,2017-10-26,PY002,stabil,Toptan ve perakende ticaret
+9741592403,Müşteri 0269 A.Ş.,Kurumsal,C,İstanbul,Marmara,S000,,2017-04-29,PY002,stabil,İmalat
+9885278574,Müşteri 0270 A.Ş.,Ticari,F,Adana,Akdeniz,S081,,2020-05-04,PY083,stabil,İnşaat
+9908436946,Müşteri 0271 A.Ş.,KOBI,C,Ankara,İç Anadolu,S032,,2018-06-30,PY033,stabil,İmalat
+9383245702,Müşteri 0272 A.Ş.,Kurumsal,G,İzmir,Ege,S050,,2021-09-14,PY053,stabil,Toptan ve perakende ticaret
+9376952771,Müşteri 0273 A.Ş.,KOBI,F,Denizli,Ege,S062,,2016-04-23,PY061,stabil,İnşaat
+9734745168,Müşteri 0274 A.Ş.,Ticari,I,Ankara,İç Anadolu,S031,G006,2024-04-04,PY032,birlikte_buyume,Konaklama ve yiyecek
+9405114271,Müşteri 0275 A.Ş.,KOBI,I,Kocaeli,Marmara,S012,G052,2016-12-13,PY013,rakip_buyutuyor,Konaklama ve yiyecek
+9461997290,Müşteri 0276 A.Ş.,KOBI,M,Trabzon,Karadeniz,S112,G068,2022-01-29,PY113,stabil,Mesleki ve teknik faaliyetler
+9583455383,Müşteri 0277 A.Ş.,Ticari,H,Denizli,Ege,S061,G024,2020-06-26,PY062,stabil,Ulaştırma ve depolama
+9447329162,Müşteri 0278 A.Ş.,Ticari,F,Kocaeli,Marmara,S011,G016,2022-03-20,PY012,birlikte_buyume,İnşaat
+9320030683,Müşteri 0279 A.Ş.,Ticari,G,Kocaeli,Marmara,S011,,2014-10-29,PY013,bozulma,Toptan ve perakende ticaret
+9440981160,Müşteri 0280 A.Ş.,Ticari,G,Kayseri,İç Anadolu,S101,,2019-03-20,PY101,bozulma,Toptan ve perakende ticaret
+9918817818,Müşteri 0281 A.Ş.,Ticari,M,Ankara,İç Anadolu,S031,G063,2017-11-23,PY032,stabil,Mesleki ve teknik faaliyetler
+9728486566,Müşteri 0282 A.Ş.,Ticari,H,İstanbul,Marmara,S001,,2014-12-10,PY001,stabil,Ulaştırma ve depolama
+9499345925,Müşteri 0283 A.Ş.,KOBI,H,Gaziantep,Güneydoğu,S092,G056,2017-06-17,PY091,stabil,Ulaştırma ve depolama
+9751088231,Müşteri 0284 A.Ş.,Ticari,J,İstanbul,Marmara,S001,,2016-03-13,PY003,stabil,Bilgi ve iletişim
+9631755299,Müşteri 0285 A.Ş.,Kurumsal,J,İzmir,Ege,S050,,2025-01-09,PY051,birlikte_buyume,Bilgi ve iletişim
+9294642378,Müşteri 0286 A.Ş.,Ticari,F,Kocaeli,Marmara,S011,,2016-04-18,PY012,stabil,İnşaat
+9118475044,Müşteri 0287 A.Ş.,Ticari,F,İzmir,Ege,S051,,2017-12-18,PY053,stabil,İnşaat
+9283923590,Müşteri 0288 A.Ş.,Kurumsal,I,Ankara,İç Anadolu,S030,,2024-07-03,PY033,stabil,Konaklama ve yiyecek
+9174940784,Müşteri 0289 A.Ş.,Kurumsal,F,İzmir,Ege,S050,G016,2015-02-06,PY051,birlikte_buyume,İnşaat
+9628076396,Müşteri 0290 A.Ş.,KOBI,I,Kayseri,İç Anadolu,S102,,2019-01-05,PY101,stabil,Konaklama ve yiyecek
+9135571256,Müşteri 0291 A.Ş.,Ticari,C,Adana,Akdeniz,S081,G058,2015-11-18,PY081,bozulma,İmalat
+9756545578,Müşteri 0292 A.Ş.,KOBI,M,Kocaeli,Marmara,S012,,2015-05-07,PY011,stabil,Mesleki ve teknik faaliyetler
+9316097315,Müşteri 0293 A.Ş.,Ticari,H,Denizli,Ege,S061,,2024-07-07,PY061,sessiz_cikis,Ulaştırma ve depolama
+9569542792,Müşteri 0294 A.Ş.,Kurumsal,H,İzmir,Ege,S050,,2020-11-21,PY052,stabil,Ulaştırma ve depolama
+9656003254,Müşteri 0295 A.Ş.,KOBI,M,Denizli,Ege,S062,G031,2021-05-21,PY061,bozulma,Mesleki ve teknik faaliyetler
+9785969271,Müşteri 0296 A.Ş.,KOBI,G,İstanbul,Marmara,S002,G022,2023-08-21,PY001,sessiz_cikis,Toptan ve perakende ticaret
+9842070551,Müşteri 0297 A.Ş.,Ticari,H,Bursa,Marmara,S021,,2016-06-26,PY021,ana_banka,Ulaştırma ve depolama
+9160280211,Müşteri 0298 A.Ş.,Ticari,C,Adana,Akdeniz,S081,G032,2022-05-15,PY081,proje_buyumesi,İmalat
+9987426768,Müşteri 0299 A.Ş.,Kurumsal,G,Ankara,İç Anadolu,S030,G017,2024-01-30,PY032,proje_buyumesi,Toptan ve perakende ticaret
+9848932017,Müşteri 0300 A.Ş.,Ticari,I,Gaziantep,Güneydoğu,S091,,2022-02-27,PY093,rakip_buyutuyor,Konaklama ve yiyecek
+9224722496,Müşteri 0301 A.Ş.,Ticari,J,İzmir,Ege,S051,,2020-12-01,PY051,proje_buyumesi,Bilgi ve iletişim
+9849214195,Müşteri 0302 A.Ş.,Ticari,G,İzmir,Ege,S051,,2018-07-06,PY051,stabil,Toptan ve perakende ticaret
+9253287179,Müşteri 0303 A.Ş.,Kurumsal,I,Ankara,İç Anadolu,S030,,2024-10-06,PY033,birlikte_buyume,Konaklama ve yiyecek
+9107175792,Müşteri 0304 A.Ş.,Ticari,J,İzmir,Ege,S051,G079,2016-04-09,PY053,birlikte_buyume,Bilgi ve iletişim
+9167816279,Müşteri 0305 A.Ş.,KOBI,C,Bursa,Marmara,S022,G071,2024-11-25,PY022,bozulma,İmalat
+9311233139,Müşteri 0306 A.Ş.,KOBI,H,Denizli,Ege,S062,,2019-08-21,PY061,birlikte_buyume,Ulaştırma ve depolama
+9897831267,Müşteri 0307 A.Ş.,Ticari,H,Adana,Akdeniz,S081,,2015-12-26,PY083,stabil,Ulaştırma ve depolama
+9235116600,Müşteri 0308 A.Ş.,Kurumsal,I,İzmir,Ege,S050,G066,2022-05-24,PY052,rakip_buyutuyor,Konaklama ve yiyecek
+9897701341,Müşteri 0309 A.Ş.,Ticari,C,Gaziantep,Güneydoğu,S091,,2018-05-21,PY093,stabil,İmalat
+9844722751,Müşteri 0310 A.Ş.,Ticari,G,İstanbul,Marmara,S001,,2021-10-05,PY002,stabil,Toptan ve perakende ticaret
+9394208516,Müşteri 0311 A.Ş.,KOBI,I,Denizli,Ege,S062,G025,2016-03-31,PY062,birlikte_buyume,Konaklama ve yiyecek
+9825631514,Müşteri 0312 A.Ş.,KOBI,M,Adana,Akdeniz,S082,,2019-05-11,PY081,stabil,Mesleki ve teknik faaliyetler
+9724473400,Müşteri 0313 A.Ş.,KOBI,M,Adana,Akdeniz,S082,G067,2020-10-30,PY081,stabil,Mesleki ve teknik faaliyetler
+9107755531,Müşteri 0314 A.Ş.,KOBI,C,Antalya,Akdeniz,S072,,2024-12-31,PY071,stabil,İmalat
+9401943791,Müşteri 0315 A.Ş.,KOBI,J,Trabzon,Karadeniz,S112,G068,2019-03-02,PY112,stabil,Bilgi ve iletişim
+9859892873,Müşteri 0316 A.Ş.,KOBI,G,Ankara,İç Anadolu,S032,G025,2019-02-18,PY031,stabil,Toptan ve perakende ticaret
+9974028704,Müşteri 0317 A.Ş.,Kurumsal,F,İstanbul,Marmara,S000,G040,2024-03-06,PY002,stabil,İnşaat
+9650660307,Müşteri 0318 A.Ş.,Kurumsal,I,Ankara,İç Anadolu,S030,,2018-02-06,PY033,rakip_buyutuyor,Konaklama ve yiyecek
+9903287345,Müşteri 0319 A.Ş.,Ticari,G,Trabzon,Karadeniz,S111,G064,2019-11-13,PY112,stabil,Toptan ve perakende ticaret
+9885385383,Müşteri 0320 A.Ş.,Ticari,G,Adana,Akdeniz,S081,,2019-09-24,PY083,sessiz_cikis,Toptan ve perakende ticaret
+9977131371,Müşteri 0321 A.Ş.,Kurumsal,H,İzmir,Ege,S050,,2021-01-15,PY053,sessiz_cikis,Ulaştırma ve depolama
+9196558351,Müşteri 0322 A.Ş.,KOBI,G,Gaziantep,Güneydoğu,S092,,2022-12-21,PY091,birlikte_buyume,Toptan ve perakende ticaret
+9865669104,Müşteri 0323 A.Ş.,Ticari,M,Ankara,İç Anadolu,S031,G008,2023-05-21,PY033,stabil,Mesleki ve teknik faaliyetler
+9187241087,Müşteri 0324 A.Ş.,Ticari,F,Trabzon,Karadeniz,S111,,2015-11-13,PY111,birlikte_buyume,İnşaat
+9861370355,Müşteri 0325 A.Ş.,Kurumsal,I,Ankara,İç Anadolu,S030,,2024-11-14,PY033,bozulma,Konaklama ve yiyecek
+9746515506,Müşteri 0326 A.Ş.,Ticari,M,Konya,İç Anadolu,S041,,2019-03-26,PY043,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9271445039,Müşteri 0327 A.Ş.,Kurumsal,M,İzmir,Ege,S050,,2023-06-19,PY052,proje_buyumesi,Mesleki ve teknik faaliyetler
+9493415237,Müşteri 0328 A.Ş.,KOBI,I,Bursa,Marmara,S022,,2017-05-30,PY022,birlikte_buyume,Konaklama ve yiyecek
+9105758806,Müşteri 0329 A.Ş.,Ticari,F,Bursa,Marmara,S021,,2021-11-21,PY022,rakip_buyutuyor,İnşaat
+9614412805,Müşteri 0330 A.Ş.,KOBI,C,Konya,İç Anadolu,S042,,2024-12-24,PY043,stabil,İmalat
+9410751273,Müşteri 0331 A.Ş.,Ticari,I,İstanbul,Marmara,S001,,2023-06-25,PY002,rakip_buyutuyor,Konaklama ve yiyecek
+9811218839,Müşteri 0332 A.Ş.,Ticari,J,Kayseri,İç Anadolu,S101,,2018-10-26,PY101,stabil,Bilgi ve iletişim
+9799926935,Müşteri 0333 A.Ş.,Ticari,C,Bursa,Marmara,S021,G067,2019-11-10,PY023,rakip_buyutuyor,İmalat
+9599350356,Müşteri 0334 A.Ş.,KOBI,I,İzmir,Ege,S052,G032,2019-03-02,PY051,bozulma,Konaklama ve yiyecek
+9113494706,Müşteri 0335 A.Ş.,KOBI,J,Kocaeli,Marmara,S012,,2021-06-09,PY012,stabil,Bilgi ve iletişim
+9632226348,Müşteri 0336 A.Ş.,Ticari,G,Adana,Akdeniz,S081,,2021-11-18,PY083,rakip_buyutuyor,Toptan ve perakende ticaret
+9132250337,Müşteri 0337 A.Ş.,KOBI,J,Ankara,İç Anadolu,S032,,2022-09-02,PY032,stabil,Bilgi ve iletişim
+9145341764,Müşteri 0338 A.Ş.,Kurumsal,J,Ankara,İç Anadolu,S030,G012,2023-10-15,PY032,rakip_buyutuyor,Bilgi ve iletişim
+9949729282,Müşteri 0339 A.Ş.,KOBI,G,Kocaeli,Marmara,S012,G040,2015-05-24,PY011,stabil,Toptan ve perakende ticaret
+9834157571,Müşteri 0340 A.Ş.,Kurumsal,J,Ankara,İç Anadolu,S030,,2021-05-27,PY033,sessiz_cikis,Bilgi ve iletişim
+9616134047,Müşteri 0341 A.Ş.,Ticari,C,Gaziantep,Güneydoğu,S091,,2015-11-10,PY093,stabil,İmalat
+9461924267,Müşteri 0342 A.Ş.,KOBI,F,Adana,Akdeniz,S082,,2024-12-16,PY083,ana_banka,İnşaat
+9683896248,Müşteri 0343 A.Ş.,Kurumsal,H,Ankara,İç Anadolu,S030,,2018-08-18,PY031,proje_buyumesi,Ulaştırma ve depolama
+9837505679,Müşteri 0344 A.Ş.,Ticari,I,Konya,İç Anadolu,S041,G040,2018-10-16,PY043,birlikte_buyume,Konaklama ve yiyecek
+9955446642,Müşteri 0345 A.Ş.,Ticari,H,Denizli,Ege,S061,G066,2016-06-16,PY061,proje_buyumesi,Ulaştırma ve depolama
+9693066967,Müşteri 0346 A.Ş.,Ticari,M,İzmir,Ege,S051,,2017-02-23,PY052,proje_buyumesi,Mesleki ve teknik faaliyetler
+9516340054,Müşteri 0347 A.Ş.,KOBI,I,Ankara,İç Anadolu,S032,G034,2022-10-14,PY031,sessiz_cikis,Konaklama ve yiyecek
+9309458931,Müşteri 0348 A.Ş.,KOBI,G,İstanbul,Marmara,S002,G067,2025-04-13,PY001,stabil,Toptan ve perakende ticaret
+9593752653,Müşteri 0349 A.Ş.,KOBI,M,Denizli,Ege,S062,G017,2021-03-29,PY062,birlikte_buyume,Mesleki ve teknik faaliyetler
+9431283943,Müşteri 0350 A.Ş.,Ticari,J,Kocaeli,Marmara,S011,,2018-10-20,PY012,stabil,Bilgi ve iletişim
+9966429055,Müşteri 0351 A.Ş.,Ticari,M,Gaziantep,Güneydoğu,S091,,2015-05-13,PY093,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9668157325,Müşteri 0352 A.Ş.,Ticari,H,Ankara,İç Anadolu,S031,,2018-11-13,PY032,stabil,Ulaştırma ve depolama
+9573945892,Müşteri 0353 A.Ş.,Ticari,C,Gaziantep,Güneydoğu,S091,,2015-10-09,PY092,birlikte_buyume,İmalat
+9803319255,Müşteri 0354 A.Ş.,Kurumsal,F,İzmir,Ege,S050,G030,2016-11-12,PY052,birlikte_buyume,İnşaat
+9556471107,Müşteri 0355 A.Ş.,KOBI,C,İstanbul,Marmara,S002,,2020-10-29,PY003,birlikte_buyume,İmalat
+9898549049,Müşteri 0356 A.Ş.,KOBI,G,Gaziantep,Güneydoğu,S092,,2020-09-30,PY091,birlikte_buyume,Toptan ve perakende ticaret
+9387699010,Müşteri 0357 A.Ş.,KOBI,M,Denizli,Ege,S062,,2022-05-11,PY061,proje_buyumesi,Mesleki ve teknik faaliyetler
+9198164725,Müşteri 0358 A.Ş.,Ticari,I,Antalya,Akdeniz,S071,,2022-01-07,PY071,proje_buyumesi,Konaklama ve yiyecek
+9723494412,Müşteri 0359 A.Ş.,Ticari,M,Bursa,Marmara,S021,G002,2022-10-09,PY022,birlikte_buyume,Mesleki ve teknik faaliyetler
+9127895309,Müşteri 0360 A.Ş.,Ticari,J,İzmir,Ege,S051,,2018-11-22,PY051,birlikte_buyume,Bilgi ve iletişim
+9323318519,Müşteri 0361 A.Ş.,Ticari,H,Trabzon,Karadeniz,S111,,2022-01-17,PY112,sessiz_cikis,Ulaştırma ve depolama
+9512725349,Müşteri 0362 A.Ş.,Ticari,I,Ankara,İç Anadolu,S031,,2021-06-20,PY031,stabil,Konaklama ve yiyecek
+9676298913,Müşteri 0363 A.Ş.,Kurumsal,J,İzmir,Ege,S050,,2021-07-17,PY052,stabil,Bilgi ve iletişim
+9335437173,Müşteri 0364 A.Ş.,Kurumsal,I,Ankara,İç Anadolu,S030,,2015-07-24,PY031,stabil,Konaklama ve yiyecek
+9933563976,Müşteri 0365 A.Ş.,KOBI,G,Trabzon,Karadeniz,S112,,2025-03-24,PY112,rakip_buyutuyor,Toptan ve perakende ticaret
+9749898295,Müşteri 0366 A.Ş.,Ticari,F,Trabzon,Karadeniz,S111,G048,2020-09-27,PY113,stabil,İnşaat
+9284144676,Müşteri 0367 A.Ş.,KOBI,F,Konya,İç Anadolu,S042,,2024-07-28,PY042,proje_buyumesi,İnşaat
+9790894929,Müşteri 0368 A.Ş.,Kurumsal,I,İstanbul,Marmara,S000,,2015-12-11,PY003,rakip_buyutuyor,Konaklama ve yiyecek
+9836432557,Müşteri 0369 A.Ş.,Ticari,G,Trabzon,Karadeniz,S111,,2020-03-12,PY111,stabil,Toptan ve perakende ticaret
+9466170255,Müşteri 0370 A.Ş.,Ticari,M,İzmir,Ege,S051,,2015-06-01,PY052,bozulma,Mesleki ve teknik faaliyetler
+9852855900,Müşteri 0371 A.Ş.,Ticari,I,Gaziantep,Güneydoğu,S091,,2017-12-14,PY093,proje_buyumesi,Konaklama ve yiyecek
+9128423197,Müşteri 0372 A.Ş.,Kurumsal,C,Ankara,İç Anadolu,S030,,2023-12-18,PY033,stabil,İmalat
+9807938196,Müşteri 0373 A.Ş.,Kurumsal,I,Ankara,İç Anadolu,S030,,2022-04-07,PY033,stabil,Konaklama ve yiyecek
+9837333446,Müşteri 0374 A.Ş.,KOBI,H,Kayseri,İç Anadolu,S102,,2020-03-25,PY101,stabil,Ulaştırma ve depolama
+9221688379,Müşteri 0375 A.Ş.,Ticari,H,Gaziantep,Güneydoğu,S091,G030,2016-04-15,PY092,stabil,Ulaştırma ve depolama
+9922514230,Müşteri 0376 A.Ş.,Ticari,M,Bursa,Marmara,S021,,2015-10-09,PY023,stabil,Mesleki ve teknik faaliyetler
+9305502608,Müşteri 0377 A.Ş.,Ticari,I,Denizli,Ege,S061,,2015-07-13,PY061,sessiz_cikis,Konaklama ve yiyecek
+9742709001,Müşteri 0378 A.Ş.,Ticari,H,Kayseri,İç Anadolu,S101,,2024-11-12,PY101,stabil,Ulaştırma ve depolama
+9994053230,Müşteri 0379 A.Ş.,Ticari,C,Kayseri,İç Anadolu,S101,,2016-08-01,PY103,stabil,İmalat
+9667136772,Müşteri 0380 A.Ş.,Kurumsal,I,İstanbul,Marmara,S000,,2019-12-05,PY001,rakip_buyutuyor,Konaklama ve yiyecek
+9653638876,Müşteri 0381 A.Ş.,KOBI,F,Denizli,Ege,S062,,2021-06-18,PY061,birlikte_buyume,İnşaat
+9744960480,Müşteri 0382 A.Ş.,KOBI,J,Antalya,Akdeniz,S072,,2017-05-15,PY071,sessiz_cikis,Bilgi ve iletişim
+9338333956,Müşteri 0383 A.Ş.,KOBI,G,Ankara,İç Anadolu,S032,,2021-11-15,PY033,proje_buyumesi,Toptan ve perakende ticaret
+9818874844,Müşteri 0384 A.Ş.,Ticari,C,Kocaeli,Marmara,S011,,2018-05-23,PY011,birlikte_buyume,İmalat
+9259595854,Müşteri 0385 A.Ş.,Kurumsal,G,İstanbul,Marmara,S000,,2021-04-17,PY003,stabil,Toptan ve perakende ticaret
+9919946734,Müşteri 0386 A.Ş.,KOBI,M,Adana,Akdeniz,S082,,2021-02-15,PY082,ana_banka,Mesleki ve teknik faaliyetler
+9195348121,Müşteri 0387 A.Ş.,Ticari,J,İzmir,Ege,S051,,2023-02-02,PY053,rakip_buyutuyor,Bilgi ve iletişim
+9454675680,Müşteri 0388 A.Ş.,Kurumsal,H,İzmir,Ege,S050,,2022-11-15,PY052,ana_banka,Ulaştırma ve depolama
+9451813732,Müşteri 0389 A.Ş.,Ticari,M,Trabzon,Karadeniz,S111,G059,2019-05-09,PY112,stabil,Mesleki ve teknik faaliyetler
+9371612080,Müşteri 0390 A.Ş.,KOBI,I,Ankara,İç Anadolu,S032,,2022-06-14,PY032,bozulma,Konaklama ve yiyecek
+9623799215,Müşteri 0391 A.Ş.,Ticari,F,Ankara,İç Anadolu,S031,,2020-02-22,PY033,rakip_buyutuyor,İnşaat
+9771083191,Müşteri 0392 A.Ş.,KOBI,C,Ankara,İç Anadolu,S032,,2021-11-07,PY032,stabil,İmalat
+9345757517,Müşteri 0393 A.Ş.,KOBI,F,Trabzon,Karadeniz,S112,,2018-05-21,PY111,birlikte_buyume,İnşaat
+9765255089,Müşteri 0394 A.Ş.,Ticari,G,Kayseri,İç Anadolu,S101,,2022-12-13,PY101,rakip_buyutuyor,Toptan ve perakende ticaret
+9560029386,Müşteri 0395 A.Ş.,KOBI,F,Konya,İç Anadolu,S042,,2015-05-08,PY041,stabil,İnşaat
+9311629528,Müşteri 0396 A.Ş.,Ticari,M,Antalya,Akdeniz,S071,,2023-08-03,PY071,birlikte_buyume,Mesleki ve teknik faaliyetler
+9837692397,Müşteri 0397 A.Ş.,Ticari,H,Bursa,Marmara,S021,,2025-02-28,PY023,bozulma,Ulaştırma ve depolama
+9866340979,Müşteri 0398 A.Ş.,Kurumsal,I,İzmir,Ege,S050,,2025-03-29,PY052,stabil,Konaklama ve yiyecek
+9831067251,Müşteri 0399 A.Ş.,KOBI,H,Trabzon,Karadeniz,S112,,2017-11-28,PY112,birlikte_buyume,Ulaştırma ve depolama
+9379946592,Müşteri 0400 A.Ş.,Ticari,F,İstanbul,Marmara,S001,G045,2018-08-16,PY003,stabil,İnşaat
+9166244835,Müşteri 0401 A.Ş.,Kurumsal,F,İzmir,Ege,S050,G066,2024-01-05,PY051,stabil,İnşaat
+9965366523,Müşteri 0402 A.Ş.,Ticari,F,İzmir,Ege,S051,,2019-11-16,PY053,sessiz_cikis,İnşaat
+9110926810,Müşteri 0403 A.Ş.,Kurumsal,G,Ankara,İç Anadolu,S030,,2019-07-20,PY033,proje_buyumesi,Toptan ve perakende ticaret
+9326536868,Müşteri 0404 A.Ş.,Kurumsal,G,İzmir,Ege,S050,,2020-12-01,PY051,stabil,Toptan ve perakende ticaret
+9377050108,Müşteri 0405 A.Ş.,Ticari,C,İzmir,Ege,S051,,2019-12-18,PY053,ana_banka,İmalat
+9736804248,Müşteri 0406 A.Ş.,Ticari,G,Antalya,Akdeniz,S071,,2025-02-21,PY072,bozulma,Toptan ve perakende ticaret
+9634053032,Müşteri 0407 A.Ş.,KOBI,H,Ankara,İç Anadolu,S032,G005,2019-11-02,PY031,stabil,Ulaştırma ve depolama
+9183957440,Müşteri 0408 A.Ş.,Ticari,I,Konya,İç Anadolu,S041,G024,2016-06-19,PY042,bozulma,Konaklama ve yiyecek
+9788330800,Müşteri 0409 A.Ş.,KOBI,M,Antalya,Akdeniz,S072,,2021-08-24,PY071,stabil,Mesleki ve teknik faaliyetler
+9796988749,Müşteri 0410 A.Ş.,Ticari,F,Kayseri,İç Anadolu,S101,,2014-11-27,PY101,ana_banka,İnşaat
+9302767604,Müşteri 0411 A.Ş.,KOBI,C,Antalya,Akdeniz,S072,,2017-10-03,PY071,rakip_buyutuyor,İmalat
+9610524221,Müşteri 0412 A.Ş.,Ticari,M,İzmir,Ege,S051,,2015-10-21,PY053,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9706737760,Müşteri 0413 A.Ş.,Ticari,H,Ankara,İç Anadolu,S031,,2019-11-19,PY033,stabil,Ulaştırma ve depolama
+9628730762,Müşteri 0414 A.Ş.,KOBI,G,Trabzon,Karadeniz,S112,G047,2015-05-23,PY112,bozulma,Toptan ve perakende ticaret
+9179794485,Müşteri 0415 A.Ş.,Ticari,I,İstanbul,Marmara,S001,,2016-10-06,PY003,stabil,Konaklama ve yiyecek
+9245604211,Müşteri 0416 A.Ş.,Kurumsal,G,İzmir,Ege,S050,,2016-12-11,PY051,stabil,Toptan ve perakende ticaret
+9297421840,Müşteri 0417 A.Ş.,KOBI,J,Trabzon,Karadeniz,S112,,2018-06-25,PY112,stabil,Bilgi ve iletişim
+9562643376,Müşteri 0418 A.Ş.,KOBI,C,Gaziantep,Güneydoğu,S092,G021,2020-05-30,PY091,proje_buyumesi,İmalat
+9183285089,Müşteri 0419 A.Ş.,Kurumsal,I,İzmir,Ege,S050,,2022-02-21,PY051,stabil,Konaklama ve yiyecek
+9722696583,Müşteri 0420 A.Ş.,Ticari,F,Antalya,Akdeniz,S071,,2018-02-25,PY072,sessiz_cikis,İnşaat
+9508491514,Müşteri 0421 A.Ş.,KOBI,G,İstanbul,Marmara,S002,,2017-11-28,PY001,rakip_buyutuyor,Toptan ve perakende ticaret
+9765847984,Müşteri 0422 A.Ş.,KOBI,F,Konya,İç Anadolu,S042,,2014-12-04,PY041,stabil,İnşaat
+9575008790,Müşteri 0423 A.Ş.,KOBI,I,Adana,Akdeniz,S082,,2019-10-16,PY083,stabil,Konaklama ve yiyecek
+9793355844,Müşteri 0424 A.Ş.,Ticari,G,Kocaeli,Marmara,S011,,2014-10-26,PY012,stabil,Toptan ve perakende ticaret
+9506045038,Müşteri 0425 A.Ş.,KOBI,I,Antalya,Akdeniz,S072,G022,2022-11-19,PY072,rakip_buyutuyor,Konaklama ve yiyecek
+9614307055,Müşteri 0426 A.Ş.,Ticari,J,Adana,Akdeniz,S081,G072,2023-09-24,PY081,proje_buyumesi,Bilgi ve iletişim
+9280935817,Müşteri 0427 A.Ş.,KOBI,M,İstanbul,Marmara,S002,,2021-01-09,PY001,stabil,Mesleki ve teknik faaliyetler
+9125463074,Müşteri 0428 A.Ş.,Ticari,H,İstanbul,Marmara,S001,G045,2017-04-19,PY002,bozulma,Ulaştırma ve depolama
+9197655505,Müşteri 0429 A.Ş.,KOBI,M,Denizli,Ege,S062,G054,2018-03-27,PY062,stabil,Mesleki ve teknik faaliyetler
+9960274480,Müşteri 0430 A.Ş.,Ticari,M,Konya,İç Anadolu,S041,,2015-01-03,PY041,proje_buyumesi,Mesleki ve teknik faaliyetler
+9320633314,Müşteri 0431 A.Ş.,Ticari,F,Gaziantep,Güneydoğu,S091,,2019-12-01,PY093,sessiz_cikis,İnşaat
+9299758635,Müşteri 0432 A.Ş.,KOBI,M,İzmir,Ege,S052,,2020-09-03,PY051,proje_buyumesi,Mesleki ve teknik faaliyetler
+9782472222,Müşteri 0433 A.Ş.,Ticari,I,Kocaeli,Marmara,S011,,2015-04-20,PY012,rakip_buyutuyor,Konaklama ve yiyecek
+9343423071,Müşteri 0434 A.Ş.,KOBI,H,Denizli,Ege,S062,G030,2023-06-21,PY063,bozulma,Ulaştırma ve depolama
+9489698393,Müşteri 0435 A.Ş.,Ticari,H,Trabzon,Karadeniz,S111,G035,2017-05-21,PY111,stabil,Ulaştırma ve depolama
+9629039736,Müşteri 0436 A.Ş.,Ticari,M,Trabzon,Karadeniz,S111,G019,2024-09-12,PY113,stabil,Mesleki ve teknik faaliyetler
+9438822490,Müşteri 0437 A.Ş.,Ticari,I,İzmir,Ege,S051,,2021-06-08,PY051,stabil,Konaklama ve yiyecek
+9388753206,Müşteri 0438 A.Ş.,Ticari,H,İzmir,Ege,S051,,2017-05-23,PY052,birlikte_buyume,Ulaştırma ve depolama
+9961518072,Müşteri 0439 A.Ş.,Ticari,H,Gaziantep,Güneydoğu,S091,,2025-06-08,PY092,rakip_buyutuyor,Ulaştırma ve depolama
+9472984543,Müşteri 0440 A.Ş.,Kurumsal,I,İzmir,Ege,S050,,2019-11-19,PY052,rakip_buyutuyor,Konaklama ve yiyecek
+9473402071,Müşteri 0441 A.Ş.,Kurumsal,G,İstanbul,Marmara,S000,G067,2021-02-10,PY002,bozulma,Toptan ve perakende ticaret
+9302018082,Müşteri 0442 A.Ş.,KOBI,C,Trabzon,Karadeniz,S112,,2015-12-21,PY112,stabil,İmalat
+9118235015,Müşteri 0443 A.Ş.,KOBI,H,Adana,Akdeniz,S082,G020,2016-01-29,PY081,rakip_buyutuyor,Ulaştırma ve depolama
+9229726848,Müşteri 0444 A.Ş.,KOBI,G,Trabzon,Karadeniz,S112,,2019-10-04,PY111,stabil,Toptan ve perakende ticaret
+9245682424,Müşteri 0445 A.Ş.,Kurumsal,F,Ankara,İç Anadolu,S030,,2024-07-03,PY031,stabil,İnşaat
+9522599668,Müşteri 0446 A.Ş.,Ticari,H,İzmir,Ege,S051,G033,2025-03-31,PY052,rakip_buyutuyor,Ulaştırma ve depolama
+9458140848,Müşteri 0447 A.Ş.,Kurumsal,C,Ankara,İç Anadolu,S030,G016,2023-12-09,PY033,ana_banka,İmalat
+9680912167,Müşteri 0448 A.Ş.,KOBI,I,İstanbul,Marmara,S002,,2017-08-28,PY001,rakip_buyutuyor,Konaklama ve yiyecek
+9977050803,Müşteri 0449 A.Ş.,KOBI,G,Trabzon,Karadeniz,S112,,2023-04-28,PY112,stabil,Toptan ve perakende ticaret
+9211935313,Müşteri 0450 A.Ş.,Ticari,G,Denizli,Ege,S061,,2022-03-20,PY061,rakip_buyutuyor,Toptan ve perakende ticaret
+9997362109,Müşteri 0451 A.Ş.,KOBI,H,Gaziantep,Güneydoğu,S092,,2021-06-12,PY091,stabil,Ulaştırma ve depolama
+9633650607,Müşteri 0452 A.Ş.,Kurumsal,C,İstanbul,Marmara,S000,,2021-04-17,PY002,bozulma,İmalat
+9885084829,Müşteri 0453 A.Ş.,Ticari,F,Bursa,Marmara,S021,,2023-11-16,PY023,rakip_buyutuyor,İnşaat
+9510622576,Müşteri 0454 A.Ş.,Kurumsal,G,İstanbul,Marmara,S000,G013,2022-10-10,PY003,stabil,Toptan ve perakende ticaret
+9131023893,Müşteri 0455 A.Ş.,Ticari,F,İstanbul,Marmara,S001,,2017-12-01,PY002,stabil,İnşaat
+9244941114,Müşteri 0456 A.Ş.,KOBI,C,Trabzon,Karadeniz,S112,G054,2023-09-11,PY112,stabil,İmalat
+9470586724,Müşteri 0457 A.Ş.,KOBI,I,Konya,İç Anadolu,S042,,2021-11-03,PY043,ana_banka,Konaklama ve yiyecek
+9286873454,Müşteri 0458 A.Ş.,Ticari,M,Trabzon,Karadeniz,S111,,2019-06-24,PY113,birlikte_buyume,Mesleki ve teknik faaliyetler
+9808404116,Müşteri 0459 A.Ş.,Ticari,H,Bursa,Marmara,S021,,2017-11-19,PY021,proje_buyumesi,Ulaştırma ve depolama
+9320164419,Müşteri 0460 A.Ş.,KOBI,I,Antalya,Akdeniz,S072,,2025-05-21,PY073,rakip_buyutuyor,Konaklama ve yiyecek
+9217761808,Müşteri 0461 A.Ş.,KOBI,J,Kayseri,İç Anadolu,S102,G053,2022-06-21,PY103,birlikte_buyume,Bilgi ve iletişim
+9818515731,Müşteri 0462 A.Ş.,Ticari,C,İzmir,Ege,S051,,2015-04-03,PY053,stabil,İmalat
+9184357558,Müşteri 0463 A.Ş.,Ticari,J,Kocaeli,Marmara,S011,G038,2015-09-23,PY013,sessiz_cikis,Bilgi ve iletişim
+9402742979,Müşteri 0464 A.Ş.,Ticari,I,İstanbul,Marmara,S001,G013,2022-01-09,PY001,stabil,Konaklama ve yiyecek
+9922618056,Müşteri 0465 A.Ş.,Ticari,F,Kocaeli,Marmara,S011,,2016-12-20,PY013,birlikte_buyume,İnşaat
+9768900784,Müşteri 0466 A.Ş.,KOBI,I,İstanbul,Marmara,S002,G074,2019-09-11,PY002,rakip_buyutuyor,Konaklama ve yiyecek
+9854079234,Müşteri 0467 A.Ş.,Ticari,F,Konya,İç Anadolu,S041,,2014-11-18,PY041,rakip_buyutuyor,İnşaat
+9522220093,Müşteri 0468 A.Ş.,KOBI,F,İzmir,Ege,S052,G052,2022-09-16,PY053,sessiz_cikis,İnşaat
+9555152229,Müşteri 0469 A.Ş.,Kurumsal,G,Ankara,İç Anadolu,S030,,2016-09-24,PY033,stabil,Toptan ve perakende ticaret
+9650792448,Müşteri 0470 A.Ş.,Ticari,M,Denizli,Ege,S061,,2016-08-16,PY061,birlikte_buyume,Mesleki ve teknik faaliyetler
+9746289348,Müşteri 0471 A.Ş.,KOBI,I,Gaziantep,Güneydoğu,S092,G059,2022-12-03,PY092,stabil,Konaklama ve yiyecek
+9967145496,Müşteri 0472 A.Ş.,Ticari,H,Kocaeli,Marmara,S011,G017,2018-12-21,PY012,birlikte_buyume,Ulaştırma ve depolama
+9935251221,Müşteri 0473 A.Ş.,Ticari,J,Ankara,İç Anadolu,S031,,2015-09-21,PY032,stabil,Bilgi ve iletişim
+9144766476,Müşteri 0474 A.Ş.,KOBI,H,Kayseri,İç Anadolu,S102,,2024-01-31,PY101,stabil,Ulaştırma ve depolama
+9981318915,Müşteri 0475 A.Ş.,KOBI,J,İzmir,Ege,S052,,2024-06-15,PY052,stabil,Bilgi ve iletişim
+9520622191,Müşteri 0476 A.Ş.,Ticari,F,Bursa,Marmara,S021,,2024-10-04,PY021,stabil,İnşaat
+9796976050,Müşteri 0477 A.Ş.,Ticari,I,Adana,Akdeniz,S081,G047,2021-12-14,PY081,stabil,Konaklama ve yiyecek
+9775752699,Müşteri 0478 A.Ş.,Ticari,F,Kayseri,İç Anadolu,S101,,2022-05-15,PY102,rakip_buyutuyor,İnşaat
+9503944590,Müşteri 0479 A.Ş.,Ticari,I,Antalya,Akdeniz,S071,G070,2017-12-01,PY073,rakip_buyutuyor,Konaklama ve yiyecek
+9323893295,Müşteri 0480 A.Ş.,Ticari,C,Antalya,Akdeniz,S071,,2020-11-03,PY071,stabil,İmalat
+9453925120,Müşteri 0481 A.Ş.,Ticari,G,Bursa,Marmara,S021,,2017-07-23,PY021,stabil,Toptan ve perakende ticaret
+9257518958,Müşteri 0482 A.Ş.,KOBI,G,İzmir,Ege,S052,G031,2022-08-25,PY053,stabil,Toptan ve perakende ticaret
+9642175265,Müşteri 0483 A.Ş.,KOBI,I,Kayseri,İç Anadolu,S102,,2021-06-17,PY102,birlikte_buyume,Konaklama ve yiyecek
+9435256716,Müşteri 0484 A.Ş.,KOBI,F,Trabzon,Karadeniz,S112,G012,2014-12-16,PY111,stabil,İnşaat
+9745819003,Müşteri 0485 A.Ş.,KOBI,I,Gaziantep,Güneydoğu,S092,G024,2023-07-14,PY092,stabil,Konaklama ve yiyecek
+9908111334,Müşteri 0486 A.Ş.,KOBI,G,Gaziantep,Güneydoğu,S092,,2018-04-20,PY093,stabil,Toptan ve perakende ticaret
+9502645665,Müşteri 0487 A.Ş.,KOBI,G,Ankara,İç Anadolu,S032,,2017-06-25,PY031,birlikte_buyume,Toptan ve perakende ticaret
+9383152069,Müşteri 0488 A.Ş.,KOBI,I,Denizli,Ege,S062,,2017-01-21,PY061,stabil,Konaklama ve yiyecek
+9539083448,Müşteri 0489 A.Ş.,Ticari,C,Bursa,Marmara,S021,,2025-03-26,PY023,birlikte_buyume,İmalat
+9653145597,Müşteri 0490 A.Ş.,Ticari,M,Kayseri,İç Anadolu,S101,,2020-03-14,PY101,birlikte_buyume,Mesleki ve teknik faaliyetler
+9859399827,Müşteri 0491 A.Ş.,Ticari,F,Antalya,Akdeniz,S071,G019,2019-02-08,PY073,rakip_buyutuyor,İnşaat
+9224855466,Müşteri 0492 A.Ş.,Ticari,F,Konya,İç Anadolu,S041,,2022-01-31,PY042,rakip_buyutuyor,İnşaat
+9501428547,Müşteri 0493 A.Ş.,Ticari,M,Konya,İç Anadolu,S041,G033,2023-12-23,PY043,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9114631398,Müşteri 0494 A.Ş.,Ticari,H,Antalya,Akdeniz,S071,,2015-03-09,PY072,stabil,Ulaştırma ve depolama
+9186894106,Müşteri 0495 A.Ş.,Ticari,M,Bursa,Marmara,S021,,2018-06-18,PY022,proje_buyumesi,Mesleki ve teknik faaliyetler
+9649862810,Müşteri 0496 A.Ş.,Ticari,C,Denizli,Ege,S061,G049,2022-12-13,PY061,birlikte_buyume,İmalat
+9202516529,Müşteri 0497 A.Ş.,Ticari,F,Bursa,Marmara,S021,,2018-06-13,PY023,stabil,İnşaat
+9585576534,Müşteri 0498 A.Ş.,KOBI,G,Denizli,Ege,S062,G037,2020-08-25,PY063,rakip_buyutuyor,Toptan ve perakende ticaret
+9451562690,Müşteri 0499 A.Ş.,KOBI,M,Denizli,Ege,S062,,2023-08-08,PY063,stabil,Mesleki ve teknik faaliyetler
+9968123083,Müşteri 0500 A.Ş.,Kurumsal,C,İzmir,Ege,S050,G037,2022-09-01,PY051,birlikte_buyume,İmalat
+9451248527,Müşteri 0501 A.Ş.,Kurumsal,I,İstanbul,Marmara,S000,G021,2015-06-17,PY003,rakip_buyutuyor,Konaklama ve yiyecek
+9275877629,Müşteri 0502 A.Ş.,Ticari,C,Adana,Akdeniz,S081,,2015-03-27,PY081,bozulma,İmalat
+9621691138,Müşteri 0503 A.Ş.,KOBI,G,Denizli,Ege,S062,,2020-10-21,PY061,sessiz_cikis,Toptan ve perakende ticaret
+9943934889,Müşteri 0504 A.Ş.,KOBI,F,Kayseri,İç Anadolu,S102,G024,2021-06-25,PY103,birlikte_buyume,İnşaat
+9104203706,Müşteri 0505 A.Ş.,Kurumsal,H,İzmir,Ege,S050,,2023-11-19,PY051,birlikte_buyume,Ulaştırma ve depolama
+9705995476,Müşteri 0506 A.Ş.,KOBI,J,Bursa,Marmara,S022,G022,2018-07-15,PY021,proje_buyumesi,Bilgi ve iletişim
+9399139421,Müşteri 0507 A.Ş.,Kurumsal,J,İzmir,Ege,S050,,2021-12-16,PY051,stabil,Bilgi ve iletişim
+9715095307,Müşteri 0508 A.Ş.,Ticari,F,Trabzon,Karadeniz,S111,,2022-10-18,PY111,bozulma,İnşaat
+9759743475,Müşteri 0509 A.Ş.,KOBI,M,Gaziantep,Güneydoğu,S092,,2023-01-01,PY093,birlikte_buyume,Mesleki ve teknik faaliyetler
+9188484931,Müşteri 0510 A.Ş.,Kurumsal,I,İstanbul,Marmara,S000,,2025-01-17,PY002,stabil,Konaklama ve yiyecek
+9858752416,Müşteri 0511 A.Ş.,Kurumsal,H,İstanbul,Marmara,S000,,2024-11-23,PY001,stabil,Ulaştırma ve depolama
+9114493372,Müşteri 0512 A.Ş.,Ticari,G,Bursa,Marmara,S021,G037,2014-11-04,PY021,bozulma,Toptan ve perakende ticaret
+9344123099,Müşteri 0513 A.Ş.,Ticari,J,Denizli,Ege,S061,,2025-02-21,PY063,stabil,Bilgi ve iletişim
+9740545407,Müşteri 0514 A.Ş.,KOBI,F,Adana,Akdeniz,S082,G068,2021-11-25,PY081,stabil,İnşaat
+9370701380,Müşteri 0515 A.Ş.,KOBI,G,Trabzon,Karadeniz,S112,G032,2023-07-07,PY112,stabil,Toptan ve perakende ticaret
+9141606212,Müşteri 0516 A.Ş.,Kurumsal,C,İzmir,Ege,S050,G062,2015-09-13,PY052,stabil,İmalat
+9798685589,Müşteri 0517 A.Ş.,Kurumsal,M,İzmir,Ege,S050,,2015-05-27,PY051,stabil,Mesleki ve teknik faaliyetler
+9743431872,Müşteri 0518 A.Ş.,KOBI,C,İstanbul,Marmara,S002,,2019-01-27,PY001,rakip_buyutuyor,İmalat
+9159953674,Müşteri 0519 A.Ş.,Ticari,F,Konya,İç Anadolu,S041,G064,2019-01-14,PY041,stabil,İnşaat
+9704786083,Müşteri 0520 A.Ş.,KOBI,F,İzmir,Ege,S052,,2017-11-23,PY052,bozulma,İnşaat
+9136163415,Müşteri 0521 A.Ş.,KOBI,C,Ankara,İç Anadolu,S032,,2016-03-23,PY033,bozulma,İmalat
+9133463352,Müşteri 0522 A.Ş.,Kurumsal,H,Ankara,İç Anadolu,S030,,2017-05-16,PY031,stabil,Ulaştırma ve depolama
+9542361855,Müşteri 0523 A.Ş.,KOBI,J,Trabzon,Karadeniz,S112,G014,2014-11-24,PY111,stabil,Bilgi ve iletişim
+9754309815,Müşteri 0524 A.Ş.,Kurumsal,F,İstanbul,Marmara,S000,G069,2019-05-06,PY001,rakip_buyutuyor,İnşaat
+9275526520,Müşteri 0525 A.Ş.,Ticari,I,Bursa,Marmara,S021,,2025-03-20,PY022,stabil,Konaklama ve yiyecek
+9683089732,Müşteri 0526 A.Ş.,Ticari,J,Trabzon,Karadeniz,S111,,2021-05-08,PY112,stabil,Bilgi ve iletişim
+9608601450,Müşteri 0527 A.Ş.,Ticari,F,Kocaeli,Marmara,S011,,2019-10-04,PY013,ana_banka,İnşaat
+9930465186,Müşteri 0528 A.Ş.,KOBI,J,Bursa,Marmara,S022,,2015-09-10,PY022,ana_banka,Bilgi ve iletişim
+9863373194,Müşteri 0529 A.Ş.,KOBI,G,Adana,Akdeniz,S082,G019,2024-11-01,PY081,proje_buyumesi,Toptan ve perakende ticaret
+9982946808,Müşteri 0530 A.Ş.,KOBI,C,İstanbul,Marmara,S002,,2023-08-22,PY003,stabil,İmalat
+9811583925,Müşteri 0531 A.Ş.,KOBI,M,Gaziantep,Güneydoğu,S092,G047,2016-05-19,PY093,rakip_buyutuyor,Mesleki ve teknik faaliyetler
+9419321727,Müşteri 0532 A.Ş.,Ticari,I,Antalya,Akdeniz,S071,G002,2024-09-13,PY071,rakip_buyutuyor,Konaklama ve yiyecek
+9346820981,Müşteri 0533 A.Ş.,Kurumsal,H,İzmir,Ege,S050,,2016-10-24,PY051,stabil,Ulaştırma ve depolama
+9269282943,Müşteri 0534 A.Ş.,KOBI,C,Kocaeli,Marmara,S012,,2015-01-01,PY013,rakip_buyutuyor,İmalat
+9275353917,Müşteri 0535 A.Ş.,KOBI,G,Trabzon,Karadeniz,S112,,2018-07-26,PY111,stabil,Toptan ve perakende ticaret
+9314174870,Müşteri 0536 A.Ş.,Ticari,C,İstanbul,Marmara,S001,,2021-08-01,PY001,stabil,İmalat
+9247828048,Müşteri 0537 A.Ş.,Ticari,C,Antalya,Akdeniz,S071,,2024-02-01,PY071,birlikte_buyume,İmalat
+9318389219,Müşteri 0538 A.Ş.,Ticari,G,Antalya,Akdeniz,S071,,2018-06-19,PY073,stabil,Toptan ve perakende ticaret
+9741915360,Müşteri 0539 A.Ş.,Kurumsal,M,İzmir,Ege,S050,G011,2024-04-10,PY053,stabil,Mesleki ve teknik faaliyetler
+9366711469,Müşteri 0540 A.Ş.,KOBI,G,Gaziantep,Güneydoğu,S092,,2018-12-13,PY093,bozulma,Toptan ve perakende ticaret
+9525316159,Müşteri 0541 A.Ş.,Ticari,C,Antalya,Akdeniz,S071,,2015-02-08,PY072,ana_banka,İmalat
+9953564957,Müşteri 0542 A.Ş.,KOBI,H,Denizli,Ege,S062,G022,2016-11-24,PY061,birlikte_buyume,Ulaştırma ve depolama
+9828854867,Müşteri 0543 A.Ş.,KOBI,G,Adana,Akdeniz,S082,,2023-06-02,PY081,bozulma,Toptan ve perakende ticaret
+9171385209,Müşteri 0544 A.Ş.,KOBI,F,Antalya,Akdeniz,S072,G055,2025-05-08,PY072,ana_banka,İnşaat
+9404826069,Müşteri 0545 A.Ş.,Ticari,C,İstanbul,Marmara,S001,G019,2015-01-12,PY003,stabil,İmalat
+9956387973,Müşteri 0546 A.Ş.,Ticari,G,Ankara,İç Anadolu,S031,,2024-01-02,PY031,stabil,Toptan ve perakende ticaret
+9255963239,Müşteri 0547 A.Ş.,KOBI,I,Konya,İç Anadolu,S042,,2019-06-02,PY043,stabil,Konaklama ve yiyecek
+9837829997,Müşteri 0548 A.Ş.,KOBI,F,İstanbul,Marmara,S002,,2020-04-30,PY001,stabil,İnşaat
+9958726598,Müşteri 0549 A.Ş.,Ticari,C,Konya,İç Anadolu,S041,,2020-06-04,PY041,proje_buyumesi,İmalat
+9348071545,Müşteri 0550 A.Ş.,KOBI,C,Kayseri,İç Anadolu,S102,G008,2016-07-12,PY102,stabil,İmalat
+9665628967,Müşteri 0551 A.Ş.,Kurumsal,C,İstanbul,Marmara,S000,G034,2024-02-01,PY002,birlikte_buyume,İmalat
+9417470384,Müşteri 0552 A.Ş.,KOBI,I,Adana,Akdeniz,S082,,2017-10-17,PY082,stabil,Konaklama ve yiyecek
+9314141251,Müşteri 0553 A.Ş.,Kurumsal,H,Ankara,İç Anadolu,S030,,2021-07-17,PY033,stabil,Ulaştırma ve depolama
+9547281604,Müşteri 0554 A.Ş.,Kurumsal,M,İstanbul,Marmara,S000,G038,2024-01-20,PY003,sessiz_cikis,Mesleki ve teknik faaliyetler
+9387256574,Müşteri 0555 A.Ş.,Ticari,H,Kocaeli,Marmara,S011,,2022-10-07,PY011,stabil,Ulaştırma ve depolama
+9402040153,Müşteri 0556 A.Ş.,Kurumsal,C,İzmir,Ege,S050,G017,2025-03-26,PY052,stabil,İmalat
+9388605780,Müşteri 0557 A.Ş.,Kurumsal,C,İstanbul,Marmara,S000,,2016-11-16,PY003,stabil,İmalat
+9591448659,Müşteri 0558 A.Ş.,Kurumsal,J,Ankara,İç Anadolu,S030,G049,2020-04-22,PY031,birlikte_buyume,Bilgi ve iletişim
+9763714400,Müşteri 0559 A.Ş.,Ticari,M,Gaziantep,Güneydoğu,S091,G009,2017-01-11,PY091,birlikte_buyume,Mesleki ve teknik faaliyetler
+9111219093,Müşteri 0560 A.Ş.,KOBI,M,Adana,Akdeniz,S082,,2020-11-09,PY081,birlikte_buyume,Mesleki ve teknik faaliyetler
+9595273410,Müşteri 0561 A.Ş.,Kurumsal,I,İstanbul,Marmara,S000,,2015-07-14,PY002,stabil,Konaklama ve yiyecek
+9863894876,Müşteri 0562 A.Ş.,KOBI,M,Gaziantep,Güneydoğu,S092,G041,2024-10-13,PY093,stabil,Mesleki ve teknik faaliyetler
+9347473786,Müşteri 0563 A.Ş.,KOBI,I,Konya,İç Anadolu,S042,G003,2020-09-05,PY042,bozulma,Konaklama ve yiyecek
+9416214714,Müşteri 0564 A.Ş.,Kurumsal,G,Ankara,İç Anadolu,S030,,2019-11-21,PY033,rakip_buyutuyor,Toptan ve perakende ticaret
+9912400916,Müşteri 0565 A.Ş.,Kurumsal,H,İzmir,Ege,S050,,2017-07-25,PY053,rakip_buyutuyor,Ulaştırma ve depolama
+9241841361,Müşteri 0566 A.Ş.,KOBI,F,Trabzon,Karadeniz,S112,,2024-05-25,PY112,rakip_buyutuyor,İnşaat
+9815972680,Müşteri 0567 A.Ş.,KOBI,C,Gaziantep,Güneydoğu,S092,,2019-03-12,PY091,proje_buyumesi,İmalat
+9901176446,Müşteri 0568 A.Ş.,Ticari,C,Gaziantep,Güneydoğu,S091,G071,2025-02-02,PY091,stabil,İmalat
+9280149378,Müşteri 0569 A.Ş.,KOBI,H,Adana,Akdeniz,S082,,2019-06-17,PY082,stabil,Ulaştırma ve depolama
+9532548233,Müşteri 0570 A.Ş.,Kurumsal,H,İzmir,Ege,S050,,2018-04-01,PY053,birlikte_buyume,Ulaştırma ve depolama
+9260506025,Müşteri 0571 A.Ş.,Ticari,G,Adana,Akdeniz,S081,,2016-04-04,PY082,stabil,Toptan ve perakende ticaret
+9383229922,Müşteri 0572 A.Ş.,KOBI,I,Antalya,Akdeniz,S072,,2021-12-20,PY071,bozulma,Konaklama ve yiyecek
+9458304875,Müşteri 0573 A.Ş.,Ticari,C,Ankara,İç Anadolu,S031,,2025-06-24,PY033,birlikte_buyume,İmalat
+9132675108,Müşteri 0574 A.Ş.,KOBI,M,Kayseri,İç Anadolu,S102,G068,2021-08-11,PY102,proje_buyumesi,Mesleki ve teknik faaliyetler
+9481902785,Müşteri 0575 A.Ş.,Ticari,I,Kocaeli,Marmara,S011,,2025-05-25,PY012,bozulma,Konaklama ve yiyecek
+9367406500,Müşteri 0576 A.Ş.,KOBI,M,Adana,Akdeniz,S082,G011,2016-03-25,PY082,birlikte_buyume,Mesleki ve teknik faaliyetler
+9698642242,Müşteri 0577 A.Ş.,Ticari,H,Adana,Akdeniz,S081,G045,2018-03-03,PY083,sessiz_cikis,Ulaştırma ve depolama
+9570297688,Müşteri 0578 A.Ş.,Ticari,H,Trabzon,Karadeniz,S111,G070,2024-01-10,PY112,birlikte_buyume,Ulaştırma ve depolama
+9684535692,Müşteri 0579 A.Ş.,Ticari,C,Ankara,İç Anadolu,S031,,2016-04-06,PY033,bozulma,İmalat
+9167303380,Müşteri 0580 A.Ş.,Ticari,J,Denizli,Ege,S061,,2024-04-29,PY062,stabil,Bilgi ve iletişim
+9866336428,Müşteri 0581 A.Ş.,KOBI,C,Antalya,Akdeniz,S072,,2020-10-16,PY072,birlikte_buyume,İmalat
+9916477635,Müşteri 0582 A.Ş.,Kurumsal,C,İzmir,Ege,S050,,2016-02-09,PY052,birlikte_buyume,İmalat
+9432085393,Müşteri 0583 A.Ş.,Kurumsal,F,Ankara,İç Anadolu,S030,,2017-10-05,PY031,stabil,İnşaat
+9692961533,Müşteri 0584 A.Ş.,Kurumsal,M,Ankara,İç Anadolu,S030,,2024-01-27,PY032,stabil,Mesleki ve teknik faaliyetler
+9655618059,Müşteri 0585 A.Ş.,Kurumsal,F,İstanbul,Marmara,S000,,2024-10-26,PY003,sessiz_cikis,İnşaat
+9151572658,Müşteri 0586 A.Ş.,KOBI,C,Kocaeli,Marmara,S012,,2016-05-27,PY012,rakip_buyutuyor,İmalat
+9346204317,Müşteri 0587 A.Ş.,Ticari,I,Antalya,Akdeniz,S071,,2021-10-20,PY071,stabil,Konaklama ve yiyecek
+9575796176,Müşteri 0588 A.Ş.,KOBI,I,Denizli,Ege,S062,,2024-07-31,PY063,stabil,Konaklama ve yiyecek
+9485151398,Müşteri 0589 A.Ş.,Kurumsal,J,İstanbul,Marmara,S000,,2023-08-02,PY002,stabil,Bilgi ve iletişim
+9986146638,Müşteri 0590 A.Ş.,KOBI,H,Bursa,Marmara,S022,G020,2023-11-21,PY022,stabil,Ulaştırma ve depolama
+9395907037,Müşteri 0591 A.Ş.,Ticari,H,Bursa,Marmara,S021,G026,2019-02-20,PY022,sessiz_cikis,Ulaştırma ve depolama
+9785444396,Müşteri 0592 A.Ş.,Ticari,F,Trabzon,Karadeniz,S111,G070,2021-08-09,PY111,stabil,İnşaat
+9403003726,Müşteri 0593 A.Ş.,KOBI,C,Gaziantep,Güneydoğu,S092,,2018-03-27,PY091,stabil,İmalat
+9944307895,Müşteri 0594 A.Ş.,KOBI,J,Kocaeli,Marmara,S012,,2016-10-21,PY012,birlikte_buyume,Bilgi ve iletişim
+9100893217,Müşteri 0595 A.Ş.,KOBI,C,Denizli,Ege,S062,,2025-02-16,PY062,stabil,İmalat
+9366026516,Müşteri 0596 A.Ş.,Kurumsal,M,Ankara,İç Anadolu,S030,,2025-03-05,PY031,stabil,Mesleki ve teknik faaliyetler
+9812662560,Müşteri 0597 A.Ş.,Ticari,F,Kayseri,İç Anadolu,S101,,2020-09-04,PY102,rakip_buyutuyor,İnşaat
+9447829316,Müşteri 0598 A.Ş.,KOBI,G,Ankara,İç Anadolu,S032,,2024-07-09,PY033,rakip_buyutuyor,Toptan ve perakende ticaret
+9450355148,Müşteri 0599 A.Ş.,Ticari,G,Konya,İç Anadolu,S041,,2017-01-02,PY043,ana_banka,Toptan ve perakende ticaret
+9552956633,Müşteri 0600 A.Ş.,KOBI,H,Ankara,İç Anadolu,S032,,2020-06-29,PY032,rakip_buyutuyor,Ulaştırma ve depolama

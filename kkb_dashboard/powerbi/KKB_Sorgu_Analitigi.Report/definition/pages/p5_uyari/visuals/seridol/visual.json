@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "seridol",
+  "position": {
+    "x": 960,
+    "y": 244,
+    "z": 900,
+    "width": 306,
+    "height": 226,
+    "tabOrder": 900
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Tarih"
+                    }
+                  },
+                  "Property": "AyAdi"
+                }
+              },
+              "queryRef": "Dim_Tarih.AyAdi",
+              "nativeQueryRef": "AyAdi"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Ortalama Limit Doluluk"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Ortalama Limit Doluluk",
+              "nativeQueryRef": "Ortalama Limit Doluluk"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_Tarih"
+                  }
+                },
+                "Property": "AyAdi"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Seçili müşteri: limit doluluğu'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

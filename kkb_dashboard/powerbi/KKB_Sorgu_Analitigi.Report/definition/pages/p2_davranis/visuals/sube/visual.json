@@ -1,0 +1,134 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "sube",
+  "position": {
+    "x": 754,
+    "y": 386,
+    "z": 800,
+    "width": 512,
+    "height": 322,
+    "tabOrder": 800
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Sube"
+                    }
+                  },
+                  "Property": "SubeAdi"
+                }
+              },
+              "queryRef": "Dim_Sube.SubeAdi",
+              "nativeQueryRef": "SubeAdi"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Sorgu Adedi"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Sorgu Adedi",
+              "nativeQueryRef": "Sorgu Adedi"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Sorgu Donusum %"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Sorgu Donusum %",
+              "nativeQueryRef": "Sorgu Donusum %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Olu Sorgu Orani %"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Olu Sorgu Orani %",
+              "nativeQueryRef": "Olu Sorgu Orani %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Olu Sorgu Maliyeti TL"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Olu Sorgu Maliyeti TL",
+              "nativeQueryRef": "Olu Sorgu Maliyeti TL"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_Sorgu"
+                  }
+                },
+                "Property": "Olu Sorgu Maliyeti TL"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Şube bazında sorgu verimi'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

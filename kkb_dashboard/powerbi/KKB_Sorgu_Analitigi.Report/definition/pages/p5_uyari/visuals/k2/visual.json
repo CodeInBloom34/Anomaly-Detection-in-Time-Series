@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "k2",
+  "position": {
+    "x": 518,
+    "y": 76,
+    "z": 300,
+    "width": 244,
+    "height": 96,
+    "tabOrder": 300
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Yeni Takip Gecisi"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Yeni Takip Gecisi",
+              "nativeQueryRef": "Yeni Takip Gecisi"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Takibe düşüş'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

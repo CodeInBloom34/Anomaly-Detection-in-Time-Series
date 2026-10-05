@@ -1,0 +1,92 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "aysonu",
+  "position": {
+    "x": 874,
+    "y": 76,
+    "z": 500,
+    "width": 392,
+    "height": 300,
+    "tabOrder": 500
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Tarih"
+                    }
+                  },
+                  "Property": "Ay Donemi"
+                }
+              },
+              "queryRef": "Dim_Tarih.Ay Donemi",
+              "nativeQueryRef": "Ay Donemi"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Sorgu Donusum %"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Sorgu Donusum %",
+              "nativeQueryRef": "Sorgu Donusum %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Olu Sorgu Orani %"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Olu Sorgu Orani %",
+              "nativeQueryRef": "Olu Sorgu Orani %"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Ay sonu baskısı: dönüşüm ve ölü sorgu'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

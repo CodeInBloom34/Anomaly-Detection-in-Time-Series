@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "KKB_Sorgu_Analitigi"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7284dee7-de6c-5916-ab64-317e02f1c5fa"
+  }
+}
