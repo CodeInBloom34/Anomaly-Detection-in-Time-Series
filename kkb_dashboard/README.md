@@ -83,6 +83,16 @@ Skor = 0,5 × bireysel + 0,5 × akran. Bireysel geçmiş yoksa yalnızca akran s
 
 Örnek veride (600 müşteri) senaryo bazında medyan skorlar şöyle çıktı: stabil ≈ 27, bozulma ≈ 78, proje büyümesi ≈ 78. Gerçek veride eşikler (≥ 70 gibi) pilot dönemde geriye dönük testle kalibre edilmelidir.
 
+## Riskli kitle listesi
+
+`riskli_kitle.py`, her müşterinin son KKB sorgusunu kendi geçmiş normaliyle karşılaştırır ve yalnızca bankacılık açısından **olumsuz** yöndeki sapmaları sayar: doluluk artışı, not düşüşü, banka sayısı artışı, limit kısılması, karşılıksız çek. Geçmişte bu sapma desenlerinin sonraki 12 ayda gecikme veya takiple sonuçlanıp sonuçlanmadığını açıklanabilir bir lojistik regresyonla öğrenir. Olumsuz sapmalar yalnızca riski artırabilecek şekilde kısıtlanır. Model zamana göre ayrılmış bir dönemde test edilir.
+
+Çıktı `docs/Riskli_Kitle.xlsx` dosyasıdır. Dosyada Özet, Riskli Kitle, Zaten Gecikmede ve Yöntem sekmeleri bulunur. Her müşteri için kademe (Yüksek / Orta / İzleme), olasılık, iki neden ("normali X, şimdi Y") ve önerilen aksiyon yer alır.
+
+```bash
+python riskli_kitle.py --data data --out docs/Riskli_Kitle.csv --xlsx docs/Riskli_Kitle.xlsx
+```
+
 ## Gerçek veriye geçiş
 
 1. `sql/fact_sorgu_view.sql` dosyasındaki kaynak tablo adlarını kendi ortamınıza uyarlayın. KKB sorgu yanıtının saklanması ön koşuldur.
