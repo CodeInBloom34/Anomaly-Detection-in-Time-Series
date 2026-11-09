@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "korrisk",
+  "position": {
+    "x": 1068,
+    "y": 388,
+    "z": 1400,
+    "width": 198,
+    "height": 100,
+    "tabOrder": 1400
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Kor Nokta Risk TL"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Kor Nokta Risk TL",
+              "nativeQueryRef": "Kor Nokta Risk TL"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Kör nokta risk (TL)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

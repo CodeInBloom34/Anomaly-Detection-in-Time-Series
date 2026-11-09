@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "kopru",
+  "position": {
+    "x": 874,
+    "y": 76,
+    "z": 300,
+    "width": 392,
+    "height": 300,
+    "tabOrder": 300
+  },
+  "visual": {
+    "visualType": "waterfallChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Risk Kopru"
+                    }
+                  },
+                  "Property": "Kalem"
+                }
+              },
+              "queryRef": "Risk Kopru.Kalem",
+              "nativeQueryRef": "Kalem"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Kopru Deger"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Kopru Deger",
+              "nativeQueryRef": "Kopru Deger"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Risk Kopru"
+                  }
+                },
+                "Property": "Kalem"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sektör risk artışını kim finanse etti?'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

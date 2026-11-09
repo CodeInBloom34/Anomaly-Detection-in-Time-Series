@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "anatrend",
+  "position": {
+    "x": 444,
+    "y": 506,
+    "z": 700,
+    "width": 400,
+    "height": 202,
+    "tabOrder": 700
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Tarih"
+                    }
+                  },
+                  "Property": "AyAdi"
+                }
+              },
+              "queryRef": "Dim_Tarih.AyAdi",
+              "nativeQueryRef": "AyAdi"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Ana Banka Orani %"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Ana Banka Orani %",
+              "nativeQueryRef": "Ana Banka Orani %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_Tarih"
+                  }
+                },
+                "Property": "AyAdi"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Ana banka olma oranı'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

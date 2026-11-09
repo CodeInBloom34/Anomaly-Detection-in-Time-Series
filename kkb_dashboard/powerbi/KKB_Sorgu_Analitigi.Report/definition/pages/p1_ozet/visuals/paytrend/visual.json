@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "paytrend",
+  "position": {
+    "x": 14,
+    "y": 458,
+    "z": 1100,
+    "width": 840,
+    "height": 250,
+    "tabOrder": 1100
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Tarih"
+                    }
+                  },
+                  "Property": "AyAdi"
+                }
+              },
+              "queryRef": "Dim_Tarih.AyAdi",
+              "nativeQueryRef": "AyAdi"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Cuzdan Payi"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Cuzdan Payi",
+              "nativeQueryRef": "Cuzdan Payi"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_Tarih"
+                  }
+                },
+                "Property": "AyAdi"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Aylık cüzdan payı'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

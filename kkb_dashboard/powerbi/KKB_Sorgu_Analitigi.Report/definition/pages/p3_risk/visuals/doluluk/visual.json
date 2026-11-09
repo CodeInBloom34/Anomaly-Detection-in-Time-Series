@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "doluluk",
+  "position": {
+    "x": 644,
+    "y": 386,
+    "z": 500,
+    "width": 300,
+    "height": 322,
+    "tabOrder": 500
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Tarih"
+                    }
+                  },
+                  "Property": "AyAdi"
+                }
+              },
+              "queryRef": "Dim_Tarih.AyAdi",
+              "nativeQueryRef": "AyAdi"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Ortalama Limit Doluluk"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Ortalama Limit Doluluk",
+              "nativeQueryRef": "Ortalama Limit Doluluk"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Dim_Tarih"
+                  }
+                },
+                "Property": "AyAdi"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Limit doluluk oranı'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

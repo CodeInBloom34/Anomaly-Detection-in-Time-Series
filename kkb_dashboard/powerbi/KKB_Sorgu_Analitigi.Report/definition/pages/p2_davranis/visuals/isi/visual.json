@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "isi",
+  "position": {
+    "x": 444,
+    "y": 76,
+    "z": 400,
+    "width": 420,
+    "height": 300,
+    "tabOrder": 400
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Tarih"
+                    }
+                  },
+                  "Property": "AyinHaftasi"
+                }
+              },
+              "queryRef": "Dim_Tarih.AyinHaftasi",
+              "nativeQueryRef": "AyinHaftasi"
+            }
+          ]
+        },
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Tarih"
+                    }
+                  },
+                  "Property": "Gun Adi"
+                }
+              },
+              "queryRef": "Dim_Tarih.Gun Adi",
+              "nativeQueryRef": "Gun Adi"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Sorgu Adedi"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Sorgu Adedi",
+              "nativeQueryRef": "Sorgu Adedi"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Ayın haftası × gün (sorgu adedi)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

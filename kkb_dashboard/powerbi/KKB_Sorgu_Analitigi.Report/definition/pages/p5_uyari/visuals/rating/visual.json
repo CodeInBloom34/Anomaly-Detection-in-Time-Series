@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "rating",
+  "position": {
+    "x": 954,
+    "y": 480,
+    "z": 1100,
+    "width": 312,
+    "height": 228,
+    "tabOrder": 1100
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Musteri"
+                    }
+                  },
+                  "Property": "Unvan"
+                }
+              },
+              "queryRef": "Dim_Musteri.Unvan",
+              "nativeQueryRef": "Unvan"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Ortalama KKB Not"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Ortalama KKB Not",
+              "nativeQueryRef": "Ortalama KKB Not"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_KrediSonuc"
+                    }
+                  },
+                  "Property": "Ortalama Ic Rating"
+                }
+              },
+              "queryRef": "Fact_KrediSonuc.Ortalama Ic Rating",
+              "nativeQueryRef": "Ortalama Ic Rating"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'KKB notu × iç rating'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

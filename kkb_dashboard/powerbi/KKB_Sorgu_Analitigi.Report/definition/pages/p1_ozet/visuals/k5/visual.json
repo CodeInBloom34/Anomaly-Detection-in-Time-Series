@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "k5",
+  "position": {
+    "x": 914,
+    "y": 76,
+    "z": 800,
+    "width": 172,
+    "height": 110,
+    "tabOrder": 800
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Payi Eriyen Musteri"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Payi Eriyen Musteri",
+              "nativeQueryRef": "Payi Eriyen Musteri"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Payı eriyen müşteri'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

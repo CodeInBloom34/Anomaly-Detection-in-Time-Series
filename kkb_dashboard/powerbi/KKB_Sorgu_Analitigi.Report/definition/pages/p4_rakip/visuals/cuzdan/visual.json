@@ -1,0 +1,114 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "cuzdan",
+  "position": {
+    "x": 14,
+    "y": 76,
+    "z": 100,
+    "width": 620,
+    "height": 420,
+    "tabOrder": 100
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Musteri"
+                    }
+                  },
+                  "Property": "Unvan"
+                }
+              },
+              "queryRef": "Dim_Musteri.Unvan",
+              "nativeQueryRef": "Unvan"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Pay Degisimi"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Pay Degisimi",
+              "nativeQueryRef": "Pay Degisimi"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Sektor Risk Buyumesi %"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Sektor Risk Buyumesi %",
+              "nativeQueryRef": "Sektor Risk Buyumesi %"
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Sektor Risk TL"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Sektor Risk TL",
+              "nativeQueryRef": "Sektor Risk TL"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cüzdan matrisi: x = pay değişimi, y = sektör risk büyümesi'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

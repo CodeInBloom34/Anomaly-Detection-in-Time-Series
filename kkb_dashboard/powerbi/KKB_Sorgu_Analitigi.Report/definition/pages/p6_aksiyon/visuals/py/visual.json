@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "py",
+  "position": {
+    "x": 1100,
+    "y": 6,
+    "z": 100,
+    "width": 170,
+    "height": 56,
+    "tabOrder": 100
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Musteri"
+                    }
+                  },
+                  "Property": "PortfoyYoneticisi"
+                }
+              },
+              "queryRef": "Dim_Musteri.PortfoyYoneticisi",
+              "nativeQueryRef": "PortfoyYoneticisi"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Portföy yöneticisi'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

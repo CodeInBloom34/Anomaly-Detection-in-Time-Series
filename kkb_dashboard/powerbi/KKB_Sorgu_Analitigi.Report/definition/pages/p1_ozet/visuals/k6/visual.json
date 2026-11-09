@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "k6",
+  "position": {
+    "x": 1094,
+    "y": 76,
+    "z": 900,
+    "width": 172,
+    "height": 110,
+    "tabOrder": 900
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Yeni Gecikme Sinyali"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Yeni Gecikme Sinyali",
+              "nativeQueryRef": "Yeni Gecikme Sinyali"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Yeni gecikme sinyali'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

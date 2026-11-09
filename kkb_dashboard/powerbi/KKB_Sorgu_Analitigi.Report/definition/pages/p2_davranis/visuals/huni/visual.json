@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "huni",
+  "position": {
+    "x": 14,
+    "y": 76,
+    "z": 300,
+    "width": 420,
+    "height": 300,
+    "tabOrder": 300
+  },
+  "visual": {
+    "visualType": "funnel",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Huni Asama"
+                    }
+                  },
+                  "Property": "Asama"
+                }
+              },
+              "queryRef": "Huni Asama.Asama",
+              "nativeQueryRef": "Asama"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Sorgu"
+                    }
+                  },
+                  "Property": "Huni Deger"
+                }
+              },
+              "queryRef": "Fact_Sorgu.Huni Deger",
+              "nativeQueryRef": "Huni Deger"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Huni Asama"
+                  }
+                },
+                "Property": "Asama"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Başvuru sorgusundan kullandırıma'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
